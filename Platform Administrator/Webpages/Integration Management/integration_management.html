@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration Management - Edge by Citrus</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon.icon">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-16x16.png">
+
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="integration_management.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Dashboard & Analytics\dashboard_analytics.html">
+                <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Logo\Logo.png"
+                    alt="Edge by Citrus Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-icons">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Notifications\notifications.html">
+                <i class="fas fa-bell" id="notificationsBtn"></i>
+                <span class="notification-badge">3</span>
+            </a>
+            <img src="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Technical Writings/Images/Icons/icons8-profile-picture-48.png"
+                alt="Profile" id="profile-icon" style="width: 32px; height: 32px; cursor: pointer;">
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dashboard & Analytics/dashboard_analytics.html"
+            class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            Dashboard & Analytics
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/User & Role Management/user.html"
+            class="nav-item">
+            <i class="fas fa-users"></i>
+            User & Role Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/System Configuration/system_configuration.html"
+            class="nav-item">
+            <i class="fas fa-cogs"></i>
+            System Configuration
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Integration Management/integration_management.html"
+            class="nav-item active">
+            <i class="fas fa-plug"></i>
+            Integration Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Security & Compliance/security_compliance.html"
+            class="nav-item">
+            <i class="fas fa-shield-alt"></i>
+            Security & Compliance
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Flagged Registrations/flagged _registrations.html"
+            class="nav-item">
+            <i class="fas fa-flag"></i>
+            Flagged Registrations
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dynamic Sales Capture/dynamic_sales_capture.html"
+            class="nav-item">
+            <i class="fas fa-chart-bar"></i>
+            Dynamic Sales Capture
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Settings/settings.html"
+            class="nav-item">
+            <i class="fas fa-cog"></i>
+            Settings
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1 class="section-title">Integration Management</h1>
+
+        <!-- Overview Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-plug"></i>
+                <div class="stat-value">12</div>
+                <div class="stat-label">Active Integrations</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-key"></i>
+                <div class="stat-value">8</div>
+                <div class="stat-label">API Keys</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-chart-line"></i>
+                <div class="stat-value">99.9%</div>
+                <div class="stat-label">System Uptime</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="stat-value">2</div>
+                <div class="stat-label">Active Alerts</div>
+            </div>
+        </div>
+
+        <!-- Third-Party Connections -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-plug"></i>
+                Third-Party Connections
+            </h2>
+            <div class="integration-grid">
+                <!-- CRM Integration -->
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <h3 class="integration-title">Salesforce CRM</h3>
+                        <span class="status-badge status-active">Active</span>
+                    </div>
+                    <div class="integration-details">
+                        <p>Last Sync: 5 minutes ago</p>
+                        <p>Status: Healthy</p>
+                    </div>
+                    <div class="integration-actions">
+                        <button class="btn btn-primary" onclick="openConnectionModal('edit')">Edit</button>
+                        <button class="btn btn-secondary" onclick="testConnection('salesforce')">Test</button>
+                    </div>
+                </div>
+
+                <!-- Additional CRM Integration -->
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <h3 class="integration-title">HubSpot</h3>
+                        <span class="status-badge status-pending">Pending</span>
+                    </div>
+                    <div class="integration-details">
+                        <p>Last Sync: Never</p>
+                        <p>Status: Setup Required</p>
+                    </div>
+                    <div class="integration-actions">
+                        <button class="btn btn-primary" onclick="openConnectionModal('setup')">Setup</button>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" style="margin-top: 1rem;" onclick="openConnectionModal('add')">
+                <i class="fas fa-plus"></i> Add New Connection
+            </button>
+        </div>
+
+        <!-- API Key Management -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-key"></i>
+                API Key Management
+            </h2>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Key Name</th>
+                            <th>Created</th>
+                            <th>Expires</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>prod_key_1</td>
+                            <td>2025-01-15</td>
+                            <td>2025-04-15</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                            <td>
+                                <button class="btn btn-secondary" onclick="rotateKey('prod_key_1')">Rotate</button>
+                                <button class="btn btn-secondary" onclick="revokeKey('prod_key_1')">Revoke</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>test_key_1</td>
+                            <td>2025-01-01</td>
+                            <td>2025-03-01</td>
+                            <td><span class="status-badge status-inactive">Expired</span></td>
+                            <td>
+                                <button class="btn btn-secondary" onclick="rotateKey('test_key_1')">Rotate</button>
+                                <button class="btn btn-secondary" onclick="revokeKey('test_key_1')">Revoke</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn btn-primary" style="margin-top: 1rem;" onclick="generateNewKey()">
+                <i class="fas fa-plus"></i> Generate New Key
+            </button>
+        </div>
+
+        <!-- Integration Health -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-heartbeat"></i>
+                Integration Health
+            </h2>
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <h3 class="integration-title">Performance Metrics</h3>
+                    <div class="chart-container" id="performanceChart">
+                        <!-- Chart will be rendered here -->
+                    </div>
+                </div>
+                <div class="integration-card">
+                    <h3 class="integration-title">Error Rates</h3>
+                    <div class="chart-container" id="errorChart">
+                        <!-- Chart will be rendered here -->
+                    </div>
+                </div>
+            </div>
+            <div class="table-container" style="margin-top: 1rem;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Alert Type</th>
+                            <th>Integration</th>
+                            <th>Timestamp</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>High Latency</td>
+                            <td>Salesforce</td>
+                            <td>2025-02-18 10:30 AM</td>
+                            <td><span class="status-badge status-warning">Warning</span></td>
+                        </tr>
+                        <tr>
+                            <td>API Rate Limit</td>
+                            <td>HubSpot</td>
+                            <td>2025-02-18 09:45 AM</td>
+                            <td><span class="status-badge status-active">Resolved</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Custom Integration Setup -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-tools"></i>
+                Custom Integration Setup
+            </h2>
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <h3 class="integration-title">Quick Start</h3>
+                    <div class="form-group">
+                        <label>Integration Type</label>
+                        <select class="form-control">
+                            <option>REST API</option>
+                            <option>SOAP</option>
+                            <option>GraphQL</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Authentication Method</label>
+                        <select class="form-control">
+                            <option>OAuth 2.0</option>
+                            <option>API Key</option>
+                            <option>Basic Auth</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary">Start Setup</button>
+                </div>
+                <div class="integration-card">
+                    <h3 class="integration-title">Documentation</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="#" class="nav-item">Setup Guides</a></li>
+                        <li><a href="#" class="nav-item">API References</a></li>
+                        <li><a href="#" class="nav-item">Example Code</a></li>
+                        <li><a href="#" class="nav-item">Best Practices</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-links">
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Data Policy/data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/FAQ/faq.html">FAQ</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Privacy Policy/privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Terms of Service/terms_of_service.html">Terms
+                    of Service</a>
+            </div>
+            <div class="copyright">
+                © 2025 Citrus Labs. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- User Profile Popup -->
+    <div class="profile-popup" id="profile-popup">
+        <div class="profile-menu">
+            <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Landing Page/landing_page.html"
+                class="nav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                Log Out
+            </a>
+        </div>
+    </div>
+
+    <!-- Connection Modal -->
+    <div class="modal" id="connectionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Configure Connection</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="form-group">
+                <label>Integration Name</label>
+                <input type="text" class="form-control" placeholder="Enter integration name">
+            </div>
+            <div class="form-group">
+                <label>API Endpoint</label>
+                <input type="text" class="form-control" placeholder="Enter API endpoint">
+            </div>
+            <div class="form-group">
+                <label>Authentication Type</label>
+                <select class="form-control">
+                    <option>OAuth 2.0</option>
+                    <option>API Key</option>
+                    <option>Basic Auth</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Sync Frequency</label>
+                <select class="form-control">
+                    <option>Real-time</option>
+                    <option>Every 5 minutes</option>
+                    <option>Every 15 minutes</option>
+                    <option>Every hour</option>
+                </select>
+            </div>
+            <button class="btn btn-primary">Save Configuration</button>
+        </div>
+    </div>
+
+    <script>
+        // Profile Popup Toggle
+        const profileIcon = document.getElementById('profile-icon');
+        const profilePopup = document.getElementById('profile-popup');
+
+        profileIcon.addEventListener('click', () => {
+            profilePopup.classList.toggle('show');
+        });
+
+        // Close profile popup when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !profilePopup.contains(event.target)) {
+                profilePopup.classList.remove('show');
+            }
+        });
+
+        // Notifications Popup
+        const notificationsIcon = document.getElementById('notifications-icon');
+        notificationsIcon.addEventListener('click', () => {
+            window.location.href = 'C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Notifications/notifications.html';
+        });
+
+        // Connection Modal
+        const connectionModal = document.getElementById('connectionModal');
+        const modalClose = document.querySelector('.modal-close');
+
+        function openConnectionModal(type) {
+            connectionModal.classList.add('show');
+        }
+
+        modalClose.addEventListener('click', () => {
+            connectionModal.classList.remove('show');
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === connectionModal) {
+                connectionModal.classList.remove('show');
+            }
+        });
+
+        // API Key Management Functions
+        function generateNewKey() {
+            // Implementation for generating new API key
+            alert('New API key generated successfully!');
+        }
+
+        function rotateKey(keyId) {
+            // Implementation for rotating API key
+            alert(`Rotating key: ${keyId}`);
+        }
+
+        function revokeKey(keyId) {
+            // Implementation for revoking API key
+            alert(`Revoking key: ${keyId}`);
+        }
+
+        // Connection Testing
+        function testConnection(integration) {
+            // Implementation for testing connection
+            alert(`Testing connection to ${integration}...`);
+        }
+
+        // Charts initialization (using a sample implementation)
+        function initializeCharts() {
+            // Performance Chart
+            const performanceCtx = document.getElementById('performanceChart');
+            if (performanceCtx) {
+                // Implementation for performance chart
+            }
+
+            // Error Chart
+            const errorCtx = document.getElementById('errorChart');
+            if (errorCtx) {
+                // Implementation for error chart
+            }
+        }
+
+        // Initialize charts when the page loads
+        window.addEventListener('load', initializeCharts);
+    </script>
+</body>
+
+</html>

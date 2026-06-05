@@ -1,0 +1,86 @@
+graph TD
+    TC[Terms and Conditions]
+    
+    %% Main Sections
+    TC --> IN[1. Introduction]
+    TC --> AT[2. Acceptance of Terms]
+    TC --> AR[3. Administrator Responsibilities]
+    TC --> AP[4. Access and Permissions]
+    TC --> DM[5. Data Management]
+    TC --> IP[6. Intellectual Property]
+    TC --> SC[7. Security and Compliance]
+    TC --> PB[8. Payment and Billing]
+    TC --> TS[9. Termination and Suspension]
+    TC --> DR[10. Dispute Resolution]
+    TC --> MT[11. Modifications to Terms]
+    TC --> LL[12. Limitation of Liability]
+    TC --> GL[13. Governing Law]
+    
+    %% Acceptance of Terms Subsections
+    AT --> AT1[Binding Agreement]
+    AT --> AT2[Conditional Access]
+    
+    %% Administrator Responsibilities Subsections
+    AR --> AR1[Conduct and Ethics]
+    AR --> AR2[Confidentiality]
+    AR --> AR3[Compliance]
+    
+    %% Access and Permissions Subsections
+    AP --> AP1[Scope of Access]
+    AP --> AP2[Authorized Use]
+    AP --> AP3[Monitoring]
+    
+    %% Data Management Subsections
+    DM --> DM1[Data Handling]
+    DM --> DM2[Data Security]
+    DM --> DM3[Confidentiality and Integrity]
+    
+    %% Intellectual Property Subsections
+    IP --> IP1[Ownership]
+    IP --> IP2[Usage Rights]
+    
+    %% Security and Compliance Subsections
+    SC --> SC1[Security Protocols]
+    SC1 --> SC1A[Multi-factor Authentication]
+    SC1 --> SC1B[Password Policies]
+    SC1 --> SC1C[Security Audits]
+    SC --> SC2[Compliance Obligations]
+    SC --> SC3[Incident Reporting]
+    
+    %% Payment and Billing Subsections
+    PB --> PB1[Administrative Fees]
+    PB --> PB2[Billing Cycles]
+    PB --> PB3[Dispute Resolution]
+    
+    %% Termination Subsections
+    TS --> TS1[Grounds for Termination]
+    TS --> TS2[Appeal Process]
+    TS --> TS3[Immediate Revocation]
+    
+    %% Dispute Resolution Subsections
+    DR --> DR1[Informal Resolution]
+    DR --> DR2[Formal Resolution]
+    DR --> DR3[Binding Decision]
+    
+    %% Modifications Subsections
+    MT --> MT1[Right to Modify]
+    MT --> MT2[Continued Use]
+    MT --> MT3[Review Period]
+    
+    %% Limitation of Liability Subsections
+    LL --> LL1[Disclaimer of Warranties]
+    LL --> LL2[Liability Cap]
+    LL --> LL3[No Guarantee]
+    
+    %% Governing Law Subsections
+    GL --> GL1[Applicable Law]
+    GL --> GL2[Jurisdiction]
+    
+    %% Styling
+    classDef mainSection fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subSection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef detail fill:#dfd,stroke:#333,stroke-width:1px
+    
+    class TC,IN,AT,AR,AP,DM,IP,SC,PB,TS,DR,MT,LL,GL mainSection
+    class AT1,AT2,AR1,AR2,AR3,AP1,AP2,AP3,DM1,DM2,DM3,IP1,IP2,SC1,SC2,SC3,PB1,PB2,PB3,TS1,TS2,TS3,DR1,DR2,DR3,MT1,MT2,MT3,LL1,LL2,LL3,GL1,GL2 subSection
+    class SC1A,SC1B,SC1C detail

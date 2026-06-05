@@ -1,0 +1,76 @@
+graph TD
+    TaskMgmt[Task Management Page] --> PageAccess[Initial Page Load]
+    TaskMgmt --> TaskCreation[Task Creation]
+    TaskMgmt --> TaskMonitoring[Task Monitoring]
+    TaskMgmt --> Alerts[Due Date Alerts]
+    TaskMgmt --> ActivityLog[Activity Logging]
+    
+    PageAccess --> Overview[Task Overview]
+    PageAccess --> CurrentTasks[Current Tasks Display]
+    PageAccess --> FollowUps[Follow-up Activities]
+    
+    TaskCreation --> CreateButton[Create Task Button]
+    CreateButton --> DynamicForm[Dynamic Task Form]
+    
+    DynamicForm --> TaskDetails[Task Details]
+    DynamicForm --> LeadAssociation[Lead Association]
+    DynamicForm --> Assignment[Task Assignment]
+    DynamicForm --> Scheduling[Due Date & Priority]
+    
+    TaskDetails --> Title[Title & Description]
+    TaskDetails --> Status[Task Status]
+    
+    TaskMonitoring --> TaskList[Interactive Task List]
+    TaskList --> SortOptions[Sort Options]
+    TaskList --> FilterOptions[Filter Options]
+    TaskList --> Actions[Task Actions]
+    
+    SortOptions --> DueDate[Sort by Due Date]
+    SortOptions --> Priority[Sort by Priority]
+    SortOptions --> Status[Sort by Status]
+    
+    FilterOptions --> Pending[Show Pending]
+    FilterOptions --> Completed[Show Completed]
+    FilterOptions --> AssignedTo[Filter by Assignee]
+    
+    Actions --> EditTask[Edit Task]
+    Actions --> CompleteTask[Mark Complete]
+    Actions --> ReassignTask[Reassign Task]
+    
+    Alerts --> AutoAlerts[Automated Alerts]
+    AutoAlerts --> InApp[In-app Notifications]
+    AutoAlerts --> Email[Email Reminders]
+    AutoAlerts --> Visual[Visual Indicators]
+    
+    ActivityLog --> Communications[Communication History]
+    ActivityLog --> LeadContext[Lead Context]
+    ActivityLog --> NewEntries[Add Log Entries]
+    
+    subgraph Task Creation Flow
+        CreateButton
+        DynamicForm
+        TaskDetails
+        LeadAssociation
+    end
+    
+    subgraph Monitoring System
+        TaskList
+        SortOptions
+        FilterOptions
+        Actions
+    end
+    
+    subgraph Alert System
+        AutoAlerts
+        InApp
+        Email
+        Visual
+    end
+    
+    style TaskMgmt fill:#f9f,stroke:#333,stroke-width:2px
+    style Task Creation Flow fill:#ffd,stroke:#333,stroke-width:1px
+    style Monitoring System fill:#dff,stroke:#333,stroke-width:1px
+    style Alert System fill:#ffe,stroke:#333,stroke-width:1px
+    
+    classDef action fill:#e1e1e1,stroke:#666,stroke-width:2px
+    class CreateButton,EditTask,CompleteTask,ReassignTask action

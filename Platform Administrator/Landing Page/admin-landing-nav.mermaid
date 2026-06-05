@@ -1,0 +1,91 @@
+graph TD
+    Landing[Administrator Landing Page]
+
+    %% Main Administrative Sections
+    Landing --> DA[Dashboard & Analytics]
+    Landing --> UR[User & Role Management]
+    Landing --> SC[System Configuration]
+    Landing --> IM[Integration Management]
+    Landing --> SO[Security & Compliance]
+    Landing --> FR[Flagged Registrations]
+    Landing --> DC[Dynamic Sales Capture]
+
+    %% Dashboard & Analytics
+    DA --> DA1[System Metrics]
+    DA1 --> DA1A[User Activity]
+    DA1 --> DA1B[Integration Status]
+    DA1 --> DA1C[System Health]
+    DA --> DA2[Real-Time Alerts]
+    DA2 --> DA2A[Security Breaches]
+    DA2 --> DA2B[Integration Failures]
+    DA2 --> DA2C[Flagged Issues]
+    DA --> DA3[Analytics Reports]
+    DA3 --> DA3A[Usage Reports]
+    DA3 --> DA3B[Performance Metrics]
+    DA3 --> DA3C[Export Tools]
+
+    %% User & Role Management
+    UR --> UR1[Account Management]
+    UR1 --> UR1A[Create Account]
+    UR1 --> UR1B[Modify Account]
+    UR1 --> UR1C[Deactivate Account]
+    UR --> UR2[Role Assignment]
+    UR2 --> UR2A[Permission Settings]
+    UR2 --> UR2B[Access Controls]
+    UR --> UR3[Activity Monitoring]
+    UR3 --> UR3A[Login History]
+    UR3 --> UR3B[Action Logs]
+
+    %% System Configuration
+    SC --> SC1[Global Settings]
+    SC1 --> SC1A[Session Management]
+    SC1 --> SC1B[Security Protocols]
+    SC1 --> SC1C[Data Retention]
+    SC --> SC2[API Controls]
+    SC2 --> SC2A[Key Management]
+    SC2 --> SC2B[Endpoint Config]
+    SC2 --> SC2C[Integration Rules]
+
+    %% Integration Management
+    IM --> IM1[Third-Party Systems]
+    IM1 --> IM1A[CRM Integration]
+    IM1 --> IM1B[Payment Systems]
+    IM --> IM2[Custom Integration]
+    IM2 --> IM2A[Setup Wizard]
+    IM2 --> IM2B[Testing Tools]
+    IM --> IM3[Health Monitoring]
+
+    %% Security & Compliance
+    SO --> SO1[Audit Management]
+    SO1 --> SO1A[Audit Logs]
+    SO1 --> SO1B[Compliance Reports]
+    SO --> SO2[Security Controls]
+    SO2 --> SO2A[MFA Settings]
+    SO2 --> SO2B[Session Policies]
+    SO --> SO3[Documentation]
+
+    %% Flagged Registrations
+    FR --> FR1[Review Queue]
+    FR1 --> FR1A[Pending Reviews]
+    FR1 --> FR1B[Investigation Cases]
+    FR --> FR2[Resolution Tools]
+    FR2 --> FR2A[Approve]
+    FR2 --> FR2B[Reject]
+    FR2 --> FR2C[Escalate]
+
+    %% Dynamic Sales Capture
+    DC --> DC1[Registration Monitoring]
+    DC1 --> DC1A[Active Sessions]
+    DC1 --> DC1B[Verification Status]
+    DC --> DC2[Fraud Prevention]
+    DC2 --> DC2A[Duplicate Check]
+    DC2 --> DC2B[Anomaly Detection]
+
+    %% Styling
+    classDef section fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subsection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef action fill:#dfd,stroke:#333,stroke-width:1px
+
+    class Landing,DA,UR,SC,IM,SO,FR,DC section
+    class DA1,DA2,DA3,UR1,UR2,UR3,SC1,SC2,IM1,IM2,IM3,SO1,SO2,SO3,FR1,FR2,DC1,DC2 subsection
+    class DA1A,DA1B,DA1C,DA2A,DA2B,DA2C,DA3A,DA3B,DA3C,UR1A,UR1B,UR1C,UR2A,UR2B,UR3A,UR3B,SC1A,SC1B,SC1C,SC2A,SC2B,SC2C,IM1A,IM1B,IM2A,IM2B,SO1A,SO1B,SO2A,SO2B,FR1A,FR1B,FR2A,FR2B,FR2C,DC1A,DC1B,DC2A,DC2B action

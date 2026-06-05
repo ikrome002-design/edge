@@ -1,0 +1,71 @@
+graph TD
+    SC[Security & Compliance]
+
+    %% Audit Logs Section
+    SC --> AL[Audit Logs]
+    AL --> SL[System Logs]
+    SL --> SL1[Admin Actions]
+    SL --> SL2[User Activities]
+    SL --> SL3[System Changes]
+    AL --> EL[Event Logs]
+    EL --> EL1[Security Events]
+    EL --> EL2[Integration Events]
+    EL --> EL3[Access Attempts]
+    AL --> RL[Report Generation]
+    RL --> RL1[Custom Reports]
+    RL --> RL2[Scheduled Reports]
+    RL --> RL3[Export Options]
+
+    %% MFA Management Section
+    SC --> MFA[MFA Management]
+    MFA --> MS[MFA Settings]
+    MS --> MS1[Enable/Disable]
+    MS --> MS2[Method Selection]
+    MS --> MS3[Policy Config]
+    MFA --> MU[User Management]
+    MU --> MU1[Status Overview]
+    MU --> MU2[Reset Options]
+    MU --> MU3[Bulk Actions]
+    MFA --> MT[Token Management]
+    MT --> MT1[Generate Tokens]
+    MT --> MT2[Revoke Tokens]
+    MT --> MT3[Track Usage]
+
+    %% Session Controls Section
+    SC --> SES[Session Controls]
+    SES --> SP[Session Policies]
+    SP --> SP1[Timeout Settings]
+    SP --> SP2[Concurrent Sessions]
+    SP --> SP3[IP Restrictions]
+    SES --> SM[Session Monitoring]
+    SM --> SM1[Active Sessions]
+    SM --> SM2[Session History]
+    SM --> SM3[Anomaly Detection]
+    SES --> SA[Session Actions]
+    SA --> SA1[Force Logout]
+    SA --> SA2[Lock Account]
+    SA --> SA3[Session Reset]
+
+    %% Compliance Documents Section
+    SC --> CD[Compliance Documents]
+    CD --> PD[Policy Documents]
+    PD --> PD1[Security Policies]
+    PD --> PD2[Privacy Policies]
+    PD --> PD3[Access Policies]
+    CD --> CM[Compliance Monitoring]
+    CM --> CM1[Audit Status]
+    CM --> CM2[Certification Status]
+    CM --> CM3[Review Schedule]
+    CD --> DR[Document Repository]
+    DR --> DR1[Version Control]
+    DR --> DR2[Access Logs]
+    DR --> DR3[Update History]
+
+    %% Styling
+    classDef section fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subsection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef action fill:#dfd,stroke:#333,stroke-width:1px
+
+    class SC,AL,MFA,SES,CD section
+    class SL,EL,RL,MS,MU,MT,SP,SM,SA,PD,CM,DR subsection
+    class SL1,SL2,SL3,EL1,EL2,EL3,RL1,RL2,RL3,MS1,MS2,MS3,MU1,MU2,MU3,MT1,MT2,MT3,SP1,SP2,SP3,SM1,SM2,SM3,SA1,SA2,SA3,PD1,PD2,PD3,CM1,CM2,CM3,DR1,DR2,DR3 action

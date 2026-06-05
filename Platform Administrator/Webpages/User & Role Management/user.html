@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User & Role Management - Edge by Citrus</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon.icon">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-16x16.png">
+
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="user.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Dashboard & Analytics\dashboard_analytics.html">
+                <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Logo\Logo.png"
+                    alt="Edge by Citrus Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-icons">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Notifications\notifications.html">
+                <i class="fas fa-bell" id="notificationsBtn"></i>
+                <span class="notification-badge">3</span>
+            </a>
+            <img src="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Technical Writings/Images/Icons/icons8-profile-picture-48.png"
+                alt="Profile" id="profile-icon" style="width: 32px; height: 32px; cursor: pointer;">
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dashboard & Analytics/dashboard_analytics.html"
+            class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            Dashboard & Analytics
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/User & Role Management/user.html"
+            class="nav-item active">
+            <i class="fas fa-users"></i>
+            User & Role Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/System Configuration/system_configuration.html"
+            class="nav-item">
+            <i class="fas fa-cogs"></i>
+            System Configuration
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Integration Management/integration_management.html"
+            class="nav-item">
+            <i class="fas fa-plug"></i>
+            Integration Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Security & Compliance/security_compliance.html"
+            class="nav-item">
+            <i class="fas fa-shield-alt"></i>
+            Security & Compliance
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Flagged Registrations/flagged _registrations.html"
+            class="nav-item">
+            <i class="fas fa-flag"></i>
+            Flagged Registrations
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dynamic Sales Capture/dynamic_sales_capture.html"
+            class="nav-item">
+            <i class="fas fa-chart-bar"></i>
+            Dynamic Sales Capture
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Settings/settings.html"
+            class="nav-item">
+            <i class="fas fa-cog"></i>
+            Settings
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1 class="section-title">User & Role Management</h1>
+
+        <!-- Account Management Card -->
+        <div class="card">
+            <h2 class="card-title">Account Management</h2>
+            <button class="btn">Create New Account</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Department</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Sales Personnel</td>
+                        <td>Sales</td>
+                        <td>Active</td>
+                        <td>
+                            <i class="fas fa-edit"></i>
+                            <i class="fas fa-trash"></i>
+                        </td>
+                    </tr>
+                    <!-- More table rows -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Role Assignment Card -->
+        <div class="card">
+            <h2 class="card-title">Role Assignment</h2>
+            <div class="role-definition">
+                <h3>Role Definition</h3>
+                <div class="role-types">
+                    <div class="role-type">
+                        <h4>Sales Personnel</h4>
+                        <ul>
+                            <li>Lead management access</li>
+                            <li>Basic reporting</li>
+                            <li>Customer interaction tools</li>
+                        </ul>
+                    </div>
+                    <div class="role-type">
+                        <h4>Partner Users</h4>
+                        <ul>
+                            <li>Limited system access</li>
+                            <li>Collaboration tools</li>
+                            <li>Shared resources</li>
+                        </ul>
+                    </div>
+                    <div class="role-type">
+                        <h4>Administrators</h4>
+                        <ul>
+                            <li>Full system access</li>
+                            <li>Configuration rights</li>
+                            <li>User management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="permission-matrix">
+                <h3>Permission Matrix</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Feature Access</th>
+                            <th>Data Access</th>
+                            <th>Integration Access</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sales Personnel</td>
+                            <td>Limited</td>
+                            <td>Own Data</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr>
+                            <td>Partner Users</td>
+                            <td>Moderate</td>
+                            <td>Shared Data</td>
+                            <td>Limited</td>
+                        </tr>
+                        <tr>
+                            <td>Administrators</td>
+                            <td>Full</td>
+                            <td>All Data</td>
+                            <td>Full</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Permission Management Card -->
+        <div class="card">
+            <h2 class="card-title">Permission Management</h2>
+            <div class="permission-groups">
+                <h3>Permission Groups</h3>
+                <div class="permission-types">
+                    <div class="permission-type">
+                        <h4>View Permissions</h4>
+                        <ul>
+                            <li>Read-only access</li>
+                            <li>Report viewing</li>
+                            <li>Dashboard access</li>
+                        </ul>
+                    </div>
+                    <div class="permission-type">
+                        <h4>Edit Permissions</h4>
+                        <ul>
+                            <li>Data modification</li>
+                            <li>Record updates</li>
+                            <li>Content management</li>
+                        </ul>
+                    </div>
+                    <div class="permission-type">
+                        <h4>Admin Permissions</h4>
+                        <ul>
+                            <li>User management</li>
+                            <li>System configuration</li>
+                            <li>Security controls</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Activity Monitoring Card -->
+        <div class="card">
+            <h2 class="card-title">User Activity Monitoring</h2>
+            <div class="activity-logs">
+                <h3>Activity Logs</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Action</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Login</td>
+                            <td>2025-02-18 09:30</td>
+                            <td>Success</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>Permission Change</td>
+                            <td>2025-02-18 10:15</td>
+                            <td>Success</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="usage-metrics">
+                <h3>Usage Metrics</h3>
+                <div class="metric-cards">
+                    <div class="metric-card">
+                        <h4>Active Sessions</h4>
+                        <p class="metric-value">24</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Feature Usage</h4>
+                        <p class="metric-value">85%</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Access Patterns</h4>
+                        <p class="metric-value">Normal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Controls Card -->
+        <div class="card">
+            <h2 class="card-title">Security Controls</h2>
+            <div class="mfa-management">
+                <h3>MFA Management</h3>
+                <div class="mfa-options">
+                    <div class="mfa-option">
+                        <h4>Setup Options</h4>
+                        <ul>
+                            <li>Google Authenticator</li>
+                            <li>SMS Verification</li>
+                            <li>Email Authentication</li>
+                        </ul>
+                    </div>
+                    <div class="mfa-option">
+                        <h4>Enforcement Rules</h4>
+                        <ul>
+                            <li>Required for all admins</li>
+                            <li>Optional for other users</li>
+                            <li>Grace period: 7 days</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="session-policies">
+                <h3>Session Policies</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Policy</th>
+                            <th>Value</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Session Timeout</td>
+                            <td>30 minutes</td>
+                            <td>Enabled</td>
+                        </tr>
+                        <tr>
+                            <td>Concurrent Sessions</td>
+                            <td>2 maximum</td>
+                            <td>Enabled</td>
+                        </tr>
+                        <tr>
+                            <td>IP Restriction</td>
+                            <td>Office Only</td>
+                            <td>Disabled</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-links">
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Data Policy/data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/FAQ/faq.html">FAQ</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Privacy Policy/privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Terms of Service/terms_of_service.html">Terms
+                    of Service</a>
+            </div>
+            <div class="copyright">
+                © 2025 Citrus Labs. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- User Profile Popup -->
+    <div class="profile-popup" id="profile-popup">
+        <div class="profile-menu">
+            <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Landing Page/landing_page.html"
+                class="nav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                Log Out
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Profile Popup Toggle
+        const profileIcon = document.getElementById('profile-icon');
+        const profilePopup = document.getElementById('profile-popup');
+
+        profileIcon.addEventListener('click', () => {
+            profilePopup.classList.toggle('show');
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !profilePopup.contains(event.target)) {
+                profilePopup.classList.remove('show');
+            }
+        });
+
+        // Notifications Popup
+        const notificationsIcon = document.getElementById('notifications-icon');
+        notificationsIcon.addEventListener('click', () => {
+            window.location.href = 'C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Notifications/notifications.html';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #1F1F1F;
+    background-color: #FFFFFF;
+}
+
+/* Header Styles */
+.header {
+    background-color: #FFFFFF;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 40px;
+}
+
+.user-profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-name {
+    color: #1F1F1F;
+    font-weight: 500;
+}
+
+.logout-popup {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #FFFFFF;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.logout-popup.active {
+    display: block;
+}
+
+/* Main Content Styles */
+.main-content {
+    max-width: 1200px;
+    margin: 100px auto 40px;
+    padding: 0 2rem;
+}
+
+.policy-header {
+    margin-bottom: 2rem;
+}
+
+.policy-header h1 {
+    color: #1F1F1F;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.policy-date {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.policy-section {
+    margin-bottom: 3rem;
+}
+
+.policy-section h2 {
+    color: #1F1F1F;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #FF9E1B;
+}
+
+.policy-section h3 {
+    color: #1F1F1F;
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.policy-section p,
+.policy-section li {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.policy-section ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.policy-section ul li::before {
+    content: "•";
+    color: #FF9E1B;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h4 {
+    color: #FF9E1B;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #FF9E1B;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FF9E1B;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Contact DPO Section */
+.contact-dpo {
+    background-color: #F5F5F5;
+    padding: 2rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+
+.contact-dpo h3 {
+    color: #1F1F1F;
+    margin-bottom: 1rem;
+}
+
+.contact-dpo a {
+    color: #FF9E1B;
+    text-decoration: none;
+}
+
+.contact-dpo a:hover {
+    text-decoration: underline;
+}

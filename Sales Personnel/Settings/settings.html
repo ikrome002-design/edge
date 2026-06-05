@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Edge by Citrus</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="settings.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Dashboard\dashboard.html">
+                <img src="file:///C:/Users/nderu/Documents/Development/Product/Edge%20by%20Citrus/Technical%20Writings/Images/Logo/Logo.png"
+                    alt="Edge by Citrus Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-links">
+
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Lead Management\lead_management.html"
+                class="nav-item">
+                <i class="fas fa-users"></i> Lead Management
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Task Management\task_management.html"
+                class="nav-item">
+                <i class="fas fa-tasks"></i> Task Management
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Sales Reports\sales_reports.html"
+                class="nav-item">
+                <i class="fas fa-chart-line"></i> Sales Reports
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Integrations\integrations.html"
+                class="nav-item">
+                <i class="fas fa-plug"></i> Integrations
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Settings\settings.html"
+                class="nav-item">
+                <i class="fas fa-cog"></i> Settings
+            </a>
+
+            <div class="user-section">
+                <div class="notifications">
+                    <a
+                        href="file:///C:/Users/nderu/Documents/Development/Product/Edge%20by%20Citrus/Webpages/Notifications/notifications.html">
+                        <i class="fas fa-bell" id="notificationsBtn"></i>
+                        <span class="notification-badge">3</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="user-profile">
+                <img src="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Technical Writings/Images/Icons/icons8-profile-picture-48.png"
+                    alt="User Profile">
+                <div class="logout-popup">
+                    <a
+                        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Landing Page/landing_page.html">Log
+                        Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="settings">
+        <!-- Settings Navigation -->
+        <aside class="settings-nav">
+            <ul>
+                <li class="active" data-section="my-account">
+                    <i class="fas fa-user"></i> My Account
+                </li>
+                <li data-section="documentation">
+                    <i class="fas fa-book"></i> Documentation & Help
+                </li>
+                <li data-section="legal">
+                    <i class="fas fa-gavel"></i> Legal & Policy
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Settings Content -->
+        <div class="settings-content">
+            <!-- My Account Section -->
+            <section id="my-account" class="settings-section active">
+                <h1>My Account</h1>
+
+                <!-- Profile Management -->
+                <div class="settings-card">
+                    <h2>Profile Management</h2>
+                    <form id="profileForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" value="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" value="john.doe@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" value="+254 712 345 678" required>
+                        </div>
+                        <button type="submit" class="primary-btn">Save Changes</button>
+                    </form>
+                </div>
+
+                <!-- Security Settings -->
+                <div class="settings-card">
+                    <h2>Security Settings</h2>
+                    <div class="security-options">
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h3>Password</h3>
+                                <p>Last changed: 30 days ago</p>
+                            </div>
+                            <button class="secondary-btn" id="changePasswordBtn">Change Password</button>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h3>Two-Factor Authentication</h3>
+                                <p>Status: Enabled</p>
+                            </div>
+                            <button class="secondary-btn" id="manageTwoFactorBtn">Manage</button>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-info">
+                                <h3>Active Sessions</h3>
+                                <p>2 devices currently logged in</p>
+                            </div>
+                            <button class="secondary-btn" id="manageSessionsBtn">View Sessions</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notification Preferences -->
+                <div class="settings-card">
+                    <h2>Notification Preferences</h2>
+                    <div class="notification-settings">
+                        <div class="notification-group">
+                            <h3>Email Notifications</h3>
+                            <div class="notification-toggle">
+                                <label>
+                                    <input type="checkbox" checked> Lead Updates
+                                </label>
+                            </div>
+                            <div class="notification-toggle">
+                                <label>
+                                    <input type="checkbox" checked> Task Reminders
+                                </label>
+                            </div>
+                            <div class="notification-toggle">
+                                <label>
+                                    <input type="checkbox" checked> Sales Reports
+                                </label>
+                            </div>
+                        </div>
+                        <div class="notification-group">
+                            <h3>In-App Notifications</h3>
+                            <div class="notification-toggle">
+                                <label>
+                                    <input type="checkbox" checked> System Updates
+                                </label>
+                            </div>
+                            <div class="notification-toggle">
+                                <label>
+                                    <input type="checkbox" checked> Team Messages
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales Code -->
+                <div class="settings-card">
+                    <h2>Sales Code</h2>
+                    <div class="sales-code">
+                        <div class="code-display">
+                            <input type="text" value="SALES-JD-2025-001" readonly>
+                            <button class="copy-btn" id="copySalesCode">
+                                <i class="fas fa-copy"></i> Copy
+                            </button>
+                        </div>
+                        <button class="secondary-btn" id="regenerateCode">
+                            <i class="fas fa-sync"></i> Regenerate Code
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Documentation Section -->
+            <section id="documentation" class="settings-section">
+                <h1>Documentation & Help</h1>
+
+                <!-- User Manuals -->
+                <div class="settings-card">
+                    <h2>User Manuals</h2>
+                    <div class="manual-list">
+                        <div class="manual-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="manual-info">
+                                <h3>Getting Started Guide</h3>
+                                <p>Complete guide for new users</p>
+                            </div>
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i> Download PDF
+                            </button>
+                        </div>
+                        <div class="manual-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="manual-info">
+                                <h3>Advanced Features Guide</h3>
+                                <p>Detailed documentation of all features</p>
+                            </div>
+                            <button class="download-btn">
+                                <i class="fas fa-download"></i> Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQs & Tutorials -->
+                <div class="settings-card">
+                    <h2>FAQs & Tutorials</h2>
+                    <div class="faq-search">
+                        <input type="text" placeholder="Search FAQs and tutorials...">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h3>How do I manage my leads?</h3>
+                            <p>Learn about lead management features and best practices.</p>
+                            <a href="#" class="view-more">View Tutorial</a>
+                        </div>
+                        <div class="faq-item">
+                            <h3>Setting up payment integrations</h3>
+                            <p>Step-by-step guide for payment gateway setup.</p>
+                            <a href="#" class="view-more">View Tutorial</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Legal Section -->
+            <section id="legal" class="settings-section">
+                <h1>Legal & Policy</h1>
+
+                <!-- Terms & Privacy -->
+                <div class="settings-card">
+                    <h2>Terms of Service</h2>
+                    <div class="legal-content">
+                        <p>Last updated: February 15, 2025</p>
+                        <div class="terms-preview">
+                            <p>Review our terms of service and usage guidelines.</p>
+                        </div>
+                        <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Footer\Terms of Service\terms_service.html"
+                            class="view-full">View Full Terms</a>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h2>Privacy Policy</h2>
+                    <div class="legal-content">
+                        <p>Last updated: February 15, 2025</p>
+                        <div class="privacy-preview">
+                            <p>Learn about how we handle and protect your data.</p>
+                        </div>
+                        <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Footer\Privacy Policy\privacy_policy.html"
+                            class="view-full">View Full Policy</a>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h2>Compliance Information</h2>
+                    <div class="compliance-info">
+                        <div class="compliance-item">
+                            <h3>Data Protection</h3>
+                            <p>We comply with GDPR and local data protection regulations.</p>
+                        </div>
+                        <div class="compliance-item">
+                            <h3>Security Standards</h3>
+                            <p>ISO 27001 certified for information security management.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Change Password Modal -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <h2>Change Password</h2>
+            <form id="passwordForm">
+                <div class="form-group">
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" id="currentPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm New Password</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="secondary-btn" id="cancelPasswordBtn">Cancel</button>
+                    <button type="submit" class="primary-btn">Update Password</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-links">
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Data Policy\data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Privacy Policy\privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Terms of Service\terms_service.html">Terms
+                    of Service</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\FAQ\faq.html">FAQ</a>
+            </div>
+            <div class="corporate-info">
+                <a href="https://citruslabs.co.ke/" target="_blank">Corporate Website</a>
+                <p>&copy; 2025 Citrus Labs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+graph TD
+    DB[Dashboard & Analytics]
+
+    %% System Metrics Section
+    DB --> SM[System Metrics Overview]
+    SM --> UA[User Activity Module]
+    UA --> UA1[Login Statistics]
+    UA --> UA2[Account Modifications]
+    UA --> UA3[Platform Usage Trends]
+    SM --> IP[Integration Performance]
+    IP --> IP1[Sync Status Monitor]
+    IP --> IP2[Connectivity Metrics]
+    IP --> IP3[Error Rates]
+    SM --> SH[System Health]
+    SH --> SH1[Uptime Tracking]
+    SH --> SH2[Resource Usage]
+    SH --> SH3[Performance Metrics]
+
+    %% Real-Time Alerts Section
+    DB --> RA[Real-Time Alerts Hub]
+    RA --> SB[Security Breaches]
+    SB --> SB1[Active Threats]
+    SB --> SB2[Security Logs]
+    RA --> IF[Integration Failures]
+    IF --> IF1[Sync Errors]
+    IF --> IF2[Connection Issues]
+    RA --> FR[Flagged Registrations]
+    FR --> FR1[Pending Reviews]
+    FR --> FR2[Suspicious Activities]
+
+    %% Analytics & Reporting Section
+    DB --> AR[Analytics & Reports]
+    AR --> CR[Customizable Reports]
+    CR --> CR1[Date Range Selection]
+    CR --> CR2[Integration Filters]
+    CR --> CR3[User Segments]
+    AR --> EX[Export Tools]
+    EX --> EX1[PDF Generation]
+    EX --> EX2[CSV Export]
+    AR --> DV[Data Visualization]
+    DV --> DV1[Interactive Charts]
+    DV --> DV2[Trend Analysis]
+    DV --> DV3[Performance Graphs]
+
+    %% Quick Actions Panel
+    DB --> QA[Quick Actions]
+    QA --> QA1[System Checks]
+    QA --> QA2[Integration Tests]
+    QA --> QA3[Security Scans]
+    QA --> QA4[Report Generation]
+
+    %% Real-Time Monitoring
+    DB --> RT[Real-Time Monitoring]
+    RT --> RT1[Session Validation]
+    RT1 --> RT1A[Active Users]
+    RT1 --> RT1B[Session Health]
+    RT --> RT2[Data Sync Status]
+    RT2 --> RT2A[Sync Progress]
+    RT2 --> RT2B[Last Updated]
+    RT --> RT3[Alert Management]
+    RT3 --> RT3A[Critical Alerts]
+    RT3 --> RT3B[Warning Notices]
+
+    %% Styling
+    classDef section fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subsection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef action fill:#dfd,stroke:#333,stroke-width:1px
+
+    class DB,SM,RA,AR,QA,RT section
+    class UA,IP,SH,SB,IF,FR,CR,EX,DV,RT1,RT2,RT3 subsection
+    class UA1,UA2,UA3,IP1,IP2,IP3,SH1,SH2,SH3,SB1,SB2,IF1,IF2,FR1,FR2,CR1,CR2,CR3,EX1,EX2,DV1,DV2,DV3,QA1,QA2,QA3,QA4,RT1A,RT1B,RT2A,RT2B,

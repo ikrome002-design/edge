@@ -1,0 +1,71 @@
+graph TD
+    DP[Data Policy]
+    
+    %% Main Sections
+    DP --> DC[1. Data Collection]
+    DP --> AR[2. Administrator Rights]
+    DP --> DS[3. Data Security]
+    DP --> AG[4. Accountability & Governance]
+    DP --> DT[5. Data Transfers]
+    DP --> CE[6. Compliance & Enforcement]
+    DP --> TA[7. Training & Awareness]
+    DP --> IR[8. Incident Response]
+    DP --> CI[9. Contact Information]
+    
+    %% Data Collection Subsections
+    DC --> DC1[Scope of Collection]
+    DC1 --> DC1A[Personal Identification]
+    DC1 --> DC1B[Usage & Operational]
+    DC --> DC2[Purpose & Lawfulness]
+    
+    %% Administrator Rights Subsections
+    AR --> AR1[Access Rights]
+    AR --> AR2[Correction & Deletion]
+    AR --> AR3[Data Portability]
+    AR --> AR4[Exercising Rights]
+    
+    %% Data Security Subsections
+    DS --> DS1[Security Measures]
+    DS1 --> DS1A[Encryption]
+    DS1 --> DS1B[Access Controls]
+    DS1 --> DS1C[Monitoring]
+    DS --> DS2[Breach Prevention]
+    
+    %% Accountability Subsections
+    AG --> AG1[DPO Role]
+    AG --> AG2[Audits & Reviews]
+    AG --> AG3[Governance Structure]
+    
+    %% Data Transfers Subsections
+    DT --> DT1[Third-Party Sharing]
+    DT --> DT2[Cross-Border Transfers]
+    DT --> DT3[Documentation]
+    
+    %% Compliance Subsections
+    CE --> CE1[Requirements]
+    CE --> CE2[Enforcement]
+    CE --> CE3[Penalties]
+    
+    %% Training Subsections
+    TA --> TA1[Mandatory Training]
+    TA --> TA2[Ongoing Awareness]
+    TA --> TA3[Documentation]
+    
+    %% Incident Response Subsections
+    IR --> IR1[Response Protocols]
+    IR --> IR2[Notification Procedures]
+    IR --> IR3[Post-Incident Review]
+    
+    %% Contact Information Subsections
+    CI --> CI1[Email]
+    CI --> CI2[Mailing Address]
+    CI --> CI3[Phone]
+    
+    %% Styling
+    classDef mainSection fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subSection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef detail fill:#dfd,stroke:#333,stroke-width:1px
+    
+    class DP,DC,AR,DS,AG,DT,CE,TA,IR,CI mainSection
+    class DC1,DC2,AR1,AR2,AR3,AR4,DS1,DS2,AG1,AG2,AG3,DT1,DT2,DT3,CE1,CE2,CE3,TA1,TA2,TA3,IR1,IR2,IR3,CI1,CI2,CI3 subSection
+    class DC1A,DC1B,DS1A,DS1B,DS1C detail

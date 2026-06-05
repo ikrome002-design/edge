@@ -1,0 +1,42 @@
+stateDiagram-v2
+    [*] --> LoginPage: User accesses login page
+    
+    LoginPage --> EmailInput: Display email input field
+    
+    EmailInput --> EmailValidation: User enters work email
+    note right of EmailInput
+        Single input field for
+        work email address
+    end note
+    
+    EmailValidation --> SendVerification: Email format valid
+    EmailValidation --> EmailInput: Invalid email format
+    
+    SendVerification --> VerificationEmail: System sends secure email
+    note right of SendVerification
+        Generates unique,
+        time-sensitive token
+    end note
+    
+    VerificationEmail --> TokenValidation: User clicks link
+    note right of VerificationEmail
+        Contains encrypted
+        verification link
+    end note
+    
+    TokenValidation --> SessionCreation: Token valid
+    TokenValidation --> LoginPage: Token expired/invalid
+    
+    SessionCreation --> Dashboard: Auto-login successful
+    note right of SessionCreation
+        Establishes secure session
+        Sets role-based access
+    end note
+    
+    Dashboard --> ActiveSession: Session monitoring
+    
+    ActiveSession --> SessionValidation: Continuous validation
+    SessionValidation --> ActiveSession: Session valid
+    SessionValidation --> LoginPage: Session timeout/invalid
+    
+    ActiveSession --> [*]: User logs out

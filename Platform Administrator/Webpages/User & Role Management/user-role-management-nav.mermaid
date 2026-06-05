@@ -1,0 +1,79 @@
+graph TD
+    URM[User & Role Management]
+
+    %% Account Management Section
+    URM --> AM[Account Management]
+    AM --> AC[Account Creation]
+    AC --> AC1[Personal Details Form]
+    AC1 --> AC1A[Name & Contact]
+    AC1 --> AC1B[Work Email]
+    AC1 --> AC1C[Department]
+    AC --> AC2[Role Selection]
+    AC2 --> AC2A[Default Permissions]
+    AC2 --> AC2B[Access Levels]
+    AC --> AC3[Initial Setup]
+    AC3 --> AC3A[Notification Preferences]
+    AC3 --> AC3B[System Access]
+
+    %% Role Assignment Section
+    URM --> RA[Role Assignment]
+    RA --> RD[Role Definition]
+    RD --> RD1[Sales Personnel]
+    RD --> RD2[Partner Users]
+    RD --> RD3[Administrators]
+    RA --> PM[Permission Matrix]
+    PM --> PM1[Feature Access]
+    PM --> PM2[Data Access]
+    PM --> PM3[Integration Access]
+    RA --> RC[Role Customization]
+    RC --> RC1[Custom Permissions]
+    RC --> RC2[Access Levels]
+
+    %% Permission Management Section
+    URM --> PM[Permission Management]
+    PM --> PG[Permission Groups]
+    PG --> PG1[View Permissions]
+    PG --> PG2[Edit Permissions]
+    PG --> PG3[Admin Permissions]
+    PM --> PA[Permission Assignment]
+    PA --> PA1[Bulk Assignment]
+    PA --> PA2[Individual Setup]
+    PM --> PS[Permission Sync]
+    PS --> PS1[Integration Access]
+    PS --> PS2[Data Access]
+
+    %% User Activity Monitoring
+    URM --> UAM[User Activity Monitoring]
+    UAM --> AL[Activity Logs]
+    AL --> AL1[Login History]
+    AL --> AL2[Action Tracking]
+    AL --> AL3[System Changes]
+    UAM --> UM[Usage Metrics]
+    UM --> UM1[Active Sessions]
+    UM --> UM2[Feature Usage]
+    UM --> UM3[Access Patterns]
+    UAM --> AR[Audit Reports]
+    AR --> AR1[Compliance Reports]
+    AR --> AR2[Activity Summary]
+    AR --> AR3[Security Logs]
+
+    %% Security Controls
+    URM --> SC[Security Controls]
+    SC --> MFA[MFA Management]
+    MFA --> MFA1[Setup Options]
+    MFA --> MFA2[Enforcement Rules]
+    SC --> SP[Session Policies]
+    SP --> SP1[Timeout Settings]
+    SP --> SP2[Access Restrictions]
+    SC --> SL[Security Logs]
+    SL --> SL1[Access Attempts]
+    SL --> SL2[Security Events]
+
+    %% Styling
+    classDef section fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subsection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef action fill:#dfd,stroke:#333,stroke-width:1px
+
+    class URM,AM,RA,PM,UAM,SC section
+    class AC,RD,PM,PG,PA,PS,AL,UM,AR,MFA,SP,SL subsection
+    class AC1A,AC1B,AC1C,AC2A,AC2B,AC3A,AC3B,RD1,RD2,RD3,PM1,PM2,PM3,RC1,RC2,PG1,PG2,PG3,PA1,PA2,PS1,PS2,AL1,AL2,AL3,UM1,UM2,UM3,AR1,AR2,AR3,MFA1,MFA2,SP1,SP2,SL1,SL2 action

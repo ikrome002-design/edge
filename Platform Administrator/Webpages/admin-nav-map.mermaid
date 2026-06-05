@@ -1,0 +1,64 @@
+graph TD
+    Admin[Administrator Dashboard]
+
+    %% Main Administrative Sections
+    Admin --> DA[Dashboard & Analytics]
+    Admin --> URM[User & Role Management]
+    Admin --> SC[System Configuration]
+    Admin --> IM[Integration Management]
+    Admin --> SCO[Security & Compliance]
+    Admin --> FReg[Flagged Registrations]
+    Admin --> DSC[Dynamic Sales Capture]
+
+    %% Dashboard & Analytics Subsections
+    DA --> DA1[Key Metrics Display]
+    DA --> DA2[Real-Time Alerts]
+    DA --> DA3[Report Generation]
+    DA --> DA4[System Health Status]
+
+    %% User & Role Management Subsections
+    URM --> URM1[Account Creation]
+    URM --> URM2[Role Assignment]
+    URM --> URM3[Permission Management]
+    URM --> URM4[User Activity Monitoring]
+
+    %% System Configuration Subsections
+    SC --> SC1[Global Settings]
+    SC --> SC2[Security Protocols]
+    SC --> SC3[Data Retention]
+    SC --> SC4[API Controls]
+
+    %% Integration Management Subsections
+    IM --> IM1[Third-Party Connections]
+    IM --> IM2[API Key Management]
+    IM --> IM3[Integration Health]
+    IM --> IM4[Custom Integration Setup]
+
+    %% Security & Compliance Subsections
+    SCO --> SCO1[Audit Logs]
+    SCO --> SCO2[MFA Management]
+    SCO --> SCO3[Session Controls]
+    SCO --> SCO4[Compliance Docs]
+
+    %% Flagged Registrations Subsections
+    FReg --> FR1[Review Queue]
+    FReg --> FR2[Verification Process]
+    FR2 --> FR2A[Approve]
+    FR2 --> FR2B[Reject]
+    FR2 --> FR2C[Escalate]
+    FReg --> FR3[Issue Resolution]
+
+    %% Dynamic Sales Capture Subsections
+    DSC --> DSC1[Sale Assignment]
+    DSC --> DSC2[Security Validation]
+    DSC --> DSC3[Fraud Prevention]
+    DSC --> DSC4[Performance Tracking]
+
+    %% Styling
+    classDef section fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subsection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef action fill:#dfd,stroke:#333,stroke-width:1px
+
+    class Admin,DA,URM,SC,IM,SCO,FReg,DSC section
+    class DA1,DA2,DA3,DA4,URM1,URM2,URM3,URM4,SC1,SC2,SC3,SC4,IM1,IM2,IM3,IM4,SCO1,SCO2,SCO3,SCO4,FR1,FR2,FR3,DSC1,DSC2,DSC3,DSC4 subsection
+    class FR2A,FR2B,FR2C action

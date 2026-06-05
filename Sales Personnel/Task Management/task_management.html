@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management - Edge by Citrus</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="task_management.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Dashboard\dashboard.html">
+                <img src="file:///C:/Users/nderu/Documents/Development/Product/Edge%20by%20Citrus/Technical%20Writings/Images/Logo/Logo.png"
+                    alt="Edge by Citrus Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-links">
+
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Lead Management\lead_management.html"
+                class="nav-item">
+                <i class="fas fa-users"></i> Lead Management
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Task Management\task_management.html"
+                class="nav-item">
+                <i class="fas fa-tasks"></i> Task Management
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Sales Reports\sales_reports.html"
+                class="nav-item">
+                <i class="fas fa-chart-line"></i> Sales Reports
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Integrations\integrations.html"
+                class="nav-item">
+                <i class="fas fa-plug"></i> Integrations
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Settings\settings.html"
+                class="nav-item">
+                <i class="fas fa-cog"></i> Settings
+            </a>
+            <div class="user-section">
+                <div class="notifications">
+                    <a
+                        href="file:///C:/Users/nderu/Documents/Development/Product/Edge%20by%20Citrus/Webpages/Notifications/notifications.html">
+                        <i class="fas fa-bell" id="notificationsBtn"></i>
+                        <span class="notification-badge">3</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="user-profile">
+                <img src="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Technical Writings/Images/Icons/icons8-profile-picture-48.png"
+                    alt="User Profile">
+                <div class="logout-popup">
+                    <a
+                        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Landing Page/landing_page.html">Log
+                        Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main class="task-management">
+        <!-- Task Overview Section -->
+        <section class="overview">
+            <h1>Task Management</h1>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total Tasks</h3>
+                    <p>28</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Due Today</h3>
+                    <p>5</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Overdue</h3>
+                    <p>2</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Completed Today</h3>
+                    <p>8</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task Controls -->
+        <section class="task-controls">
+            <button id="createTaskBtn" class="primary-btn">
+                <i class="fas fa-plus"></i> Create New Task
+            </button>
+            <div class="filters">
+                <select id="statusFilter">
+                    <option value="">Filter by Status</option>
+                    <option value="pending">Pending</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <select id="priorityFilter">
+                    <option value="">Filter by Priority</option>
+                    <option value="high">High Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="low">Low Priority</option>
+                </select>
+                <select id="sortBy">
+                    <option value="dueDate">Sort by Due Date</option>
+                    <option value="priority">Sort by Priority</option>
+                    <option value="status">Sort by Status</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Task List -->
+        <section class="task-list">
+            <!-- Sample Task 1 -->
+            <div class="task-card high-priority">
+                <div class="task-header">
+                    <h3>Follow up with Tech Solutions Ltd</h3>
+                    <span class="priority-badge">High Priority</span>
+                </div>
+                <div class="task-details">
+                    <p><i class="fas fa-calendar"></i> Due: Feb 18, 2025</p>
+                    <p><i class="fas fa-user"></i> Associated Lead: Alice Johnson</p>
+                    <p><i class="fas fa-info-circle"></i> Status: Pending</p>
+                </div>
+                <div class="task-actions">
+                    <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                    <button class="action-btn complete"><i class="fas fa-check"></i></button>
+                    <button class="action-btn reassign"><i class="fas fa-user-plus"></i></button>
+                </div>
+            </div>
+
+            <!-- Sample Task 2 -->
+            <div class="task-card medium-priority">
+                <div class="task-header">
+                    <h3>Prepare Proposal for DataCorp</h3>
+                    <span class="priority-badge">Medium Priority</span>
+                </div>
+                <div class="task-details">
+                    <p><i class="fas fa-calendar"></i> Due: Feb 20, 2025</p>
+                    <p><i class="fas fa-user"></i> Associated Lead: Bob Smith</p>
+                    <p><i class="fas fa-info-circle"></i> Status: In Progress</p>
+                </div>
+                <div class="task-actions">
+                    <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                    <button class="action-btn complete"><i class="fas fa-check"></i></button>
+                    <button class="action-btn reassign"><i class="fas fa-user-plus"></i></button>
+                </div>
+            </div>
+
+            <!-- Sample Task 3 -->
+            <div class="task-card low-priority">
+                <div class="task-header">
+                    <h3>Update Client Database</h3>
+                    <span class="priority-badge">Low Priority</span>
+                </div>
+                <div class="task-details">
+                    <p><i class="fas fa-calendar"></i> Due: Feb 22, 2025</p>
+                    <p><i class="fas fa-user"></i> Associated Lead: Carol White</p>
+                    <p><i class="fas fa-info-circle"></i> Status: Pending</p>
+                </div>
+                <div class="task-actions">
+                    <button class="action-btn edit"><i class="fas fa-edit"></i></button>
+                    <button class="action-btn complete"><i class="fas fa-check"></i></button>
+                    <button class="action-btn reassign"><i class="fas fa-user-plus"></i></button>
+                </div>
+            </div>
+
+            <!-- Sample Task 4 -->
+            <div class="task-card completed">
+                <div class="task-header">
+                    <h3>Send Welcome Package</h3>
+                    <span class="status-badge">Completed</span>
+                </div>
+                <div class="task-details">
+                    <p><i class="fas fa-calendar"></i> Completed: Feb 16, 2025</p>
+                    <p><i class="fas fa-user"></i> Associated Lead: David Brown</p>
+                    <p><i class="fas fa-info-circle"></i> Status: Completed</p>
+                </div>
+                <div class="task-actions">
+                    <button class="action-btn view"><i class="fas fa-eye"></i></button>
+                    <button class="action-btn reopen"><i class="fas fa-redo"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity Log Section -->
+        <section class="activity-log">
+            <h2>Recent Activity</h2>
+            <div class="log-entries">
+                <div class="log-entry">
+                    <i class="fas fa-check-circle"></i>
+                    <div class="log-content">
+                        <p>Task "Send Welcome Package" marked as complete</p>
+                        <span>2 hours ago</span>
+                    </div>
+                </div>
+                <div class="log-entry">
+                    <i class="fas fa-plus-circle"></i>
+                    <div class="log-content">
+                        <p>New task created: "Follow up with Tech Solutions Ltd"</p>
+                        <span>4 hours ago</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Create/Edit Task Modal -->
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <h2>Create New Task</h2>
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Task Title</label>
+                    <input type="text" id="taskTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDescription">Description</label>
+                    <textarea id="taskDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="associatedLead">Associated Lead</label>
+                    <select id="associatedLead" required>
+                        <option value="">Select Lead</option>
+                        <option value="1">Alice Johnson - Tech Solutions Ltd</option>
+                        <option value="2">Bob Smith - DataCorp</option>
+                        <option value="3">Carol White - Innovation Inc</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dueDate">Due Date</label>
+                        <input type="date" id="dueDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="priority">Priority</label>
+                        <select id="priority" required>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="secondary-btn" id="cancelTaskBtn">Cancel</button>
+                    <button type="submit" class="primary-btn">Save Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- User Profile Popup -->
+    <div id="userPopup" class="popup">
+        <div class="popup-content">
+            <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Icons\icons8-profile-picture-48.png"
+                alt="User Profile">
+            <h3>John Doe</h3>
+            <p>Sales Representative</p>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Landing Page\landing_page.html"
+                class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> Log Out
+            </a>
+        </div>
+    </div>
+
+    <!-- Notifications Popup -->
+    <div id="notificationsPopup" class="popup">
+        <div class="popup-content">
+            <h3>Notifications</h3>
+            <div class="notification-list">
+                <div class="notification urgent">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div class="notification-content">
+                        <p>Task "Follow up with Tech Solutions Ltd" is due in 1 hour</p>
+                        <span>10 minutes ago</span>
+                    </div>
+                </div>
+                <div class="notification">
+                    <i class="fas fa-check-circle"></i>
+                    <div class="notification-content">
+                        <p>Task "Send Welcome Package" was completed</p>
+                        <span>2 hours ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <div class="footer-links">
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Data Policy\data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Privacy Policy\privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Terms of Service\terms_service.html">Terms
+                    of Service</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\FAQ\faq.html">FAQ</a>
+            </div>
+
+            <div class="corporate-info">
+                <a href="https://citruslabs.co.ke/" target="_blank">Corporate Website</a>
+                <p>&copy; 2025 Citrus Labs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

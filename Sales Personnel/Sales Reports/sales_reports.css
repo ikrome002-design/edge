@@ -1,0 +1,529 @@
+/* Edge by Citrus Sales Reports Styles
+   Modern and minimalistic design following brand identity
+   Version: 1.0
+*/
+
+/* CSS Variables */
+:root {
+    /* Brand Colors */
+    --deep-charcoal: #1F1F1F;
+    --citrus-orange: #FF9E1B;
+    --light-gray: #F5F5F5;
+    --white: #FFFFFF;
+    
+    /* Trend Colors */
+    --trend-up: #4CAF50;
+    --trend-down: #f44336;
+    
+    /* Chart Colors */
+    --chart-primary: var(--citrus-orange);
+    --chart-secondary: #2196F3;
+    --chart-tertiary: #9C27B0;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--deep-charcoal);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--white);
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.nav-item {
+    color: var(--deep-charcoal);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-normal);
+}
+
+.nav-item i {
+    font-size: 1.2rem;
+    transition: transform var(--transition-normal);
+}
+
+.nav-item:hover {
+    color: var(--citrus-orange);
+    background-color: var(--light-gray);
+}
+
+.nav-item:hover i {
+    transform: translateY(-2px);
+}
+
+/* User Section */
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.notifications {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--citrus-orange);
+    color: var(--white);
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+}
+
+.user-profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border-color var(--transition-normal);
+}
+
+.user-profile:hover img {
+    border-color: var(--citrus-orange);
+}
+
+.logout-popup {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 120%;
+    background: var(--white);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    min-width: 150px;
+}
+
+.user-profile:hover .logout-popup {
+    display: block;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.logout-popup a {
+    color: var(--deep-charcoal);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    transition: color var(--transition-normal);
+}
+
+.logout-popup a:hover {
+    color: var(--citrus-orange);
+}
+
+/* Sales Reports Content */
+.sales-reports {
+    padding: var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.overview h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Stats Section */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.stat-card {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card h3 {
+    color: var(--deep-charcoal);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.stat-card p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--deep-charcoal);
+    margin-bottom: var(--spacing-xs);
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 0.9rem;
+}
+
+.trend.up {
+    color: var(--trend-up);
+}
+
+.trend.down {
+    color: var(--trend-down);
+}
+
+.trend::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.trend.up::before {
+    content: '\f062';
+}
+
+.trend.down::before {
+    content: '\f063';
+}
+
+/* Report Controls */
+.report-controls {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.filters {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.filters label {
+    font-weight: 500;
+    margin-right: var(--spacing-xs);
+}
+
+.filters select {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid #ddd;
+    border-radius: var(--radius-sm);
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.export-options {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.export-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: none;
+    border-radius: var(--radius-sm);
+    background-color: var(--light-gray);
+    color: var(--deep-charcoal);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.export-btn:hover {
+    background-color: var(--citrus-orange);
+    color: var(--white);
+}
+
+/* Charts Section */
+.charts-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.chart-container {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.chart-container h2 {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.chart-controls {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.view-toggle,
+.metric-toggle {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--light-gray);
+    border-radius: var(--radius-sm);
+    background: none;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.view-toggle.active,
+.metric-toggle.active {
+    background-color: var(--citrus-orange);
+    color: var(--white);
+    border-color: var(--citrus-orange);
+}
+
+/* Commission Section */
+.commission-section {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.commission-section h2 {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.5rem;
+}
+
+.commission-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.commission-card {
+    background: var(--light-gray);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-normal);
+}
+
+.commission-card:hover {
+    transform: translateY(-2px);
+}
+
+.commission-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.commission-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.amount {
+    color: var(--citrus-orange);
+    font-weight: 700;
+}
+
+.commission-details p {
+    color: #666;
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Chart.js Customization */
+canvas {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+/* Footer */
+.footer {
+    background: var(--deep-charcoal);
+    color: var(--white);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.social-icons {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: all var(--transition-normal);
+}
+
+.social-icons a:hover {
+    color: var(--citrus-orange);
+    transform: translateY(-2px);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.footer-links a,
+.corporate-link a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color var(--transition-normal);
+}
+
+.footer-links a:hover,
+.corporate-link a:hover {
+    color: var(--citrus-orange);
+}
+
+.copyright {
+    grid-column: 1/-1;
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .charts-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sales-reports {
+        padding: var(--spacing-sm);
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .report-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    .export-options {
+        justify-content: stretch;
+    }
+    
+    .export-btn {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-card, .chart-container, .commission-card {
+    animation: fadeIn 0.5s ease forwards;
+}

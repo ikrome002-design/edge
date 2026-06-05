@@ -1,0 +1,622 @@
+/* 
+* Lead Management - Edge by Citrus
+* CSS Stylesheet
+* Based on provided brand identity guidelines
+*/
+
+/* ---------- GLOBAL STYLES ---------- */
+/* Global Styles & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Roboto', 'Proxima Nova', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5;
+    color: #1F1F1F;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* Main Container Layout */
+.main-container {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+/* ---------- NAVIGATION BAR ---------- */
+/* Sidebar Navigation Styles */
+.sidebar {
+    width: 250px;
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    z-index: 100;
+}
+
+.logo-container {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.navigation ul {
+    padding: 15px 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-item a i {
+    margin-right: 12px;
+    font-size: 18px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.nav-item a span {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.nav-item:hover a {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+    background-color: #FF9E1B;
+    color: #1F1F1F;
+}
+
+.nav-item.active:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #FFFFFF;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 0 0 60px;
+    /* Adding space for footer */
+    overflow-x: hidden;
+    background-color: #F5F5F5;
+    min-height: 100vh;
+}
+
+/* Top Header Styles */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.notification-icon,
+.settings-icon {
+    margin-right: 25px;
+    position: relative;
+}
+
+.notification-icon i,
+.settings-icon i {
+    font-size: 20px;
+    color: #1F1F1F;
+    transition: color 0.3s ease;
+}
+
+.notification-icon i:hover,
+.settings-icon i:hover {
+    color: #FF9E1B;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #FF9E1B;
+    color: #FFFFFF;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.user-profile:hover {
+    background-color: #F5F5F5;
+}
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-profile span {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.profile-popup {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    z-index: 10;
+    display: none;
+}
+
+.profile-popup.active {
+    display: block;
+}
+
+.profile-popup ul li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-popup ul li a:hover {
+    background-color: #F5F5F5;
+}
+
+.profile-popup ul li a i {
+    margin-right: 10px;
+    color: #1F1F1F;
+    width: 20px;
+    text-align: center;
+}
+
+/* Dashboard Content Styles */
+.dashboard-content {
+    padding: 25px;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+    flex: 1;
+    padding: var(--spacing-xl);
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Overview Section */
+.overview {
+    margin-bottom: var(--spacing-xl);
+}
+
+.overview h1 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.stat-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.stat-card h3 {
+    color: var(--deep-charcoal);
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.stat-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--citrus-orange);
+}
+
+/* Lead List Section */
+.lead-list {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--card-shadow);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.filters {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+select {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid #ddd;
+    background-color: var(--white);
+    font-size: 0.9rem;
+    min-width: 150px;
+}
+
+/* Leads Table */
+.leads-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--light-gray);
+}
+
+th, td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: 600;
+}
+
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 158, 27, 0.05);
+}
+
+.status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status.new {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--new-color);
+}
+
+.status.contacted {
+    background-color: rgba(33, 150, 243, 0.1);
+    color: var(--contacted-color);
+}
+
+.status.in-progress {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: var(--in-progress-color);
+}
+
+.status.closed {
+    background-color: rgba(158, 158, 158, 0.1);
+    color: var(--closed-color);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--citrus-orange);
+    border-radius: 4px;
+}
+
+.actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+/* ---------- MODAL ---------- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-xl);
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--deep-charcoal);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: var(--deep-charcoal);
+    color: var(--white);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.social-media {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-media a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--citrus-orange);
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--citrus-orange);
+}
+
+.corporate-info {
+    text-align: center;
+}
+
+.corporate-info a {
+    color: var(--citrus-orange);
+    margin-bottom: var(--spacing-sm);
+    display: inline-block;
+}
+
+.corporate-info p {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: var(--spacing-md);
+    }
+    
+    .nav-links {
+        gap: var(--spacing-md);
+    }
+    
+    .nav-item {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    main {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filters {
+        width: 100%;
+    }
+    
+    select {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 576px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        padding: var(--spacing-lg);
+        margin: 0 var(--spacing-md);
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions button {
+        width: 100%;
+    }
+    
+    table {
+        font-size: 0.85rem;
+    }
+    
+    th, td {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* ---------- JAVASCRIPT RELATED STYLES ---------- */
+/* For JavaScript interactions */
+.show-modal {
+    display: flex;
+}
+
+/* Active state for navigation */
+.nav-item.active {
+    background-color: rgba(255, 158, 27, 0.1);
+    color: var(--citrus-orange);
+}
+
+/* Add animation for notifications */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.notification-badge.has-new {
+    animation: pulse 1.5s infinite;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge by Citrus - Sales Personnel Login</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-16x16.png">
+    <link rel="icon" type="image/x-icon"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon.icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="log_in.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-card">
+            <!-- Logo Section -->
+            <div class="logo-container">
+                <a
+                    href="file:///C:/Users/nderu/Documents/Development/Product/Edge%20by%20Citrus/Landing%20Page/landing_page.html">
+                    <img src="file:///C:/Users/nderu/Documents/Development/Product/Edge%20by%20Citrus/Technical%20Writings/Images/Logo/Logo.png"
+                        alt="Edge by Citrus Logo" class="logo">
+                </a>
+
+            </div>
+
+            <!-- Header Section -->
+            <h1>Log In</h1>
+            <p class="tagline">Empowering Sales. Simplifying Growth.</p>
+
+            <!-- Login Form -->
+            <form class="login-form" id="loginForm"
+                action="C:\Users\nderu\Documents\Development\Product\CarPal\CarPal Auto Repair Shop\Dashboard\dashboard.html"
+                method="POST">
+                <div class="form-group">
+                    <label for="email">Work Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your work email" required>
+                    <span class="error-message" id="emailError">Please enter a valid work email address</span>
+                </div>
+                <button type="submit" class="submit-btn">Send Verification</button>
+            </form>
+
+            <!-- Information Section -->
+            <div class="info-section">
+                <h2>Why Edge by Citrus?</h2>
+                <ul class="features-list">
+                    <li>Real-Time Insights: Stay ahead with up-to-the-minute performance metrics</li>
+                    <li>Robust Security: Enjoy multi-factor authentication and continuous session monitoring</li>
+                    <li>Seamless Integration: Connect effortlessly with leading SaaS platforms</li>
+                    <li>User-Centric Design: Navigate easily through a modern, minimalistic interface</li>
+                </ul>
+            </div>
+
+            <!-- Footer -->
+            <p class="footer-text">
+                Edge by Citrus – Where innovation meets simplicity, empowering your sales journey every step of the way.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const emailError = document.getElementById('emailError');
+
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                emailError.style.display = 'block';
+                return;
+            }
+
+            emailError.style.display = 'none';
+
+            // Simulate sending verification email
+            alert('Verification email sent! Please check your inbox.');
+
+            // In a real implementation, this would make an API call to send the verification email
+            // and handle the response accordingly
+        });
+    </script>
+</body>
+
+</html>

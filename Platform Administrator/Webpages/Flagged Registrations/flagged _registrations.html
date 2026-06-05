@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flagged Registrations - Edge by Citrus</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon.icon">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-16x16.png">
+
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="flagged _registrations.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Dashboard & Analytics\dashboard_analytics.html">
+                <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Logo\Logo.png"
+                    alt="Edge by Citrus Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-icons">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Notifications\notifications.html">
+                <i class="fas fa-bell" id="notificationsBtn"></i>
+                <span class="notification-badge">3</span>
+            </a>
+            <img src="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Technical Writings/Images/Icons/icons8-profile-picture-48.png"
+                alt="Profile" id="profile-icon" style="width: 32px; height: 32px; cursor: pointer;">
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dashboard & Analytics/dashboard_analytics.html"
+            class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            Dashboard & Analytics
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/User & Role Management/user.html"
+            class="nav-item">
+            <i class="fas fa-users"></i>
+            User & Role Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/System Configuration/system_configuration.html"
+            class="nav-item">
+            <i class="fas fa-cogs"></i>
+            System Configuration
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Integration Management/integration_management.html"
+            class="nav-item">
+            <i class="fas fa-plug"></i>
+            Integration Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Security & Compliance/security_compliance.html"
+            class="nav-item">
+            <i class="fas fa-shield-alt"></i>
+            Security & Compliance
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Flagged Registrations/flagged _registrations.html"
+            class="nav-item active">
+            <i class="fas fa-flag"></i>
+            Flagged Registrations
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dynamic Sales Capture/dynamic_sales_capture.html"
+            class="nav-item">
+            <i class="fas fa-chart-bar"></i>
+            Dynamic Sales Capture
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Settings/settings.html"
+            class="nav-item">
+            <i class="fas fa-cog"></i>
+            Settings
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1 class="section-title">Flagged Registrations</h1>
+
+        <!-- Overview Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon priority-high">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="stat-value">15</div>
+                <div class="stat-label">High Priority</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon priority-medium">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="stat-value">28</div>
+                <div class="stat-label">Medium Priority</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon priority-low">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="stat-value">42</div>
+                <div class="stat-label">Low Priority</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-value">85%</div>
+                <div class="stat-label">Resolution Rate</div>
+            </div>
+        </div>
+
+        <!-- Review Queue -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-list"></i>
+                Review Queue
+            </h2>
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label>Priority Level</label>
+                    <select class="form-control">
+                        <option>All Priorities</option>
+                        <option>High Priority</option>
+                        <option>Medium Priority</option>
+                        <option>Low Priority</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Flag Type</label>
+                    <select class="form-control">
+                        <option>All Types</option>
+                        <option>Suspicious Activity</option>
+                        <option>Duplicate Detection</option>
+                        <option>Validation Errors</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Status</label>
+                    <select class="form-control">
+                        <option>All Status</option>
+                        <option>New Flags</option>
+                        <option>In Review</option>
+                        <option>Resolved</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>User</th>
+                            <th>Flag Type</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Time</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#FR001</td>
+                            <td>John Doe</td>
+                            <td>Suspicious Activity</td>
+                            <td><span class="status-badge priority-high">High</span></td>
+                            <td><span class="status-badge status-new">New</span></td>
+                            <td>2025-02-18 10:30</td>
+                            <td>
+                                <button class="btn btn-primary" onclick="viewDetails('FR001')">Review</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#FR002</td>
+                            <td>Jane Smith</td>
+                            <td>Duplicate Detection</td>
+                            <td><span class="status-badge priority-medium">Medium</span></td>
+                            <td><span class="status-badge status-review">In Review</span></td>
+                            <td>2025-02-18 09:45</td>
+                            <td>
+                                <button class="btn btn-primary" onclick="viewDetails('FR002')">Review</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Verification Process -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-check-circle"></i>
+                Verification Process
+            </h2>
+            <div class="detail-panel" id="verificationPanel">
+                <div class="form-group">
+                    <label>Registration Data</label>
+                    <div class="table-container">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Full Name</td>
+                                    <td>John Doe</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>john.doe@example.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Registration Date</td>
+                                    <td>2025-02-18</td>
+                                </tr>
+                                <tr>
+                                    <td>IP Address</td>
+                                    <td>192.168.1.100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Security Analysis</label>
+                    <div class="chart-container" id="securityChart">
+                        <!-- Security analysis chart will be rendered here -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Decision</label>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="approveRegistration()">Approve</button>
+                        <button class="btn btn-secondary" onclick="rejectRegistration()">Reject</button>
+                        <button class="btn btn-secondary" onclick="escalateRegistration()">Escalate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Issue Resolution -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-tasks"></i>
+                Issue Resolution
+            </h2>
+            <div class="form-group">
+                <label>Case Assignment</label>
+                <select class="form-control">
+                    <option>Select Team Member</option>
+                    <option>Security Team</option>
+                    <option>Compliance Team</option>
+                    <option>Support Team</option>
+                </select>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Case Created</h4>
+                    <p>Suspicious activity detected in registration</p>
+                    <small>2025-02-18 10:30</small>
+                </div>
+                <div class="timeline-item">
+                    <h4>Initial Review</h4>
+                    <p>Pattern analysis indicates potential duplicate account</p>
+                    <small>2025-02-18 10:45</small>
+                </div>
+                <div class="timeline-item">
+                    <h4>Security Check</h4>
+                    <p>IP address verification in progress</p>
+                    <small>2025-02-18 11:00</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Monitoring -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-chart-line"></i>
+                Performance Monitoring
+            </h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">45m</div>
+                    <div class="stat-label">Avg. Resolution Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">92%</div>
+                    <div class="stat-label">First Response Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">78%</div>
+                    <div class="stat-label">Same-Day Resolution</div>
+                </div>
+            </div>
+            <div class="chart-container" id="performanceChart">
+                <!-- Performance trends chart will be rendered here -->
+            </div>
+            <button class="btn btn-primary" style="margin-top: 1rem;">
+                <i class="fas fa-download"></i> Export Report
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-links">
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Data Policy/data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/FAQ/faq.html">FAQ</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Privacy Policy/privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Terms of Service/terms_of_service.html">Terms
+                    of Service</a>
+            </div>
+            <div class="copyright">
+                © 2025 Citrus Labs. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- User Profile Popup -->
+    <div class="profile-popup" id="profile-popup">
+        <div class="profile-menu">
+            <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Landing Page/landing_page.html"
+                class="nav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                Log Out
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Profile Popup Toggle
+        const profileIcon = document.getElementById('profile-icon');
+        const profilePopup = document.getElementById('profile-popup');
+
+        profileIcon.addEventListener('click', () => {
+            profilePopup.classList.toggle('show');
+        });
+
+        // Close profile popup when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !profilePopup.contains(event.target)) {
+                profilePopup.classList.remove('show');
+            }
+        });
+
+        // Notifications Popup
+        const notificationsIcon = document.getElementById('notifications-icon');
+        notificationsIcon.addEventListener('click', () => {
+            window.location.href = 'C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Notifications/notifications.html';
+        });
+
+        // View Registration Details
+        function viewDetails(id) {
+            const panel = document.getElementById('verificationPanel');
+            panel.classList.add('show');
+            // Load registration details
+            console.log(`Loading details for registration ${id}`);
+        }
+
+        // Registration Decision Actions
+        function approveRegistration() {
+            // Implementation for approving registration
+            alert('Registration approved');
+        }
+
+        function rejectRegistration() {
+            // Implementation for rejecting registration
+            alert('Registration rejected');
+        }
+
+        function escalateRegistration() {
+            // Implementation for escalating registration
+            alert('Registration escalated to senior team');
+        }
+
+        // Initialize Charts
+        function initializeCharts() {
+            // Performance Chart
+            const performanceChart = document.getElementById('performanceChart');
+            if (performanceChart) {
+                // Implementation for performance chart
+            }
+
+            // Security Analysis Chart
+            const securityChart = document.getElementById('securityChart');
+            if (securityChart) {
+                // Implementation for security analysis chart
+            }
+        }
+
+        // Initialize charts when the page loads
+        window.addEventListener('load', initializeCharts);
+    </script>
+</body>
+
+</html>

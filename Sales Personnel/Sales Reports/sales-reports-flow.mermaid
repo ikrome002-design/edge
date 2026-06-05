@@ -1,0 +1,78 @@
+graph TD
+    SalesReport[Sales Reports Page] --> PageAccess[Initial Data Load]
+    SalesReport --> DataViz[Data Visualization]
+    SalesReport --> ExportOpts[Export Options]
+    SalesReport --> Commission[Commission Tracking]
+    SalesReport --> Security[Security & Sync]
+    
+    PageAccess --> LoadIndicator[Loading Indicator]
+    PageAccess --> DataPull[Real-time Data Pull]
+    PageAccess --> MetricsDisplay[Performance Metrics]
+    
+    DataViz --> Charts[Interactive Charts]
+    DataViz --> Filters[Data Filters]
+    DataViz --> Display[Responsive Display]
+    
+    Charts --> SalesTrends[Sales Trends]
+    Charts --> Targets[Target Achievement]
+    Charts --> Performance[Performance Metrics]
+    
+    SalesTrends --> Weekly[Weekly View]
+    SalesTrends --> Monthly[Monthly View]
+    SalesTrends --> DrillDown[Drill-Down Options]
+    
+    Filters --> DateRange[Date Range Filter]
+    Filters --> Categories[Category Filter]
+    Filters --> Region[Region Filter]
+    
+    Display --> Desktop[Desktop View]
+    Display --> Mobile[Mobile View]
+    Display --> Interactive[Interactive Elements]
+    
+    ExportOpts --> Formats[Export Formats]
+    ExportOpts --> Settings[Export Settings]
+    ExportOpts --> Download[Instant Download]
+    
+    Formats --> PDF[PDF Format]
+    Formats --> CSV[CSV Format]
+    
+    Settings --> DataPoints[Select Data Points]
+    Settings --> TimeFrame[Select Time Frame]
+    Settings --> Layout[Layout Options]
+    
+    Commission --> Calculation[Auto Commission Calc]
+    Commission --> Visualization[Visual Indicators]
+    Commission --> History[Historical Data]
+    
+    Calculation --> Rules[Commission Rules]
+    Calculation --> Updates[Real-time Updates]
+    
+    Security --> DataSync[Real-time Data Sync]
+    Security --> SessionValid[Session Validation]
+    Security --> UserFeedback[User Feedback]
+    
+    subgraph Visualization Tools
+        Charts
+        Filters
+        Display
+    end
+    
+    subgraph Export System
+        Formats
+        Settings
+        Download
+    end
+    
+    subgraph Commission Management
+        Calculation
+        Visualization
+        History
+    end
+    
+    style SalesReport fill:#f9f,stroke:#333,stroke-width:2px
+    style Visualization Tools fill:#ffd,stroke:#333,stroke-width:1px
+    style Export System fill:#dff,stroke:#333,stroke-width:1px
+    style Commission Management fill:#ffe,stroke:#333,stroke-width:1px
+    
+    classDef action fill:#e1e1e1,stroke:#666,stroke-width:2px
+    class PDF,CSV,Download action

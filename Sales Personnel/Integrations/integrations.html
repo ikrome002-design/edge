@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrations - Edge by Citrus</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="integrations.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Dashboard\dashboard.html">
+                <img src="file:///C:/Users/nderu/Documents/Development/Product/Edge%20by%20Citrus/Technical%20Writings/Images/Logo/Logo.png"
+                    alt="Edge by Citrus Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-links">
+
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Lead Management\lead_management.html"
+                class="nav-item">
+                <i class="fas fa-users"></i> Lead Management
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Task Management\task_management.html"
+                class="nav-item">
+                <i class="fas fa-tasks"></i> Task Management
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Sales Reports\sales_reports.html"
+                class="nav-item">
+                <i class="fas fa-chart-line"></i> Sales Reports
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Integrations\integrations.html"
+                class="nav-item">
+                <i class="fas fa-plug"></i> Integrations
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Settings\settings.html"
+                class="nav-item">
+                <i class="fas fa-cog"></i> Settings
+            </a>
+
+            <div class="user-section">
+                <div class="notifications">
+                    <a
+                        href="file:///C:/Users/nderu/Documents/Development/Product/Edge%20by%20Citrus/Webpages/Notifications/notifications.html">
+                        <i class="fas fa-bell" id="notificationsBtn"></i>
+                        <span class="notification-badge">3</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="user-profile">
+                <img src="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Technical Writings/Images/Icons/icons8-profile-picture-48.png"
+                    alt="User Profile">
+                <div class="logout-popup">
+                    <a
+                        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Landing Page/landing_page.html">Log
+                        Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="integrations">
+        <!-- Integration Overview Section -->
+        <section class="overview">
+            <h1>Integrations</h1>
+            <div class="quick-actions">
+                <button class="primary-btn" id="newIntegrationBtn">
+                    <i class="fas fa-plus"></i> Add New Integration
+                </button>
+                <button class="secondary-btn" id="refreshStatusBtn">
+                    <i class="fas fa-sync"></i> Refresh Status
+                </button>
+            </div>
+        </section>
+
+        <!-- CRM Integration Section -->
+        <section class="integration-section crm-section">
+            <h2>CRM Integration</h2>
+            <div class="integration-cards">
+                <!-- Sample CRM Integration 1 -->
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Website Images\salesforce.png"
+                            alt="Salesforce">
+                        <div class="status connected">
+                            <i class="fas fa-check-circle"></i> Connected
+                        </div>
+                    </div>
+                    <div class="integration-details">
+                        <h3>Salesforce</h3>
+                        <p>Last synced: 5 minutes ago</p>
+                        <p>Status: Active</p>
+                    </div>
+                    <div class="integration-actions">
+                        <button class="action-btn view"><i class="fas fa-eye"></i> View Logs</button>
+                        <button class="action-btn config"><i class="fas fa-cog"></i> Configure</button>
+                        <button class="action-btn sync"><i class="fas fa-sync"></i> Sync Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Integration Section -->
+        <section class="integration-section payment-section">
+            <h2>Payment Verification</h2>
+            <div class="integration-cards">
+                <!-- Sample Payment Integration 1 -->
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Website Images\mpesa.png"
+                            alt="M-Pesa">
+                        <div class="status connected">
+                            <i class="fas fa-check-circle"></i> Connected
+                        </div>
+                    </div>
+                    <div class="integration-details">
+                        <h3>M-Pesa</h3>
+                        <p>API Status: Active</p>
+                        <p>Last Transaction: 2 minutes ago</p>
+                    </div>
+                    <div class="integration-actions">
+                        <button class="action-btn test"><i class="fas fa-vial"></i> Test</button>
+                        <button class="action-btn logs"><i class="fas fa-list"></i> View Logs</button>
+                        <button class="action-btn keys"><i class="fas fa-key"></i> Update Keys</button>
+                    </div>
+                </div>
+
+                <!-- Sample Payment Integration 2 -->
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Website Images\stripe.png"
+                            alt="Stripe">
+                        <div class="status error">
+                            <i class="fas fa-exclamation-circle"></i> Configuration Required
+                        </div>
+                    </div>
+                    <div class="integration-details">
+                        <h3>Stripe</h3>
+                        <p>API Status: Inactive</p>
+                        <p>Action Required: API Key Update</p>
+                    </div>
+                    <div class="integration-actions">
+                        <button class="action-btn configure"><i class="fas fa-wrench"></i> Configure</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Integration Section -->
+        <section class="integration-section custom-section">
+            <h2>Custom Integrations</h2>
+            <div class="integration-cards">
+                <!-- Sample Custom Integration 1 -->
+                <div class="integration-card">
+                    <div class="integration-header">
+                        <div class="custom-badge">Custom API</div>
+                        <div class="status syncing">
+                            <i class="fas fa-sync fa-spin"></i> Syncing
+                        </div>
+                    </div>
+                    <div class="integration-details">
+                        <h3>Internal ERP System</h3>
+                        <p>Endpoint Status: Active</p>
+                        <p>Last Sync: In Progress</p>
+                    </div>
+                    <div class="integration-actions">
+                        <button class="action-btn view"><i class="fas fa-eye"></i> View Details</button>
+                        <button class="action-btn edit"><i class="fas fa-edit"></i> Edit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add New Integration Modal -->
+    <div id="integrationModal" class="modal">
+        <div class="modal-content">
+            <h2>Add New Integration</h2>
+            <form id="integrationForm">
+                <div class="form-group">
+                    <label for="platformType">Platform Type</label>
+                    <select id="platformType" required>
+                        <option value="">Select Platform Type</option>
+                        <option value="crm">CRM System</option>
+                        <option value="payment">Payment Gateway</option>
+                        <option value="custom">Custom Integration</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="platformName">Platform Name</label>
+                    <input type="text" id="platformName" required>
+                </div>
+                <div class="form-group">
+                    <label for="apiKey">API Key</label>
+                    <input type="password" id="apiKey" required>
+                </div>
+                <div class="form-group">
+                    <label for="webhookUrl">Webhook URL (Optional)</label>
+                    <input type="url" id="webhookUrl">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="secondary-btn" id="cancelIntegrationBtn">Cancel</button>
+                    <button type="submit" class="primary-btn">Add Integration</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-links">
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Data Policy\data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Privacy Policy\privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Terms of Service\terms_service.html">Terms
+                    of Service</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\FAQ\faq.html">FAQ</a>
+            </div>
+            <div class="corporate-info">
+                <a href="https://citruslabs.co.ke/" target="_blank">Corporate Website</a>
+                <p>&copy; 2025 Citrus Labs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

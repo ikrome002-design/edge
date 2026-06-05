@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Edge by Citrus</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon.icon">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-16x16.png">
+
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="notifications.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Dashboard & Analytics\dashboard_analytics.html">
+                <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Logo\Logo.png"
+                    alt="Edge by Citrus Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-icons">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Notifications\notifications.html">
+                <i class="fas fa-bell" id="notificationsBtn"></i>
+                <span class="notification-badge">3</span>
+            </a>
+            <img src="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Technical Writings/Images/Icons/icons8-profile-picture-48.png"
+                alt="Profile" id="profile-icon" style="width: 32px; height: 32px; cursor: pointer;">
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Notifications Header -->
+        <div class="notifications-header">
+            <h1 class="notifications-title">Notifications</h1>
+            <div class="notification-actions">
+                <button class="btn btn-primary" onclick="markAllRead()">
+                    <i class="fas fa-check-double"></i> Mark All as Read
+                </button>
+            </div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <div class="filter-group">
+                <label>Category</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="security">Security Alerts</option>
+                    <option value="system">System Issues</option>
+                    <option value="integration">Integration Alerts</option>
+                    <option value="admin">Administrative Alerts</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Priority</label>
+                <select id="priority-filter">
+                    <option value="all">All Priorities</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Time Range</label>
+                <select id="time-filter">
+                    <option value="24h">Last 24 Hours</option>
+                    <option value="7d">Last 7 Days</option>
+                    <option value="30d">Last 30 Days</option>
+                    <option value="all">All Time</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Notifications List -->
+        <div class="notification-list">
+            <!-- System Issue Alert -->
+            <div class="notification-card">
+                <div class="notification-icon icon-system">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-header">
+                        <h3 class="notification-title">System Performance Alert</h3>
+                        <span class="notification-time">15 minutes ago</span>
+                    </div>
+                    <p class="notification-message">High CPU usage detected on integration server</p>
+                    <div class="badge badge-medium">Medium Priority</div>
+                    <div class="notification-actions">
+                        <button class="btn btn-primary" onclick="viewDetails('alert-2')">View Details</button>
+                        <button class="btn btn-secondary" onclick="dismissAlert('alert-2')">Dismiss</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integration Alert -->
+            <div class="notification-card">
+                <div class="notification-icon icon-integration">
+                    <i class="fas fa-plug"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-header">
+                        <h3 class="notification-title">Integration Sync Error</h3>
+                        <span class="notification-time">30 minutes ago</span>
+                    </div>
+                    <p class="notification-message">Data synchronization failed with CRM system</p>
+                    <div class="badge badge-medium">Medium Priority</div>
+                    <div class="notification-actions">
+                        <button class="btn btn-primary" onclick="viewDetails('alert-3')">View Details</button>
+                        <button class="btn btn-secondary" onclick="dismissAlert('alert-3')">Dismiss</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Administrative Alert -->
+            <div class="notification-card">
+                <div class="notification-icon icon-admin">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-header">
+                        <h3 class="notification-title">User Role Update</h3>
+                        <span class="notification-time">1 hour ago</span>
+                    </div>
+                    <p class="notification-message">Administrator privileges granted to John Doe</p>
+                    <div class="badge badge-low">Low Priority</div>
+                    <div class="notification-actions">
+                        <button class="btn btn-primary" onclick="viewDetails('alert-4')">View Details</button>
+                        <button class="btn btn-secondary" onclick="dismissAlert('alert-4')">Dismiss</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div class="loading" id="loading-indicator">
+            <i class="fas fa-spinner fa-spin fa-2x"></i>
+        </div>
+
+        <!-- No Notifications State -->
+        <div class="no-notifications" id="no-notifications">
+            <i class="fas fa-bell-slash fa-3x"></i>
+            <h2>No Notifications</h2>
+            <p>You're all caught up! Check back later for new notifications.</p>
+        </div>
+
+        <!-- Detail Panel -->
+        <div class="detail-panel" id="detail-panel">
+            <div class="notification-header">
+                <h2 class="notification-title" id="detail-title"></h2>
+                <button class="btn btn-secondary" onclick="closeDetails()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="notification-content" id="detail-content"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-links">
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Data Policy/data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/FAQ/faq.html">FAQ</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Privacy Policy/privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Terms of Service/terms_of_service.html">Terms
+                    of Service</a>
+            </div>
+            <div class="copyright">
+                © 2025 Citrus Labs. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- User Profile Popup -->
+    <div class="profile-popup" id="profile-popup">
+        <div class="profile-menu">
+            <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Landing Page/landing_page.html"
+                class="nav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                Log Out
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Profile Popup Toggle
+        const profileIcon = document.getElementById('profile-icon');
+        const profilePopup = document.getElementById('profile-popup');
+
+        profileIcon.addEventListener('click', () => {
+            profilePopup.classList.toggle('show');
+        });
+
+        // Close profile popup when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !profilePopup.contains(event.target)) {
+                profilePopup.classList.remove('show');
+            }
+        });
+
+        // Filter Handlers
+        document.getElementById('category-filter').addEventListener('change', filterNotifications);
+        document.getElementById('priority-filter').addEventListener('change', filterNotifications);
+        document.getElementById('time-filter').addEventListener('change', filterNotifications);
+
+        function filterNotifications() {
+            const category = document.getElementById('category-filter').value;
+            const priority = document.getElementById('priority-filter').value;
+            const timeRange = document.getElementById('time-filter').value;
+
+            // Show loading indicator
+            document.getElementById('loading-indicator').classList.add('show');
+
+            // Simulate API call delay
+            setTimeout(() => {
+                // Implementation for filtering notifications
+                document.getElementById('loading-indicator').classList.remove('show');
+            }, 500);
+        }
+
+        // Notification Detail Handlers
+        function viewDetails(alertId) {
+            const detailPanel = document.getElementById('detail-panel');
+            const detailTitle = document.getElementById('detail-title');
+            const detailContent = document.getElementById('detail-content');
+
+            // Populate details based on alert ID
+            switch (alertId) {
+                case 'alert-1':
+                    detailTitle.textContent = 'Failed Login Attempt Details';
+                    detailContent.innerHTML = `
+                        <p><strong>Time:</strong> February 18, 2025 10:30 AM</p>
+                        <p><strong>IP Address:</strong> 192.168.1.100</p>
+                        <p><strong>Location:</strong> Nairobi, Kenya</p>
+                        <p><strong>Attempts:</strong> 5</p>
+                        <p><strong>Status:</strong> Blocked</p>
+                    `;
+                    break;
+                // Add cases for other alerts
+            }
+
+            detailPanel.classList.add('show');
+        }
+
+        function closeDetails() {
+            document.getElementById('detail-panel').classList.remove('show');
+        }
+
+        function dismissAlert(alertId) {
+            // Implementation for dismissing notification
+            const notification = document.querySelector(`[data-alert-id="${alertId}"]`);
+            if (notification) {
+                notification.remove();
+            }
+
+            // Check if there are any remaining notifications
+            checkEmptyState();
+        }
+
+        function markAllRead() {
+            // Implementation for marking all notifications as read
+            const notifications = document.querySelectorAll('.notification-card');
+            notifications.forEach(notification => {
+                notification.style.opacity = '0.6';
+            });
+        }
+
+        function checkEmptyState() {
+            const notifications = document.querySelectorAll('.notification-card');
+            const noNotifications = document.getElementById('no-notifications');
+
+            if (notifications.length === 0) {
+                noNotifications.classList.add('show');
+            } else {
+                noNotifications.classList.remove('show');
+            }
+        }
+
+        // Initialize on page load
+        checkEmptyState();
+    </script>
+</body>
+
+</html>

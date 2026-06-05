@@ -1,0 +1,71 @@
+graph TD
+    Integ[Integrations Page] --> PageAccess[Initial Page Load]
+    Integ --> CRMSync[CRM Integration]
+    Integ --> PaymentVerif[Payment Verification]
+    Integ --> CustomSetup[Custom Integration]
+    Integ --> Security[Security & Sync]
+    
+    PageAccess --> Overview[Integration Overview]
+    PageAccess --> StatusDisplay[Status Indicators]
+    PageAccess --> QuickAccess[Quick Access Buttons]
+    
+    CRMSync --> CRMStatus[Connection Status]
+    CRMSync --> CRMControls[CRM Controls]
+    CRMSync --> DataSync[Data Synchronization]
+    
+    CRMStatus --> Connected[Connected State]
+    CRMStatus --> Syncing[Syncing State]
+    CRMStatus --> Error[Error State]
+    
+    CRMControls --> ConnectCRM[Connect New CRM]
+    CRMControls --> ViewLogs[View Details]
+    CRMControls --> ConfigCRM[Reconfigure]
+    
+    PaymentVerif --> GatewayStatus[Gateway Overview]
+    PaymentVerif --> TransProcess[Transaction Processing]
+    PaymentVerif --> PayControls[Payment Controls]
+    
+    GatewayStatus --> MPesa[M-Pesa Integration]
+    GatewayStatus --> OtherGateways[Other Gateways]
+    
+    PayControls --> TestTrans[Test Transaction]
+    PayControls --> ViewTrans[View Transaction Logs]
+    PayControls --> UpdateKeys[Update API Keys]
+    
+    CustomSetup --> NewInteg[Add Integration]
+    CustomSetup --> ValidateInteg[Validation Process]
+    CustomSetup --> IntegConfig[Configuration]
+    
+    NewInteg --> Platform[Select Platform]
+    NewInteg --> Credentials[Enter Credentials]
+    NewInteg --> Settings[Integration Settings]
+    
+    Security --> TokenAuth[Token Authentication]
+    Security --> ErrorHandling[Error Handling]
+    Security --> UserFeedback[User Feedback]
+    
+    subgraph CRM Management
+        CRMSync
+        CRMStatus
+        CRMControls
+    end
+    
+    subgraph Payment Systems
+        PaymentVerif
+        GatewayStatus
+        PayControls
+    end
+    
+    subgraph Custom Solutions
+        CustomSetup
+        NewInteg
+        IntegConfig
+    end
+    
+    style Integ fill:#f9f,stroke:#333,stroke-width:2px
+    style CRM Management fill:#ffd,stroke:#333,stroke-width:1px
+    style Payment Systems fill:#dff,stroke:#333,stroke-width:1px
+    style Custom Solutions fill:#ffe,stroke:#333,stroke-width:1px
+    
+    classDef action fill:#e1e1e1,stroke:#666,stroke-width:2px
+    class ConnectCRM,TestTrans,Platform action

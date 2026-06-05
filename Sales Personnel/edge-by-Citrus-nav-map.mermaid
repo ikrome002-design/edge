@@ -1,0 +1,52 @@
+graph TD
+    Login[Login Page] --> Auth{Authentication}
+    Auth -->|Email Verification| Dashboard
+    
+    Dashboard --> LeadMgmt[Lead Management]
+    Dashboard --> TaskMgmt[Task Management]
+    Dashboard --> SalesReport[Sales Reports]
+    Dashboard --> Notif[Notifications]
+    Dashboard --> Integ[Integrations]
+    Dashboard --> Settings
+    
+    LeadMgmt --> AddLead[Add New Lead]
+    LeadMgmt --> ViewLeads[View/Edit Leads]
+    LeadMgmt --> LeadProgress[Lead Progress Tracking]
+    
+    TaskMgmt --> CreateTask[Create Task]
+    TaskMgmt --> ViewTasks[View Tasks]
+    TaskMgmt --> TaskAlerts[Due Date Alerts]
+    
+    SalesReport --> Analytics[Real-time Analytics]
+    SalesReport --> Export[Export Reports]
+    SalesReport --> Commission[Commission Tracking]
+    
+    Notif --> FollowUps[Follow-up Alerts]
+    Notif --> SystemAlerts[System Updates]
+    Notif --> RegAlerts[Registration Alerts]
+    
+    Integ --> CRMSync[CRM Integration]
+    Integ --> PayVerify[Payment Verification]
+    Integ --> CustomInteg[Custom Integrations]
+    
+    Settings --> Profile[Profile Settings]
+    Settings --> NotifPref[Notification Preferences]
+    Settings --> SalesCode[Sales Code Management]
+    Settings --> Docs[Documentation]
+    Settings --> Legal[Legal & Policy]
+    
+    subgraph Core Features
+        LeadMgmt
+        TaskMgmt
+        SalesReport
+    end
+    
+    subgraph Support Features
+        Notif
+        Integ
+        Settings
+    end
+    
+    style Dashboard fill:#f9f,stroke:#333,stroke-width:2px
+    style Core Features fill:#ffd,stroke:#333,stroke-width:1px
+    style Support Features fill:#dff,stroke:#333,stroke-width:1px

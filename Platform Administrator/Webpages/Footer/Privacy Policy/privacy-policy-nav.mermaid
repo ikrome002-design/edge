@@ -1,0 +1,80 @@
+graph TD
+    PP[Privacy Policy]
+    
+    %% Main Sections
+    PP --> DC[1. Data Collection and Use]
+    PP --> LB[2. Legal Basis]
+    PP --> AR[3. Administrator Rights]
+    PP --> DS[4. Data Security]
+    PP --> ST[5. Data Sharing and Transfers]
+    PP --> CT[6. Cookies and Tracking]
+    PP --> RP[7. Retention Periods]
+    PP --> CM[8. Consent Management]
+    PP --> CI[9. Contact Information]
+    PP --> PU[10. Policy Updates]
+    
+    %% Data Collection Subsections
+    DC --> DC1[Types of Data]
+    DC1 --> DC1A[Personal Identification]
+    DC1 --> DC1B[Usage Data]
+    DC1 --> DC1C[Operational Data]
+    DC --> DC2[Purpose of Collection]
+    DC2 --> DC2A[Authentication]
+    DC2 --> DC2B[Security & Performance]
+    DC2 --> DC2C[Compliance]
+    DC2 --> DC2D[Communication]
+    
+    %% Legal Basis Subsections
+    LB --> LB1[Consent]
+    LB --> LB2[Contractual Necessity]
+    LB --> LB3[Legal Obligations]
+    LB --> LB4[Legitimate Interests]
+    
+    %% Administrator Rights Subsections
+    AR --> AR1[Right of Access]
+    AR --> AR2[Right to Correction]
+    AR --> AR3[Right to Deletion]
+    AR --> AR4[Right to Data Portability]
+    AR --> AR5[Right to Object]
+    
+    %% Data Security Subsections
+    DS --> DS1[Security Measures]
+    DS1 --> DS1A[Encryption]
+    DS1 --> DS1B[Access Controls]
+    DS1 --> DS1C[Security Audits]
+    DS --> DS2[Incident Management]
+    
+    %% Sharing and Transfers Subsections
+    ST --> ST1[Third-Party Sharing]
+    ST --> ST2[Cross-Border Transfers]
+    
+    %% Cookies Subsections
+    CT --> CT1[Usage in Interface]
+    CT --> CT2[Managing Preferences]
+    
+    %% Retention Subsections
+    RP --> RP1[Data Retention]
+    RP --> RP2[Review and Deletion]
+    
+    %% Consent Management Subsections
+    CM --> CM1[Obtaining Consent]
+    CM --> CM2[Recording and Withdrawal]
+    
+    %% Contact Information Subsections
+    CI --> CI1[Email]
+    CI --> CI2[Mailing Address]
+    CI --> CI3[Phone]
+    
+    %% Policy Updates Subsections
+    PU --> PU1[Notification of Changes]
+    PU --> PU2[Reviewing Policy]
+    PU --> PU3[Effective Date]
+    
+    %% Styling
+    classDef mainSection fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subSection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef detail fill:#dfd,stroke:#333,stroke-width:1px
+    
+    class PP,DC,LB,AR,DS,ST,CT,RP,CM,CI,PU mainSection
+    class DC1,DC2,LB1,LB2,LB3,LB4,AR1,AR2,AR3,AR4,AR5,DS1,DS2,ST1,ST2,CT1,CT2,RP1,RP2,CM1,CM2,CI1,CI2,CI3,PU1,PU2,PU3 subSection
+    class DC1A,DC1B,DC1C,DC2A,DC2B,DC2C,DC2D,DS1A,DS1B,DS1C detail

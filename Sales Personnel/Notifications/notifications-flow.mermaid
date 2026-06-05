@@ -1,0 +1,71 @@
+graph TD
+    Notif[Notifications Page] --> PageAccess[Initial Page Load]
+    Notif --> AutoReminders[Automated Reminders]
+    Notif --> SystemNotifs[System Notifications]
+    Notif --> Management[Notification Management]
+    Notif --> Security[Security & Sync]
+    
+    PageAccess --> LoadIndicator[Loading Indicator]
+    PageAccess --> DataSync[Initial Data Sync]
+    PageAccess --> Display[Notifications Display]
+    
+    AutoReminders --> FollowUps[Follow-up Alerts]
+    AutoReminders --> TaskDeadlines[Task Deadlines]
+    AutoReminders --> CriticalAlerts[Critical Deadlines]
+    
+    FollowUps --> LeadAttention[Lead Attention Required]
+    FollowUps --> MeetingReminders[Meeting Reminders]
+    
+    TaskDeadlines --> Upcoming[Upcoming Tasks]
+    TaskDeadlines --> Overdue[Overdue Tasks]
+    
+    SystemNotifs --> NewLeads[New Lead Alerts]
+    SystemNotifs --> Features[Feature Updates]
+    SystemNotifs --> RegIssues[Registration Issues]
+    
+    Management --> NotifActions[Notification Actions]
+    Management --> FilterSort[Filter & Sort]
+    Management --> DetailView[Detailed View]
+    
+    NotifActions --> MarkRead[Mark as Read]
+    NotifActions --> Dismiss[Dismiss Alert]
+    NotifActions --> BatchActions[Batch Management]
+    
+    FilterSort --> TypeFilter[Filter by Type]
+    FilterSort --> DateFilter[Filter by Date]
+    FilterSort --> UrgencySort[Sort by Urgency]
+    
+    DetailView --> Timeline[Timestamp View]
+    DetailView --> Actions[Required Actions]
+    DetailView --> Instructions[Further Instructions]
+    
+    Security --> LiveConnection[Live Server Connection]
+    Security --> SessionValid[Session Validation]
+    Security --> UserFeedback[Visual Feedback]
+    
+    subgraph Automated Alerts
+        AutoReminders
+        FollowUps
+        TaskDeadlines
+    end
+    
+    subgraph System Updates
+        SystemNotifs
+        NewLeads
+        Features
+        RegIssues
+    end
+    
+    subgraph Management Tools
+        NotifActions
+        FilterSort
+        DetailView
+    end
+    
+    style Notif fill:#f9f,stroke:#333,stroke-width:2px
+    style Automated Alerts fill:#ffd,stroke:#333,stroke-width:1px
+    style System Updates fill:#dff,stroke:#333,stroke-width:1px
+    style Management Tools fill:#ffe,stroke:#333,stroke-width:1px
+    
+    classDef action fill:#e1e1e1,stroke:#666,stroke-width:2px
+    class MarkRead,Dismiss,BatchActions action

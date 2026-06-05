@@ -1,0 +1,84 @@
+graph TD
+    Terms[Terms and Conditions] --> Intro[1. Introduction]
+    Terms --> Acceptance[2. Acceptance of Terms]
+    Terms --> UserResp[3. User Responsibilities]
+    Terms --> Usage[4. Service Usage]
+    Terms --> IP[5. Intellectual Property]
+    Terms --> DataProtect[6. Data Protection]
+    Terms --> Payment[7. Payment and Billing]
+    Terms --> Termination[8. Termination]
+    Terms --> Dispute[9. Dispute Resolution]
+    Terms --> Modifications[10. Modifications]
+    Terms --> Liability[11. Limitation of Liability]
+    Terms --> Law[12. Governing Law]
+    Terms --> Contact[Contact Information]
+
+    Acceptance --> BindingAgreement[Binding Agreement]
+    Acceptance --> ElectronicAccept[Electronic Acceptance]
+
+    UserResp --> AccountSecurity[Account Security]
+    UserResp --> ProhibitedAct[Prohibited Activities]
+    UserResp --> Compliance[Compliance]
+
+    Usage --> AccessUse[Access and Use]
+    Usage --> Limitations[Limitations]
+    Usage --> ServiceMods[Modifications]
+
+    IP --> Ownership[Ownership]
+    IP --> UsageRights[Usage Rights]
+
+    DataProtect --> DataCompliance[Compliance]
+    DataProtect --> DataUsage[Data Usage]
+
+    Payment --> Subscription[Subscription Fees]
+    Payment --> PaymentMethods[Payment Methods]
+    Payment --> BillingCycles[Billing Cycles]
+    Payment --> PriceChanges[Price Changes]
+
+    Termination --> UserTermination[Termination by User]
+    Termination --> CompanyTermination[Termination by Us]
+    Termination --> Appeal[Appeal Process]
+
+    Dispute --> GoverningLaw[Governing Law]
+    Dispute --> AlternativeDR[Alternative Resolution]
+    Dispute --> BindingDecision[Binding Decision]
+
+    Modifications --> RightModify[Right to Modify]
+    Modifications --> NotificationMod[Notification]
+    Modifications --> ContinuedUse[Continued Use]
+
+    Liability --> Disclaimer[Disclaimer of Warranties]
+    Liability --> LimitDamages[Limitation of Damages]
+    Liability --> MaxLiability[Maximum Liability]
+
+    Contact --> Email[legal@citruslabs.co.ke]
+    Contact --> Address[Mailing Address]
+
+    subgraph Core Terms
+        Intro
+        Acceptance
+        UserResp
+        Usage
+    end
+
+    subgraph Legal and Data
+        IP
+        DataProtect
+        Liability
+        Law
+    end
+
+    subgraph Operational
+        Payment
+        Termination
+        Dispute
+        Modifications
+    end
+
+    style Terms fill:#FF9E1B,stroke:#333,stroke-width:2px
+    style Core Terms fill:#F5F5F5,stroke:#333,stroke-width:1px
+    style Legal and Data fill:#E8E8E8,stroke:#333,stroke-width:1px
+    style Operational fill:#F0F0F0,stroke:#333,stroke-width:1px
+
+    classDef section fill:#1F1F1F,color:#FFFFFF,stroke:#333,stroke-width:2px
+    class Intro,Acceptance,UserResp,Usage,IP,DataProtect,Payment,Termination,Dispute,Modifications,Liability,Law,Contact section

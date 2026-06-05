@@ -1,0 +1,67 @@
+graph TD
+    FR[Flagged Registrations]
+
+    %% Review Queue Section
+    FR --> RQ[Review Queue]
+    RQ --> PF[Pending Flags]
+    PF --> PF1[High Priority]
+    PF --> PF2[Medium Priority]
+    PF --> PF3[Low Priority]
+    RQ --> FT[Flag Types]
+    FT --> FT1[Suspicious Activity]
+    FT --> FT2[Duplicate Detection]
+    FT --> FT3[Validation Errors]
+    RQ --> ST[Status Tracking]
+    ST --> ST1[New Flags]
+    ST --> ST2[In Review]
+    ST --> ST3[Resolved]
+
+    %% Verification Process Section
+    FR --> VP[Verification Process]
+    VP --> DR[Detailed Review]
+    DR --> DR1[Registration Data]
+    DR --> DR2[User Activity]
+    DR --> DR3[System Logs]
+    VP --> SA[Security Analysis]
+    SA --> SA1[Pattern Analysis]
+    SA --> SA2[Risk Assessment]
+    SA --> SA3[History Check]
+    VP --> DA[Decision Actions]
+    DA --> DA1[Approve]
+    DA --> DA2[Reject]
+    DA --> DA3[Escalate]
+
+    %% Issue Resolution Section
+    FR --> IR[Issue Resolution]
+    IR --> RM[Resolution Management]
+    RM --> RM1[Case Assignment]
+    RM --> RM2[Priority Setting]
+    RM --> RM3[Timeline Tracking]
+    IR --> CM[Communication]
+    CM --> CM1[Internal Notes]
+    CM --> CM2[Team Notifications]
+    CM --> CM3[User Alerts]
+    IR --> DM[Documentation]
+    DM --> DM1[Resolution Notes]
+    DM --> DM2[Evidence Logs]
+    DM --> DM3[Audit Trail]
+
+    %% Performance Monitoring
+    FR --> PM[Performance Monitoring]
+    PM --> MT[Metrics Tracking]
+    MT --> MT1[Resolution Time]
+    MT --> MT2[Flag Patterns]
+    MT --> MT3[Team Performance]
+    PM --> RP[Reporting]
+    RP --> RP1[Daily Reports]
+    RP --> RP2[Trend Analysis]
+    RP --> RP3[Export Options]
+
+    %% Styling
+    classDef section fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subsection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef action fill:#dfd,stroke:#333,stroke-width:1px
+
+    class FR,RQ,VP,IR,PM section
+    class PF,FT,ST,DR,SA,DA,RM,CM,DM,MT,RP subsection
+    class PF1,PF2,PF3,FT1,FT2,FT3,ST1,ST2,ST3,DR1,DR2,DR3,SA1,SA2,SA3,DA1,DA2,DA3,RM1,RM2,RM3,CM1,CM2,CM3,DM1,DM2,DM3,MT1,MT2,MT3,RP1,RP2,RP3 action

@@ -1,0 +1,71 @@
+graph TD
+    DSC[Dynamic Sales Capture]
+
+    %% Sale Assignment Section
+    DSC --> SA[Sale Assignment]
+    SA --> RP[Registration Processing]
+    RP --> RP1[Code Validation]
+    RP --> RP2[Data Verification]
+    RP --> RP3[Auto-Assignment]
+    SA --> AM[Assignment Management]
+    AM --> AM1[Sales Personnel Links]
+    AM --> AM2[Territory Rules]
+    AM --> AM3[Load Balancing]
+    SA --> AT[Assignment Tracking]
+    AT --> AT1[Real-Time Status]
+    AT --> AT2[History Logs]
+    AT --> AT3[Performance Metrics]
+
+    %% Security Validation Section
+    DSC --> SV[Security Validation]
+    SV --> SC[Session Controls]
+    SC --> SC1[Active Monitoring]
+    SC --> SC2[Timeout Management]
+    SC --> SC3[Multi-Device Control]
+    SV --> AC[Authentication Checks]
+    AC --> AC1[MFA Verification]
+    AC --> AC2[Token Validation]
+    AC --> AC3[Access Rights]
+    SV --> AL[Activity Logging]
+    AL --> AL1[Security Events]
+    AL --> AL2[Login Attempts]
+    AL --> AL3[System Access]
+
+    %% Fraud Prevention Section
+    DSC --> FP[Fraud Prevention]
+    FP --> DV[Data Validation]
+    DV --> DV1[Pattern Analysis]
+    DV --> DV2[Duplicate Check]
+    DV --> DV3[Anomaly Detection]
+    FP --> RT[Real-Time Monitoring]
+    RT --> RT1[Behavior Analysis]
+    RT --> RT2[Risk Assessment]
+    RT --> RT3[Alert Generation]
+    FP --> PR[Prevention Rules]
+    PR --> PR1[Rule Configuration]
+    PR --> PR2[Threshold Settings]
+    PR --> PR3[Block Actions]
+
+    %% Performance Tracking Section
+    DSC --> PT[Performance Tracking]
+    PT --> SM[Sales Monitoring]
+    SM --> SM1[Volume Tracking]
+    SM --> SM2[Success Rates]
+    SM --> SM3[Conversion Metrics]
+    PT --> RA[Reporting & Analytics]
+    RA --> RA1[Real-Time Reports]
+    RA --> RA2[Trend Analysis]
+    RA --> RA3[Export Options]
+    PT --> KPI[KPI Management]
+    KPI --> KPI1[Goal Setting]
+    KPI --> KPI2[Performance Reviews]
+    KPI --> KPI3[Optimization]
+
+    %% Styling
+    classDef section fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subsection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef action fill:#dfd,stroke:#333,stroke-width:1px
+
+    class DSC,SA,SV,FP,PT section
+    class RP,AM,AT,SC,AC,AL,DV,RT,PR,SM,RA,KPI subsection
+    class RP1,RP2,RP3,AM1,AM2,AM3,AT1,AT2,AT3,SC1,SC2,SC3,AC1,AC2,AC3,AL1,AL2,AL3,DV1,DV2,DV3,RT1,RT2,RT3,PR1,PR2,PR3,SM1,SM2,SM3,RA1,RA2,RA3,KPI1,KPI2,KPI3 action

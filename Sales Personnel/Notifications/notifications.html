@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Edge by Citrus</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="notifications.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Indicator -->
+    <div id="loadingIndicator" class="loading-overlay">
+        <div class="spinner">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </div>
+        <p>Loading notifications...</p>
+    </div>
+
+    <!-- Main Content -->
+    <main class="notifications">
+        <!-- Notification Controls -->
+        <div class="notification-controls">
+            <div class="controls-left">
+                <button class="batch-action" id="markAllRead">
+                    <i class="fas fa-check-double"></i> Mark All as Read
+                </button>
+                <button class="batch-action" id="clearAll">
+                    <i class="fas fa-trash"></i> Clear All
+                </button>
+            </div>
+            <div class="controls-right">
+                <div class="filter-group">
+                    <select id="typeFilter">
+                        <option value="all">All Types</option>
+                        <option value="follow-up">Follow-ups</option>
+                        <option value="task">Tasks</option>
+                        <option value="system">System</option>
+                    </select>
+                    <select id="dateFilter">
+                        <option value="all">All Time</option>
+                        <option value="today">Today</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                    </select>
+                    <select id="urgencyFilter">
+                        <option value="all">All Priority</option>
+                        <option value="high">High Priority</option>
+                        <option value="medium">Medium Priority</option>
+                        <option value="low">Low Priority</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notifications List -->
+        <div class="notifications-list">
+            <!-- Sample 1: Critical Task Deadline -->
+            <div class="notification-item high-priority unread">
+                <div class="notification-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-header">
+                        <h3>Critical Task Deadline</h3>
+                        <span class="timestamp">10 minutes ago</span>
+                    </div>
+                    <p>Proposal for Tech Solutions Ltd is due in 2 hours.</p>
+                    <div class="notification-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-eye"></i> View Task
+                        </button>
+                        <button class="action-btn mark-read">
+                            <i class="fas fa-check"></i> Mark as Read
+                        </button>
+                        <button class="action-btn dismiss">
+                            <i class="fas fa-times"></i> Dismiss
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sample 2: Follow-up Reminder -->
+            <div class="notification-item medium-priority">
+                <div class="notification-icon">
+                    <i class="fas fa-user-clock"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-header">
+                        <h3>Follow-up Required</h3>
+                        <span class="timestamp">1 hour ago</span>
+                    </div>
+                    <p>Time to follow up with DataCorp about the software demo.</p>
+                    <div class="notification-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-phone"></i> Schedule Call
+                        </button>
+                        <button class="action-btn dismiss">
+                            <i class="fas fa-times"></i> Dismiss
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sample 3: New Lead Alert -->
+            <div class="notification-item medium-priority unread">
+                <div class="notification-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-header">
+                        <h3>New Lead Assigned</h3>
+                        <span class="timestamp">2 hours ago</span>
+                    </div>
+                    <p>Innovation Inc has been assigned to your lead pool.</p>
+                    <div class="notification-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-eye"></i> View Lead
+                        </button>
+                        <button class="action-btn mark-read">
+                            <i class="fas fa-check"></i> Mark as Read
+                        </button>
+                        <button class="action-btn dismiss">
+                            <i class="fas fa-times"></i> Dismiss
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sample 4: System Update -->
+            <div class="notification-item low-priority">
+                <div class="notification-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="notification-content">
+                    <div class="notification-header">
+                        <h3>System Update</h3>
+                        <span class="timestamp">1 day ago</span>
+                    </div>
+                    <p>New features have been added to the Sales Reports module.</p>
+                    <div class="notification-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-book"></i> View Changes
+                        </button>
+                        <button class="action-btn dismiss">
+                            <i class="fas fa-times"></i> Dismiss
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- No Notifications State -->
+        <div id="noNotifications" class="no-notifications hidden">
+            <i class="fas fa-bell-slash"></i>
+            <h2>No Notifications</h2>
+            <p>You're all caught up! New notifications will appear here.</p>
+        </div>
+    </main>
+
+    <!-- Detail View Modal -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Notification Details</h2>
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="detail-content">
+                    <!-- Content will be dynamically populated -->
+                </div>
+                <div class="detail-timeline">
+                    <h3>Timeline</h3>
+                    <div class="timeline-entries">
+                        <!-- Timeline entries will be dynamically populated -->
+                    </div>
+                </div>
+                <div class="detail-actions">
+                    <button class="primary-btn">Take Action</button>
+                    <button class="secondary-btn">Dismiss</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Connection Status -->
+    <div id="connectionStatus" class="connection-status">
+        <i class="fas fa-wifi"></i>
+        <span>Connected</span>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

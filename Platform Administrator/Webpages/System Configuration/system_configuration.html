@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Configuration - Edge by Citrus</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon.icon">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-16x16.png">
+
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="system_configuration.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Dashboard & Analytics\dashboard_analytics.html">
+                <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Logo\Logo.png"
+                    alt="Edge by Citrus Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-icons">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Notifications\notifications.html">
+                <i class="fas fa-bell" id="notificationsBtn"></i>
+                <span class="notification-badge">3</span>
+            </a>
+            <img src="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Technical Writings/Images/Icons/icons8-profile-picture-48.png"
+                alt="Profile" id="profile-icon" style="width: 32px; height: 32px; cursor: pointer;">
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dashboard & Analytics/dashboard_analytics.html"
+            class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            Dashboard & Analytics
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/User & Role Management/user.html"
+            class="nav-item">
+            <i class="fas fa-users"></i>
+            User & Role Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/System Configuration/system_configuration.html"
+            class="nav-item active">
+            <i class="fas fa-cogs"></i>
+            System Configuration
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Integration Management/integration_management.html"
+            class="nav-item">
+            <i class="fas fa-plug"></i>
+            Integration Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Security & Compliance/security_compliance.html"
+            class="nav-item">
+            <i class="fas fa-shield-alt"></i>
+            Security & Compliance
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Flagged Registrations/flagged _registrations.html"
+            class="nav-item">
+            <i class="fas fa-flag"></i>
+            Flagged Registrations
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dynamic Sales Capture/dynamic_sales_capture.html"
+            class="nav-item">
+            <i class="fas fa-chart-bar"></i>
+            Dynamic Sales Capture
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Settings/settings.html"
+            class="nav-item">
+            <i class="fas fa-cog"></i>
+            Settings
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1 class="section-title">System Configuration</h1>
+
+        <!-- Global Settings Card -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-globe"></i>
+                Global Settings
+            </h2>
+            <div class="config-grid">
+                <div class="config-item">
+                    <h4>Session Timeout</h4>
+                    <div class="form-group">
+                        <label>Duration (minutes)</label>
+                        <input type="number" class="form-control" value="30" min="5" max="120">
+                    </div>
+                    <div class="form-group">
+                        <label>Inactivity Warning</label>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="config-item">
+                    <h4>Data Policies</h4>
+                    <div class="form-group">
+                        <label>Retention Period (days)</label>
+                        <input type="number" class="form-control" value="90" min="30" max="365">
+                    </div>
+                    <div class="form-group">
+                        <label>Auto Cleanup</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="config-item">
+                    <h4>Localization</h4>
+                    <div class="form-group">
+                        <label>Time Zone</label>
+                        <select class="form-control">
+                            <option>UTC +03:00 (Nairobi)</option>
+                            <option>UTC +00:00 (London)</option>
+                            <option>UTC -05:00 (New York)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date Format</label>
+                        <select class="form-control">
+                            <option>DD/MM/YYYY</option>
+                            <option>MM/DD/YYYY</option>
+                            <option>YYYY-MM-DD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Protocols Card -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-shield-alt"></i>
+                Security Protocols
+            </h2>
+            <div class="config-grid">
+                <div class="config-item">
+                    <h4>MFA Configuration</h4>
+                    <div class="form-group">
+                        <label>Required for</label>
+                        <select class="form-control">
+                            <option>All Users</option>
+                            <option>Administrators Only</option>
+                            <option>Selected Groups</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Verification Method</label>
+                        <select class="form-control">
+                            <option>Authenticator App</option>
+                            <option>SMS</option>
+                            <option>Email</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="config-item">
+                    <h4>Password Policies</h4>
+                    <div class="form-group">
+                        <label>Minimum Length</label>
+                        <input type="number" class="form-control" value="12" min="8" max="32">
+                    </div>
+                    <div class="form-group">
+                        <label>Expiration (days)</label>
+                        <input type="number" class="form-control" value="90" min="30" max="180">
+                    </div>
+                    <div class="form-group">
+                        <label>Require Special Characters</label>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="config-item">
+                    <h4>Access Security</h4>
+                    <div class="form-group">
+                        <label>IP Whitelist</label>
+                        <textarea class="form-control" placeholder="Enter IP addresses"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Device Verification</label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Retention Card -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-database"></i>
+                Data Retention
+            </h2>
+            <div class="config-grid">
+                <div class="config-item">
+                    <h4>Retention Policies</h4>
+                    <div class="form-group">
+                        <label>Storage Duration (months)</label>
+                        <input type="number" class="form-control" value="24" min="12" max="60">
+                    </div>
+                    <div class="form-group">
+                        <label>Archive Automatically</label>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="config-item">
+                    <h4>Backup Settings</h4>
+                    <div class="form-group">
+                        <label>Backup Frequency</label>
+                        <select class="form-control">
+                            <option>Daily</option>
+                            <option>Weekly</option>
+                            <option>Monthly</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Storage Location</label>
+                        <select class="form-control">
+                            <option>Cloud Storage</option>
+                            <option>Local Server</option>
+                            <option>Hybrid</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="config-item">
+                    <h4>Data Purge</h4>
+                    <div class="form-group">
+                        <label>Purge Schedule</label>
+                        <select class="form-control">
+                            <option>Manual</option>
+                            <option>Automated</option>
+                            <option>Scheduled</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Compliance Check</label>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Controls Card -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-code"></i>
+                API Controls
+            </h2>
+            <div class="config-grid">
+                <div class="config-item">
+                    <h4>Key Management</h4>
+                    <div class="form-group">
+                        <label>Key Generation</label>
+                        <button class="btn">Generate New Key</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Rotation Period (days)</label>
+                        <input type="number" class="form-control" value="90" min="30" max="180">
+                    </div>
+                </div>
+                <div class="config-item">
+                    <h4>Endpoint Configuration</h4>
+                    <div class="form-group">
+                        <label>Rate Limit (requests/min)</label>
+                        <input type="number" class="form-control" value="100" min="10" max="1000">
+                    </div>
+                    <div class="form-group">
+                        <label>Timeout (seconds)</label>
+                        <input type="number" class="form-control" value="30" min="5" max="60">
+                    </div>
+                </div>
+                <div class="config-item">
+                    <h4>API Security</h4>
+                    <div class="form-group">
+                        <label>Authentication Method</label>
+                        <select class="form-control">
+                            <option>OAuth 2.0</option>
+                            <option>API Key</option>
+                            <option>JWT</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>SSL Enforcement</label>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monitoring & Alerts Card -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-chart-line"></i>
+                Monitoring & Alerts
+            </h2>
+            <div class="config-grid">
+                <div class="config-item">
+                    <h4>Performance Monitoring</h4>
+                    <div class="form-group">
+                        <label>Resource Threshold (%)</label>
+                        <input type="number" class="form-control" value="80" min="50" max="95">
+                    </div>
+                    <div class="form-group">
+                        <label>Response Time Alert (ms)</label>
+                        <input type="number" class="form-control" value="500" min="100" max="2000">
+                    </div>
+                </div>
+                <div class="config-item">
+                    <h4>Alert Management</h4>
+                    <div class="form-group">
+                        <label>Alert Recipients</label>
+                        <textarea class="form-control" placeholder="Enter email addresses"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Alert Channels</label>
+                        <select class="form-control" multiple>
+                            <option selected>Email</option>
+                            <option selected>SMS</option>
+                            <option>Slack</option>
+                            <option>Teams</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="config-item">
+                    <h4>System Logging</h4>
+                    <div class="form-group">
+                        <label>Log Level</label>
+                        <select class="form-control">
+                            <option>Error</option>
+                            <option>Warning</option>
+                            <option selected>Info</option>
+                            <option>Debug</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Audit Trail</label>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-links">
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Data Policy/data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/FAQ/faq.html">FAQ</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Privacy Policy/privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Terms of Service/terms_of_service.html">Terms
+                    of Service</a>
+            </div>
+            <div class="copyright">
+                © 2025 Citrus Labs. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- User Profile Popup -->
+    <div class="profile-popup" id="profile-popup">
+        <div class="profile-menu">
+            <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Landing Page/landing_page.html"
+                class="nav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                Log Out
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Profile Popup Toggle
+        const profileIcon = document.getElementById('profile-icon');
+        const profilePopup = document.getElementById('profile-popup');
+
+        profileIcon.addEventListener('click', () => {
+            profilePopup.classList.toggle('show');
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !profilePopup.contains(event.target)) {
+                profilePopup.classList.remove('show');
+            }
+        });
+
+        // Notifications Popup
+        const notificationsIcon = document.getElementById('notifications-icon');
+        notificationsIcon.addEventListener('click', () => {
+            window.location.href = 'C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Notifications/notifications.html';
+        });
+
+        // Save Configuration Changes
+        const saveConfig = () => {
+            // Implementation for saving configuration changes
+            alert('Configuration changes saved successfully!');
+        };
+
+        // Form Validation
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('change', (e) => {
+                if (e.target.type === 'number') {
+                    const value = parseInt(e.target.value);
+                    const min = parseInt(e.target.min);
+                    const max = parseInt(e.target.max);
+
+                    if (value < min) e.target.value = min;
+                    if (value > max) e.target.value = max;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

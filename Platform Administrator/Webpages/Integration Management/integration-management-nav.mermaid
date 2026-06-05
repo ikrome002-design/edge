@@ -1,0 +1,68 @@
+graph TD
+    IM[Integration Management]
+
+    %% Third-Party Connections Section
+    IM --> TPC[Third-Party Connections]
+    TPC --> CRM[CRM Integration]
+    CRM --> CRM1[Connection Status]
+    CRM1 --> CRM1A[Active Connections]
+    CRM1 --> CRM1B[Status Monitoring]
+    CRM --> CRM2[Data Sync]
+    CRM2 --> CRM2A[Sync Settings]
+    CRM2 --> CRM2B[Error Handling]
+    CRM --> CRM3[Connection Controls]
+    CRM3 --> CRM3A[Add Connection]
+    CRM3 --> CRM3B[Edit Connection]
+    CRM3 --> CRM3C[Remove Connection]
+
+    %% API Key Management Section
+    IM --> AKM[API Key Management]
+    AKM --> KEY[Key Operations]
+    KEY --> KEY1[Generate Keys]
+    KEY --> KEY2[Revoke Keys]
+    KEY --> KEY3[Rotate Keys]
+    AKM --> SEC[Security Settings]
+    SEC --> SEC1[Access Controls]
+    SEC --> SEC2[Usage Limits]
+    SEC --> SEC3[IP Restrictions]
+    AKM --> LOG[Key Logging]
+    LOG --> LOG1[Usage History]
+    LOG --> LOG2[Access Logs]
+
+    %% Integration Health Section
+    IM --> IH[Integration Health]
+    IH --> MON[Monitoring]
+    MON --> MON1[Performance Metrics]
+    MON --> MON2[Error Rates]
+    MON --> MON3[Status Alerts]
+    IH --> DIAG[Diagnostics]
+    DIAG --> DIAG1[System Checks]
+    DIAG --> DIAG2[Connection Tests]
+    DIAG --> DIAG3[Health Reports]
+    IH --> ALERT[Alert System]
+    ALERT --> ALERT1[Notification Rules]
+    ALERT --> ALERT2[Alert History]
+
+    %% Custom Integration Setup
+    IM --> CIS[Custom Integration Setup]
+    CIS --> CFG[Configuration]
+    CFG --> CFG1[Integration Type]
+    CFG --> CFG2[Authentication]
+    CFG --> CFG3[Data Mapping]
+    CIS --> TEST[Testing Tools]
+    TEST --> TEST1[Connectivity Test]
+    TEST --> TEST2[Data Validation]
+    TEST --> TEST3[Performance Test]
+    CIS --> DOC[Documentation]
+    DOC --> DOC1[Setup Guides]
+    DOC --> DOC2[API References]
+    DOC --> DOC3[Examples]
+
+    %% Styling
+    classDef section fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subsection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef action fill:#dfd,stroke:#333,stroke-width:1px
+
+    class IM,TPC,AKM,IH,CIS section
+    class CRM,KEY,SEC,LOG,MON,DIAG,ALERT,CFG,TEST,DOC subsection
+    class CRM1A,CRM1B,CRM2A,CRM2B,CRM3A,CRM3B,CRM3C,KEY1,KEY2,KEY3,SEC1,SEC2,SEC3,LOG1,LOG2,MON1,MON2,MON3,DIAG1,DIAG2,DIAG3,ALERT1,ALERT2,CFG1,CFG2,CFG3,TEST1,TEST2,TEST3,DOC1,DOC2,DOC3 action

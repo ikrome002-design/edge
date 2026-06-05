@@ -1,0 +1,73 @@
+graph TD
+    LeadMgmt[Lead Management Page] --> InitialView[Initial Page Load]
+    LeadMgmt --> LeadCapture[Lead Capture]
+    LeadMgmt --> ListManagement[Lead List Management]
+    LeadMgmt --> Progress[Progress Tracking]
+    LeadMgmt --> DataSync[Data Synchronization]
+    
+    InitialView --> Overview[Lead Overview Display]
+    InitialView --> Menu[Management Menu]
+    
+    LeadCapture --> AddButton[Add New Lead Button]
+    AddButton --> DynamicForm[Dynamic Entry Form]
+    
+    DynamicForm --> ClientInfo[Client Information]
+    DynamicForm --> ServiceInfo[Service Interests]
+    DynamicForm --> StatusInfo[Current Status]
+    DynamicForm --> Validation[Real-time Validation]
+    
+    ClientInfo --> Name[Name & Contact]
+    ClientInfo --> Business[Business Details]
+    
+    ListManagement --> TableView[Interactive Table]
+    TableView --> SortFilter[Sort & Filter Options]
+    TableView --> Actions[Lead Actions]
+    
+    SortFilter --> DateSort[Sort by Date]
+    SortFilter --> StatusSort[Sort by Status]
+    SortFilter --> NameSort[Sort by Name]
+    
+    Actions --> Edit[Edit Lead]
+    Actions --> Delete[Delete Lead]
+    Actions --> ViewDetails[View Lead Details]
+    
+    Progress --> StatusBars[Progress Bars]
+    StatusBars --> Contacted[Contacted - 33%]
+    StatusBars --> InProgress[In Progress - 66%]
+    StatusBars --> Closed[Closed - 100%]
+    
+    DataSync --> RealTime[Real-time Updates]
+    DataSync --> Feedback[User Feedback]
+    
+    RealTime --> StatusUpdates[Status Updates]
+    RealTime --> DataChanges[Data Changes]
+    
+    Feedback --> Confirmations[Confirmation Messages]
+    Feedback --> Notifications[Action Notifications]
+    
+    subgraph Lead Entry
+        DynamicForm
+        ClientInfo
+        ServiceInfo
+        StatusInfo
+    end
+    
+    subgraph List Management
+        TableView
+        SortFilter
+        Actions
+    end
+    
+    subgraph Progress Monitoring
+        StatusBars
+        RealTime
+        Feedback
+    end
+    
+    style LeadMgmt fill:#f9f,stroke:#333,stroke-width:2px
+    style Lead Entry fill:#ffd,stroke:#333,stroke-width:1px
+    style List Management fill:#dff,stroke:#333,stroke-width:1px
+    style Progress Monitoring fill:#ffe,stroke:#333,stroke-width:1px
+    
+    classDef action fill:#e1e1e1,stroke:#666,stroke-width:2px
+    class AddButton,Edit,Delete,ViewDetails action

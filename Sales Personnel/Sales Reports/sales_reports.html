@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Reports - Edge by Citrus</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Favicon\favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="sales_reports.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Chart.js for data visualization -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Dashboard\dashboard.html">
+                <img src="file:///C:/Users/nderu/Documents/Development/Product/Edge%20by%20Citrus/Technical%20Writings/Images/Logo/Logo.png"
+                    alt="Edge by Citrus Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-links">
+
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Lead Management\lead_management.html"
+                class="nav-item">
+                <i class="fas fa-users"></i> Lead Management
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Task Management\task_management.html"
+                class="nav-item">
+                <i class="fas fa-tasks"></i> Task Management
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Sales Reports\sales_reports.html"
+                class="nav-item">
+                <i class="fas fa-chart-line"></i> Sales Reports
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Integrations\integrations.html"
+                class="nav-item">
+                <i class="fas fa-plug"></i> Integrations
+            </a>
+            <a href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Settings\settings.html"
+                class="nav-item">
+                <i class="fas fa-cog"></i> Settings
+            </a>
+
+            <div class="user-section">
+                <div class="notifications">
+                    <a
+                        href="file:///C:/Users/nderu/Documents/Development/Product/Edge%20by%20Citrus/Webpages/Notifications/notifications.html">
+                        <i class="fas fa-bell" id="notificationsBtn"></i>
+                        <span class="notification-badge">3</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="user-profile">
+                <img src="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Technical Writings/Images/Icons/icons8-profile-picture-48.png"
+                    alt="User Profile">
+                <div class="logout-popup">
+                    <a
+                        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Landing Page/landing_page.html">Log
+                        Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="sales-reports">
+        <!-- Performance Overview Section -->
+        <section class="overview">
+            <h1>Sales Reports</h1>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total Sales</h3>
+                    <p>KES. 2,850,000</p>
+                    <span class="trend up">+15% vs last month</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Commission Earned</h3>
+                    <p>KES. 285,000</p>
+                    <span class="trend up">+12% vs last month</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Conversion Rate</h3>
+                    <p>68%</p>
+                    <span class="trend down">-2% vs last month</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Target Achievement</h3>
+                    <p>85%</p>
+                    <span class="progress-indicator">Monthly Target: KES. 3,500,000</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Report Controls -->
+        <section class="report-controls">
+            <div class="filters">
+                <div class="date-range">
+                    <label for="dateRange">Date Range:</label>
+                    <select id="dateRange">
+                        <option value="this-month">This Month</option>
+                        <option value="last-month">Last Month</option>
+                        <option value="this-quarter">This Quarter</option>
+                        <option value="custom">Custom Range</option>
+                    </select>
+                </div>
+                <div class="category-filter">
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option value="all">All Categories</option>
+                        <option value="product-a">Product A</option>
+                        <option value="product-b">Product B</option>
+                        <option value="service">Services</option>
+                    </select>
+                </div>
+                <div class="region-filter">
+                    <label for="region">Region:</label>
+                    <select id="region">
+                        <option value="all">All Regions</option>
+                        <option value="nairobi">Nairobi</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="kisumu">Kisumu</option>
+                    </select>
+                </div>
+            </div>
+            <div class="export-options">
+                <button class="export-btn" data-format="pdf">
+                    <i class="fas fa-file-pdf"></i> Export PDF
+                </button>
+                <button class="export-btn" data-format="csv">
+                    <i class="fas fa-file-csv"></i> Export CSV
+                </button>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+            <!-- Sales Trends Chart -->
+            <div class="chart-container">
+                <h2>Sales Trends</h2>
+                <div class="chart-controls">
+                    <button class="view-toggle active" data-view="weekly">Weekly</button>
+                    <button class="view-toggle" data-view="monthly">Monthly</button>
+                </div>
+                <canvas id="salesTrendsChart"></canvas>
+            </div>
+
+            <!-- Performance Metrics Chart -->
+            <div class="chart-container">
+                <h2>Performance Metrics</h2>
+                <div class="chart-controls">
+                    <button class="metric-toggle active" data-metric="conversion">Conversion</button>
+                    <button class="metric-toggle" data-metric="revenue">Revenue</button>
+                </div>
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Commission Tracking -->
+        <section class="commission-section">
+            <h2>Commission Tracking</h2>
+            <div class="commission-container">
+                <!-- Sample Commission Item 1 -->
+                <div class="commission-card">
+                    <div class="commission-header">
+                        <h3>January 2025</h3>
+                        <span class="amount">KES. 85,000</span>
+                    </div>
+                    <div class="commission-details">
+                        <p>Sales: KES. 850,000</p>
+                        <p>Commission Rate: 10%</p>
+                        <p>Status: Paid</p>
+                    </div>
+                </div>
+
+                <!-- Sample Commission Item 2 -->
+                <div class="commission-card">
+                    <div class="commission-header">
+                        <h3>December 2024</h3>
+                        <span class="amount">KES. 92,000</span>
+                    </div>
+                    <div class="commission-details">
+                        <p>Sales: KES. 920,000</p>
+                        <p>Commission Rate: 10%</p>
+                        <p>Status: Paid</p>
+                    </div>
+                </div>
+
+                <!-- Sample Commission Item 3 -->
+                <div class="commission-card">
+                    <div class="commission-header">
+                        <h3>November 2024</h3>
+                        <span class="amount">KES. 78,000</span>
+                    </div>
+                    <div class="commission-details">
+                        <p>Sales: KES. 780,000</p>
+                        <p>Commission Rate: 10%</p>
+                        <p>Status: Paid</p>
+                    </div>
+                </div>
+
+                <!-- Sample Commission Item 4 -->
+                <div class="commission-card">
+                    <div class="commission-header">
+                        <h3>October 2024</h3>
+                        <span class="amount">KES. 88,000</span>
+                    </div>
+                    <div class="commission-details">
+                        <p>Sales: KES. 880,000</p>
+                        <p>Commission Rate: 10%</p>
+                        <p>Status: Paid</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-links">
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Data Policy\data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Privacy Policy\privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\Terms of Service\terms_service.html">Terms
+                    of Service</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Webpages\Footer\FAQ\faq.html">FAQ</a>
+            </div>
+            <div class="corporate-info">
+                <a href="https://citruslabs.co.ke/" target="_blank">Corporate Website</a>
+                <p>&copy; 2025 Citrus Labs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

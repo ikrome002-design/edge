@@ -1,0 +1,50 @@
+graph TD
+    Settings[Settings Page]
+    
+    %% Main Sections
+    Settings --> MyAccount[My Account]
+    Settings --> Documentation[Documentation & Help Center]
+    Settings --> Legal[Legal & Policy Pages]
+    
+    %% My Account Section
+    MyAccount --> Profile[User Profile Management]
+    MyAccount --> Notifications[Notification Preferences]
+    MyAccount --> SalesCode[Sales Code/Link Management]
+    MyAccount --> Security[Security Settings]
+    
+    %% Profile Subsections
+    Profile --> PersonalInfo[Personal Information]
+    Profile --> PasswordChange[Password Management]
+    
+    %% Notification Subsections
+    Notifications --> NotifTypes[Alert Types]
+    NotifTypes --> SystemAlerts[System Updates]
+    NotifTypes --> FollowUpReminders[Follow-up Reminders]
+    NotifTypes --> LeadAlerts[Lead Notifications]
+    
+    %% Sales Code Subsections
+    SalesCode --> ViewCode[View Current Code]
+    SalesCode --> RegenerateCode[Regenerate Code]
+    
+    %% Security Subsections
+    Security --> TwoFactor[Two-Factor Authentication]
+    Security --> SessionMgmt[Session Management]
+    
+    %% Documentation Section
+    Documentation --> Manuals[User Manuals]
+    Documentation --> FAQs[FAQs & Tutorials]
+    Documentation --> KnowledgeBase[Knowledge Base]
+    
+    %% Legal Section
+    Legal --> Terms[Terms of Service]
+    Legal --> Privacy[Privacy Policy]
+    Legal --> Compliance[Compliance Information]
+    
+    %% Styling
+    classDef mainSection fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subSection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef feature fill:#dfd,stroke:#333,stroke-width:1px
+    
+    class Settings,MyAccount,Documentation,Legal mainSection
+    class Profile,Notifications,SalesCode,Security,Manuals,FAQs,KnowledgeBase,Terms,Privacy,Compliance subSection
+    class PersonalInfo,PasswordChange,SystemAlerts,FollowUpReminders,LeadAlerts,ViewCode,RegenerateCode,TwoFactor,SessionMgmt feature

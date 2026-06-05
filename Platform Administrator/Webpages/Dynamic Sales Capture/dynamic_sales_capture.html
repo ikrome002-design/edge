@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Sales Capture - Edge by Citrus</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Favicon\favicon.icon">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Favicon\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Favicon\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Favicon\favicon-16x16.png">
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    <link rel="stylesheet" href="dynamic_sales_capture.css">
+</head>
+
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dashboard & Analytics/dashboard_analytics.html"
+            class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            Dashboard & Analytics
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/User & Role Management/user.html"
+            class="nav-item">
+            <i class="fas fa-users"></i>
+            User & Role Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/System Configuration/system_configuration.html"
+            class="nav-item">
+            <i class="fas fa-cogs"></i>
+            System Configuration
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Integration Management/integration_management.html"
+            class="nav-item">
+            <i class="fas fa-plug"></i>
+            Integration Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Security & Compliance/security_compliance.html"
+            class="nav-item">
+            <i class="fas fa-shield-alt"></i>
+            Security & Compliance
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Flagged Registrations/flagged _registrations.html"
+            class="nav-item">
+            <i class="fas fa-flag"></i>
+            Flagged Registrations
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dynamic Sales Capture/dynamic_sales_capture.html"
+            class="nav-item active">
+            <i class="fas fa-chart-bar"></i>
+            Dynamic Sales Capture
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Settings/settings.html"
+            class="nav-item">
+            <i class="fas fa-cog"></i>
+            Settings
+        </a>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Dynamic Sales Capture</h1>
+        <div class="header-actions">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Notifications\notifications.html">
+                <i class="fas fa-bell" id="notificationsBtn"></i>
+                <span class="notification-badge">3</span>
+            </a>
+            <div class="user-profile">
+                <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Technical Writings\Images\Icons\icons8-profile-picture-48.png"
+                    alt="User Profile" style="width: 32px; height: 32px; border-radius: 50%;">
+                <span>Admin User</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Sales Assignment Section -->
+        <section class="assignment-section">
+            <div class="section-header">
+                <h2 class="section-title">Sale Assignment</h2>
+                <button class="action-button">
+                    <i class="fas fa-plus"></i> New Assignment
+                </button>
+            </div>
+
+            <div class="data-grid-container">
+                <table class="data-grid">
+                    <thead>
+                        <tr>
+                            <th>Registration ID</th>
+                            <th>Date</th>
+                            <th>Sales Personnel</th>
+                            <th>Territory</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#REG-001</td>
+                            <td>2025-02-18</td>
+                            <td>John Doe</td>
+                            <td>Nairobi Central</td>
+                            <td><span class="status-badge status-success">Assigned</span></td>
+                            <td>
+                                <button class="action-button">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#REG-001</td>
+                            <td>2025-02-18</td>
+                            <td>John Doe</td>
+                            <td>Nairobi Central</td>
+                            <td><span class="status-badge status-success">Assigned</span></td>
+                            <td>
+                                <button class="action-button">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#REG-002</td>
+                            <td>2025-02-18</td>
+                            <td>Jane Smith</td>
+                            <td>Nairobi West</td>
+                            <td><span class="status-badge status-warning">Pending</span></td>
+                            <td>
+                                <button class="action-button">View</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#REG-003</td>
+                            <td>2025-02-18</td>
+                            <td>David Wilson</td>
+                            <td>Nairobi East</td>
+                            <td><span class="status-badge status-danger">Failed</span></td>
+                            <td>
+                                <button class="action-button">View</button>
+                            </td>
+                        </tr>
+                        <!-- Additional rows -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Performance Metrics -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <h3>Sale Assignment Performance</h3>
+                <canvas id="assignmentChart"></canvas>
+            </div>
+            <div class="metric-card">
+                <h3>Territory Distribution</h3>
+                <canvas id="territoryChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Security Validation Section -->
+        <section class="assignment-section">
+            <div class="section-header">
+                <h2 class="section-title">Security Validation</h2>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-label">Active Sessions</span>
+                    <div class="metric-value">24</div>
+                    <span class="metric-trend positive">+12% from last hour</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Active Sessions</span>
+                    <div class="metric-value">24</div>
+                    <span class="metric-trend positive">+12% from last hour</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Authentication Success Rate</span>
+                    <div class="metric-value">98.5%</div>
+                    <span class="metric-trend positive">+0.5% from yesterday</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Failed Login Attempts</span>
+                    <div class="metric-value">3</div>
+                    <span class="metric-trend negative">+2 in last hour</span>
+                </div>
+                <!-- Additional metrics -->
+            </div>
+        </section>
+        <!-- Fraud Prevention Section -->
+        <section class="assignment-section">
+            <div class="section-header">
+                <h2 class="section-title">Fraud Prevention</h2>
+                <button class="action-button">
+                    <i class="fas fa-shield-alt"></i> Update Rules
+                </button>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-label">Risk Score</span>
+                    <div class="metric-value">Low</div>
+                    <span class="metric-trend positive">No threats detected</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Suspicious Activities</span>
+                    <div class="metric-value">2</div>
+                    <span class="metric-trend warning">Under investigation</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">Blocked Attempts</span>
+                    <div class="metric-value">5</div>
+                    <span class="metric-trend positive">-20% from yesterday</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Tracking Section -->
+        <section class="assignment-section">
+            <div class="section-header">
+                <h2 class="section-title">Performance Tracking</h2>
+                <button class="action-button">
+                    <i class="fas fa-download"></i> Export Report
+                </button>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Sales Performance</h3>
+                    <canvas id="salesPerformanceChart"></canvas>
+                </div>
+                <div class="metric-card">
+                    <h3>KPI Overview</h3>
+                    <canvas id="kpiChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.instagram.com/@citruske" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/LabsCitrus" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.youtube.com/@citrus-labs" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://linkedin.com/company/citrus-labs" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Footer\Data Policy\data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Footer\FAQ\faq.html">FAQ</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Footer\Privacy Policy\privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Footer\Terms of Service\terms_of_service.html">Terms
+                    of Service</a>
+            </div>
+            <div class="copyright">
+                © 2025 Citrus Labs. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Charts
+            initializeCharts();
+
+            // Setup Event Listeners
+            setupEventListeners();
+
+            // Initialize Real-time Updates
+            initializeRealTimeUpdates();
+        });
+
+        function initializeCharts() {
+            // Assignment Chart
+            const assignmentCtx = document.getElementById('assignmentChart').getContext('2d');
+            new Chart(assignmentCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                    datasets: [{
+                        label: 'Successful Assignments',
+                        data: [65, 75, 82, 78],
+                        borderColor: '#10B981',
+                        tension: 0.4
+                    }, {
+                        label: 'Failed Assignments',
+                        data: [12, 8, 5, 7],
+                        borderColor: '#EF4444',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // Territory Chart
+            const territoryCtx = document.getElementById('territoryChart').getContext('2d');
+            new Chart(territoryCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Nairobi Central', 'Nairobi West', 'Nairobi East'],
+                    datasets: [{
+                        data: [45, 30, 25],
+                        backgroundColor: [
+                            '#10B981',
+                            '#F59E0B',
+                            '#6366F1'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // Sales Performance Chart
+            const salesCtx = document.getElementById('salesPerformanceChart').getContext('2d');
+            new Chart(salesCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+                    datasets: [{
+                        label: 'Sales Volume',
+                        data: [120, 150, 180, 165],
+                        backgroundColor: '#FF9E1B'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // KPI Chart
+            const kpiCtx = document.getElementById('kpiChart').getContext('2d');
+            new Chart(kpiCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Conversion Rate', 'Response Time', 'Customer Satisfaction', 'Assignment Speed', 'Success Rate'],
+                    datasets: [{
+                        label: 'Current Performance',
+                        data: [85, 90, 88, 92, 87],
+                        borderColor: '#FF9E1B',
+                        backgroundColor: 'rgba(255, 158, 27, 0.2)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        function setupEventListeners() {
+            // User Profile Menu Toggle
+            const userProfile = document.querySelector('.user-profile');
+            const notificationBtn = document.getElementById('notificationBtn');
+
+            userProfile.addEventListener('click', function () {
+                // Toggle user menu
+                const userMenu = document.createElement('div');
+                userMenu.className = 'user-menu';
+                userMenu.innerHTML = `
+                    <a href="C:\\Users\\nderu\\Documents\\Development\\Product\\Edge by Citrus\\Platform Administrator\\Landing Page\\landing_page.html">
+                        <i class="fas fa-sign-out-alt"></i> Log Out
+                    </a>
+                `;
+                this.appendChild(userMenu);
+
+                // Remove menu on outside click
+                document.addEventListener('click', function removeMenu(e) {
+                    if (!userProfile.contains(e.target)) {
+                        userMenu.remove();
+                        document.removeEventListener('click', removeMenu);
+                    }
+                });
+            });
+
+            // Notification Button
+            notificationBtn.addEventListener('click', function () {
+                // Show notifications panel
+                // Implementation for notifications panel
+            });
+
+            // Action Buttons
+            document.querySelectorAll('.action-button').forEach(button => {
+                button.addEventListener('click', function () {
+                    // Handle action button clicks
+                    const action = this.textContent.trim();
+                    handleAction(action);
+                });
+            });
+        }
+
+        function initializeRealTimeUpdates() {
+            // Simulated real-time updates
+            setInterval(() => {
+                updateMetrics();
+                updateCharts();
+            }, 30000); // Update every 30 seconds
+        }
+
+        function updateMetrics() {
+            // Update metrics with new data
+            const metrics = document.querySelectorAll('.metric-value');
+            metrics.forEach(metric => {
+                // Simulate metric updates
+            });
+        }
+
+        function updateCharts() {
+            // Update charts with new data
+            // Implementation for chart updates
+        }
+
+        function handleAction(action) {
+            // Handle different actions
+            switch (action) {
+                case 'New Assignment':
+                    // Handle new assignment
+                    break;
+                case 'Update Rules':
+                    // Handle rules update
+                    break;
+                case 'Export Report':
+                    // Handle report export
+                    break;
+                default:
+                    // Handle other actions
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

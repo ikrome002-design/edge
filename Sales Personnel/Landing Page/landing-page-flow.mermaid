@@ -1,0 +1,47 @@
+graph TD
+    Landing[Landing Page] --> Overview[Overview & Value Proposition]
+    Landing --> Features[Interactive Features]
+    Landing --> Actions[Call-to-Action]
+    
+    Overview --> HeroBanner[Dynamic Hero Banner]
+    HeroBanner --> PlatformBenefits[Platform Benefits]
+    HeroBanner --> KeyMetrics[Key Metrics]
+    HeroBanner --> Tagline[Tagline]
+    
+    Features --> Analytics[Real-time Analytics]
+    Features --> AutoSales[Automated Sales Capture]
+    Features --> Integration[Multi-SaaS Integration]
+    Features --> AnimatedIcons[Animated Feature Icons]
+    
+    Actions --> CreateAccount[Create Account Button]
+    Actions --> LearnMore[Learn More Button]
+    
+    CreateAccount --> Registration[Registration Flow]
+    LearnMore --> AboutPage[About/Features Page]
+    
+    subgraph Hero Section
+        HeroBanner
+        PlatformBenefits
+        KeyMetrics
+        Tagline
+    end
+    
+    subgraph Core Features
+        Analytics
+        AutoSales
+        Integration
+        AnimatedIcons
+    end
+    
+    subgraph Action Buttons
+        CreateAccount
+        LearnMore
+    end
+    
+    style Landing fill:#f9f,stroke:#333,stroke-width:2px
+    style Hero Section fill:#ffd,stroke:#333,stroke-width:1px
+    style Core Features fill:#dff,stroke:#333,stroke-width:1px
+    style Action Buttons fill:#ffe,stroke:#333,stroke-width:1px
+    
+    classDef button fill:#e1e1e1,stroke:#666,stroke-width:2px
+    class CreateAccount,LearnMore button

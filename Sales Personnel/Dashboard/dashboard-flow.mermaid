@@ -1,0 +1,66 @@
+graph TD
+    Dashboard[Dashboard] --> DataLoad[Initial Data Load]
+    Dashboard --> Metrics[Overview Metrics]
+    Dashboard --> Analytics[Real-Time Analytics]
+    Dashboard --> Actions[Quick Actions]
+    Dashboard --> Navigation[Navigation Elements]
+    Dashboard --> Security[Security Monitoring]
+    
+    DataLoad --> LoadKPI[Load KPI Data]
+    DataLoad --> LoadCharts[Load Chart Data]
+    DataLoad --> LoadActivities[Load Recent Activities]
+    
+    Metrics --> TotalSales[Total Sales Display]
+    Metrics --> MonthlyTargets[Monthly Targets]
+    Metrics --> RecentActivity[Recent Activities List]
+    
+    Analytics --> SalesTrends[Sales Trends Charts]
+    Analytics --> PerformanceComparison[Performance Comparisons]
+    Analytics --> DrillDown[Interactive Drill-Down]
+    
+    SalesTrends --> Weekly[Weekly Performance]
+    SalesTrends --> Monthly[Monthly Performance]
+    
+    DrillDown --> DetailedMetrics[Detailed Metrics View]
+    DrillDown --> SubReports[Module-Specific Reports]
+    
+    Actions --> AddLead[Add New Lead]
+    Actions --> ViewReports[Access Sales Reports]
+    Actions --> QuickNav[Module Navigation]
+    
+    Navigation --> ResponsiveUI[Responsive Interface]
+    Navigation --> DrillDownNav[Drill-Down Navigation]
+    Navigation --> SessionUpdates[Real-Time Updates]
+    
+    Security --> SessionValidation[Session Validation]
+    Security --> DataAccess[Data Access Control]
+    Security --> AutoRefresh[Auto Data Refresh]
+    
+    subgraph Core Metrics
+        TotalSales
+        MonthlyTargets
+        RecentActivity
+    end
+    
+    subgraph Interactive Features
+        SalesTrends
+        PerformanceComparison
+        DrillDown
+    end
+    
+    subgraph Quick Access
+        AddLead
+        ViewReports
+        QuickNav
+    end
+    
+    style Dashboard fill:#f9f,stroke:#333,stroke-width:2px
+    style Core Metrics fill:#ffd,stroke:#333,stroke-width:1px
+    style Interactive Features fill:#dff,stroke:#333,stroke-width:1px
+    style Quick Access fill:#ffe,stroke:#333,stroke-width:1px
+    
+    classDef metric fill:#e1e1e1,stroke:#666,stroke-width:2px
+    class TotalSales,MonthlyTargets,RecentActivity metric
+    
+    classDef action fill:#f4f4f4,stroke:#666,stroke-width:2px
+    class AddLead,ViewReports,QuickNav action

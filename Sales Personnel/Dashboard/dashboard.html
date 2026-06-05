@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Edge by Citrus</title>
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:\Users\nderu\Documents\Development\Product\Edge\Technical Writings\Images\Favicon\favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:\Users\nderu\Documents\Development\Product\Edge\Technical Writings\Images\Favicon\favicon-32x32.png">
+    <link rel="icon"
+        href="C:\Users\nderu\Documents\Development\Product\Edge\Technical Writings\Images\Favicon\favicon.ico">
+    <link rel="apple-touch-icon"
+        href="C:\Users\nderu\Documents\Development\Product\Edge\Technical Writings\Images\Favicon\apple-touch-icon.png">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Left Sidebar Navigation -->
+        <aside class="sidebar">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge\Edge Platform Administrator 3.0\Dashboard\dashboard.html">
+                    <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\v.0.1\Technical Writings\Images\Logo\Logo2.jpg"
+                        alt="Edge by Citrus Logo" class="logo">
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="navigation">
+                <ul>
+                    <li class="nav-item active">
+                        <a
+                            href="C:\Users\nderu\Documents\Development\Product\Edge\Edge Platform Administrator 3.0\Dashboard\dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="C:\Users\nderu\Documents\Development\Product\Edge\Edge Platform Administrator 3.0\Vehicle Check-In\check_in.html">
+                            <i class="fas fa-funnel-dollar"></i>
+                            <span>Lead Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="C:\Users\nderu\Documents\Development\Product\Edge\Edge Platform Administrator 3.0\Service Hub\service_hub.html">
+                            <i class="fas fa-tasks"></i>
+                            <span>Task Management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="C:\Users\nderu\Documents\Development\Product\Edge\Edge Platform Administrator 3.0\Billings & Payments\billings.html">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Sales Reports</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="C:\Users\nderu\Documents\Development\Product\Edge\Edge Platform Administrator 3.0\Vehicle History\history.html">
+                            <i class="fas fa-plug"></i>
+                            <span>Integrations</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="C:\Users\nderu\Documents\Development\Product\Edge\Edge Platform Administrator 3.0\Inventory\inventory.html">
+                            <i class="fas fa-tools"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <h1>Dashboard</h1>
+
+                <div class="header-right">
+                    <!-- Notifications Icon -->
+                    <div class="notification-icon">
+                        <a
+                            href="C:\Users\nderu\Documents\Development\Product\Edge\Edge Platform Administrator 3.0\Notifications\notifications.html">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </a>
+                    </div>
+
+                    <!-- Settings Icon -->
+                    <div class="settings-icon">
+                        <a
+                            href="C:\Users\nderu\Documents\Development\Product\Edge\Edge Platform Administrator 3.0\Settings\settings.html">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                    </div>
+
+                    <!-- User Profile -->
+                    <div class="user-profile" id="userProfileBtn">
+                        <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\v.1.0\Platform Administrator\Technical Writings\Images\Icons\icons8-profile-picture-48.png"
+                            alt="User Profile" class="profile-img">
+                        <span>Admin User</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <!-- User Profile Popup -->
+                    <div class="profile-popup" id="profilePopup">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-user"></i>
+                                    <span>My Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Edge by Citrus Account Users\Platform Administrator Account\Performance & History\help.html">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>Help or Support</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="C:\Users\nderu\Documents\Development\Product\Edge\Landing Page\Edge Platform Administrator\landing_page.html">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Log Out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Analytics Content -->
+            <div class="dashboard-content">
+                <!-- Key Metrics Section -->
+                <section class="dashboard-section">
+                    <h2>Key Metrics</h2>
+
+                    <!-- Performance Cards Row -->
+                    <div class="metrics-row">
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3>Total Sales</h3>
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="metric-value">KES 1,284,500</div>
+                            <div class="metric-change positive">+14.5% <span>from last month</span></div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3>Monthly Targets</h3>
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="metric-value">78%</div>
+                            <div class="metric-progress">
+                                <div class="progress-bar" style="width: 78%;"></div>
+                            </div>
+                            <div class="metric-info">KES 1M target (KES 780K achieved)</div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3>Revenue Metrics</h3>
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="metric-value">KES 452,800</div>
+                            <div class="metric-change positive">+8.3% <span>from last month</span></div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3>Commission Stats</h3>
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="metric-value">KES 128,450</div>
+                            <div class="metric-info">10% of total sales paid</div>
+                        </div>
+                    </div>
+
+                    <!-- Activity Monitoring Cards Row -->
+                    <div class="metrics-row">
+                        <div class="metric-card activity-card">
+                            <div class="metric-header">
+                                <h3>Recent Activities</h3>
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="activity-timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-icon"><i class="fas fa-car"></i></div>
+                                    <div class="timeline-content">
+                                        <p>Vehicle <b>KCZ 123T</b> checked in by <b>James</b></p>
+                                        <span class="timeline-time">25 minutes ago</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-icon"><i class="fas fa-tools"></i></div>
+                                    <div class="timeline-content">
+                                        <p>Service completed for <b>KDG 678Y</b></p>
+                                        <span class="timeline-time">1 hour ago</span>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-icon"><i class="fas fa-file-invoice"></i></div>
+                                    <div class="timeline-content">
+                                        <p>Payment received for <b>KBZ 445F</b></p>
+                                        <span class="timeline-time">2 hours ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3>User Engagement</h3>
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="metric-value">25 Active Users</div>
+                            <div class="metric-info">Average session: 42 minutes</div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3>Sales Pipeline</h3>
+                                <i class="fas fa-funnel-dollar"></i>
+                            </div>
+                            <div class="pipeline-status">
+                                <div class="pipeline-stage">
+                                    <div class="stage-name">New Leads</div>
+                                    <div class="stage-value">24</div>
+                                </div>
+                                <div class="pipeline-stage">
+                                    <div class="stage-name">In Progress</div>
+                                    <div class="stage-value">18</div>
+                                </div>
+                                <div class="pipeline-stage">
+                                    <div class="stage-name">Closing</div>
+                                    <div class="stage-value">9</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Real-Time Alerts Section -->
+                <section class="dashboard-section">
+                    <h2>Real-Time Alerts</h2>
+
+                    <div class="alerts-container">
+                        <div class="alert-card priority-high">
+                            <div class="alert-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="alert-content">
+                                <h4>Security Alert</h4>
+                                <p>Unusual login attempt detected from IP 192.168.1.15</p>
+                                <span class="alert-time">5 minutes ago</span>
+                            </div>
+                            <div class="alert-actions">
+                                <button class="btn-resolve">Resolve</button>
+                                <button class="btn-view">View Details</button>
+                            </div>
+                        </div>
+
+                        <div class="alert-card priority-medium">
+                            <div class="alert-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="alert-content">
+                                <h4>System Notification</h4>
+                                <p>Database backup completed successfully</p>
+                                <span class="alert-time">30 minutes ago</span>
+                            </div>
+                            <div class="alert-actions">
+                                <button class="btn-resolve">Dismiss</button>
+                                <button class="btn-view">View Log</button>
+                            </div>
+                        </div>
+
+                        <div class="alert-card priority-low">
+                            <div class="alert-icon"><i class="fas fa-sync-alt"></i></div>
+                            <div class="alert-content">
+                                <h4>Integration Status</h4>
+                                <p>Payment gateway integration sync completed</p>
+                                <span class="alert-time">1 hour ago</span>
+                            </div>
+                            <div class="alert-actions">
+                                <button class="btn-resolve">Dismiss</button>
+                                <button class="btn-view">View Report</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Performance Charts & System Health -->
+                <div class="dashboard-row">
+                    <!-- Performance Charts Section -->
+                    <section class="dashboard-section half-width">
+                        <h2>Performance Charts</h2>
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3>Monthly Sales Trend</h3>
+                                <div class="chart-filters">
+                                    <button class="active">Monthly</button>
+                                    <button>Quarterly</button>
+                                    <button>Yearly</button>
+                                </div>
+                            </div>
+                            <div class="chart-placeholder">
+                                <!-- Chart will be rendered by JavaScript -->
+                                <div class="chart-loading">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <p>Chart will display here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- System Health Section -->
+                    <section class="dashboard-section half-width">
+                        <h2>System Health</h2>
+                        <div class="system-health-container">
+                            <div class="health-card">
+                                <div class="health-title">Server Status</div>
+                                <div class="health-status good">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Healthy</span>
+                                </div>
+                                <div class="health-metrics">
+                                    <div class="health-metric">
+                                        <span>Uptime:</span>
+                                        <span>99.98%</span>
+                                    </div>
+                                    <div class="health-metric">
+                                        <span>Response:</span>
+                                        <span>210ms</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="health-card">
+                                <div class="health-title">Database Health</div>
+                                <div class="health-status good">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Healthy</span>
+                                </div>
+                                <div class="health-metrics">
+                                    <div class="health-metric">
+                                        <span>Query Time:</span>
+                                        <span>65ms avg</span>
+                                    </div>
+                                    <div class="health-metric">
+                                        <span>Connections:</span>
+                                        <span>24/100</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="health-card">
+                                <div class="health-title">API Status</div>
+                                <div class="health-status warning">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <span>Minor Issues</span>
+                                </div>
+                                <div class="health-metrics">
+                                    <div class="health-metric">
+                                        <span>Response:</span>
+                                        <span>340ms</span>
+                                    </div>
+                                    <div class="health-metric">
+                                        <span>Error Rate:</span>
+                                        <span>1.2%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="health-card">
+                                <div class="health-title">Resource Usage</div>
+                                <div class="health-status good">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Optimal</span>
+                                </div>
+                                <div class="health-metrics">
+                                    <div class="health-metric">
+                                        <span>CPU:</span>
+                                        <span>32%</span>
+                                    </div>
+                                    <div class="health-metric">
+                                        <span>Memory:</span>
+                                        <span>48%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Report Generation Section -->
+                <section class="dashboard-section">
+                    <h2>Report Generation</h2>
+
+                    <div class="reports-container">
+                        <div class="reports-header">
+                            <div class="reports-tabs">
+                                <button class="tab-btn active">Standard Reports</button>
+                                <button class="tab-btn">Custom Reports</button>
+                                <button class="tab-btn">Scheduled Reports</button>
+                            </div>
+                            <div class="reports-actions">
+                                <button class="btn-create-report">
+                                    <i class="fas fa-plus"></i> Create New Report
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="reports-list">
+                            <div class="report-item">
+                                <div class="report-icon"><i class="fas fa-file-chart-line"></i></div>
+                                <div class="report-info">
+                                    <h4>Monthly Sales Summary</h4>
+                                    <p>Complete breakdown of sales performance</p>
+                                </div>
+                                <div class="report-meta">
+                                    <span class="report-date">Generated: Apr 4, 2025</span>
+                                </div>
+                                <div class="report-actions">
+                                    <button class="btn-download"><i class="fas fa-download"></i> PDF</button>
+                                    <button class="btn-download"><i class="fas fa-download"></i> CSV</button>
+                                    <button class="btn-view"><i class="fas fa-eye"></i> View</button>
+                                </div>
+                            </div>
+
+                            <div class="report-item">
+                                <div class="report-icon"><i class="fas fa-file-user"></i></div>
+                                <div class="report-info">
+                                    <h4>Technician Performance</h4>
+                                    <p>Technician productivity and efficiency</p>
+                                </div>
+                                <div class="report-meta">
+                                    <span class="report-date">Generated: Apr 2, 2025</span>
+                                </div>
+                                <div class="report-actions">
+                                    <button class="btn-download"><i class="fas fa-download"></i> PDF</button>
+                                    <button class="btn-download"><i class="fas fa-download"></i> CSV</button>
+                                    <button class="btn-view"><i class="fas fa-eye"></i> View</button>
+                                </div>
+                            </div>
+
+                            <div class="report-item">
+                                <div class="report-icon"><i class="fas fa-file-shield"></i></div>
+                                <div class="report-info">
+                                    <h4>Security Audit Report</h4>
+                                    <p>Monthly security log review</p>
+                                </div>
+                                <div class="report-meta">
+                                    <span class="report-date">Generated: Apr 1, 2025</span>
+                                </div>
+                                <div class="report-actions">
+                                    <button class="btn-download"><i class="fas fa-download"></i> PDF</button>
+                                    <button class="btn-view"><i class="fas fa-eye"></i> View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <button class="dark-mode-toggle" id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+
+        <div class="footer-center">
+            <div class="social-links">
+                <a href="https://www.instagram.com/@citruske" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/LabsCitrus" target="_blank" aria-label="X">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <div class="footer-copyright">
+                &copy; 2025 Citrus Labs. All Rights Reserved.
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <a href="https://citruslabs.co.ke/" target="_blank" class="corporate-link">
+                Citrus Labs
+            </a>
+        </div>
+    </footer>
+
+    <!-- External JavaScript Link -->
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Edge by Citrus</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon.icon">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-16x16.png">
+
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Dashboard & Analytics\dashboard_analytics.html">
+                <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Logo\Logo.png"
+                    alt="Edge by Citrus Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-icons">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Notifications\notifications.html">
+                <i class="fas fa-bell" id="notificationsBtn"></i>
+                <span class="notification-badge">3</span>
+            </a>
+            <img src="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Technical Writings/Images/Icons/icons8-profile-picture-48.png"
+                alt="Profile" id="profile-icon" style="width: 32px; height: 32px; cursor: pointer;">
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dashboard & Analytics/dashboard_analytics.html"
+            class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            Dashboard & Analytics
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/User & Role Management/user.html"
+            class="nav-item">
+            <i class="fas fa-users"></i>
+            User & Role Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/System Configuration/system_configuration.html"
+            class="nav-item">
+            <i class="fas fa-cogs"></i>
+            System Configuration
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Integration Management/integration_management.html"
+            class="nav-item">
+            <i class="fas fa-plug"></i>
+            Integration Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Security & Compliance/security_compliance.html"
+            class="nav-item">
+            <i class="fas fa-shield-alt"></i>
+            Security & Compliance
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Flagged Registrations/flagged _registrations.html"
+            class="nav-item">
+            <i class="fas fa-flag"></i>
+            Flagged Registrations
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dynamic Sales Capture/dynamic_sales_capture.html"
+            class="nav-item">
+            <i class="fas fa-chart-bar"></i>
+            Dynamic Sales Capture
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Settings/settings.html"
+            class="nav-item active">
+            <i class="fas fa-cog"></i>
+            Settings
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1 class="section-title">Settings</h1>
+
+        <!-- Settings Navigation -->
+        <div class="settings-nav">
+            <div class="settings-nav-item active" data-section="my-account">
+                <i class="fas fa-user"></i> My Account
+            </div>
+            <div class="settings-nav-item" data-section="documentation">
+                <i class="fas fa-book"></i> Documentation
+            </div>
+            <div class="settings-nav-item" data-section="legal">
+                <i class="fas fa-gavel"></i> Legal
+            </div>
+        </div>
+
+        <!-- My Account Section -->
+        <section id="my-account" class="settings-section active">
+            <!-- User Profile Management -->
+            <div class="settings-card">
+                <h2 class="settings-card-title">
+                    <i class="fas fa-user-circle"></i>
+                    Personal Information
+                </h2>
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" value="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" value="john.doe@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-control" value="+254 123 456 789">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+
+            <!-- Password Management -->
+            <div class="settings-card">
+                <h2 class="settings-card-title">
+                    <i class="fas fa-key"></i>
+                    Password Management
+                </h2>
+                <form id="password-form">
+                    <div class="form-group">
+                        <label>Current Password</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>New Password</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm New Password</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Password</button>
+                </form>
+            </div>
+
+            <!-- Notification Preferences -->
+            <div class="settings-card">
+                <h2 class="settings-card-title">
+                    <i class="fas fa-bell"></i>
+                    Notification Preferences
+                </h2>
+                <div class="form-group">
+                    <label>System Updates</label>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Follow-up Reminders</label>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Lead Notifications</label>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Sales Code Management -->
+            <div class="settings-card">
+                <h2 class="settings-card-title">
+                    <i class="fas fa-link"></i>
+                    Sales Code Management
+                </h2>
+                <div class="form-group">
+                    <label>Current Sales Code</label>
+                    <div style="display: flex; gap: 1rem;">
+                        <input type="text" class="form-control" value="SALES123" readonly>
+                        <button class="btn btn-secondary" onclick="copySalesCode()">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="regenerateSalesCode()">
+                    <i class="fas fa-sync"></i> Regenerate Code
+                </button>
+            </div>
+
+            <!-- Security Settings -->
+            <div class="settings-card">
+                <h2 class="settings-card-title">
+                    <i class="fas fa-shield-alt"></i>
+                    Security Settings
+                </h2>
+                <div class="form-group">
+                    <label>Two-Factor Authentication</label>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <label class="switch">
+                            <input type="checkbox" id="2fa-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <span id="2fa-status" class="badge badge-success">Enabled</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Active Sessions</label>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Device</th>
+                                <th>Location</th>
+                                <th>Last Active</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Chrome - Windows</td>
+                                <td>Nairobi, Kenya</td>
+                                <td>Now</td>
+                                <td>Current Session</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile App - iPhone</td>
+                                <td>Nairobi, Kenya</td>
+                                <td>2 hours ago</td>
+                                <td>
+                                    <button class="btn btn-secondary" onclick="terminateSession('session-id')">
+                                        Terminate
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documentation Section -->
+        <section id="documentation" class="settings-section">
+            <div class="help-grid">
+                <div class="help-card">
+                    <h3>User Manuals</h3>
+                    <ul>
+                        <li><a href="#">Getting Started Guide</a></li>
+                        <li><a href="#">Sales Integration Manual</a></li>
+                        <li><a href="#">Admin Guide</a></li>
+                        <li><a href="#">Security Best Practices</a></li>
+                    </ul>
+                </div>
+                <div class="help-card">
+                    <h3>FAQs & Tutorials</h3>
+                    <ul>
+                        <li><a href="#">Common Questions</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">Troubleshooting Guide</a></li>
+                        <li><a href="#">Feature Updates</a></li>
+                    </ul>
+                </div>
+                <div class="help-card">
+                    <h3>Knowledge Base</h3>
+                    <ul>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Integration Guides</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                        <li><a href="#">Release Notes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Section -->
+        <section id="legal" class="settings-section">
+            <div class="settings-card">
+                <h2 class="settings-card-title">
+                    <i class="fas fa-file-contract"></i>
+                    Legal Documents
+                </h2>
+                <div class="form-group">
+                    <h3>Terms of Service</h3>
+                    <p>Last updated: February 18, 2025</p>
+                    <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Terms of Service/terms_of_service.html"
+                        class="btn btn-secondary">
+                        View Full Terms
+                    </a>
+                </div>
+                <div class="form-group">
+                    <h3>Privacy Policy</h3>
+                    <p>Last updated: February 18, 2025</p>
+                    <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Privacy Policy/privacy_policy.html"
+                        class="btn btn-secondary">
+                        View Privacy Policy
+                    </a>
+                </div>
+                <div class="form-group">
+                    <h3>Compliance Information</h3>
+                    <p>Last updated: February 18, 2025</p>
+                    <button class="btn btn-secondary">View Compliance Details</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-links">
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Data Policy/data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/FAQ/faq.html">FAQ</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Privacy Policy/privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Terms of Service/terms_of_service.html">Terms
+                    of Service</a>
+            </div>
+            <div class="copyright">
+                © 2025 Citrus Labs. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- User Profile Popup -->
+    <div class="profile-popup" id="profile-popup">
+        <div class="profile-menu">
+            <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Landing Page/landing_page.html"
+                class="nav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                Log Out
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Profile Popup Toggle
+        const profileIcon = document.getElementById('profile-icon');
+        const profilePopup = document.getElementById('profile-popup');
+
+        profileIcon.addEventListener('click', () => {
+            profilePopup.classList.toggle('show');
+        });
+
+        // Close profile popup when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !profilePopup.contains(event.target)) {
+                profilePopup.classList.remove('show');
+            }
+        });
+
+        // Notifications Popup
+        const notificationsIcon = document.getElementById('notifications-icon');
+        notificationsIcon.addEventListener('click', () => {
+            window.location.href = 'C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Notifications/notifications.html';
+        });
+
+        // Settings Navigation
+        const settingsNavItems = document.querySelectorAll('.settings-nav-item');
+        const settingsSections = document.querySelectorAll('.settings-section');
+
+        settingsNavItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const sectionId = item.dataset.section;
+
+                // Update navigation items
+                settingsNavItems.forEach(navItem => {
+                    navItem.classList.remove('active');
+                });
+                item.classList.add('active');
+
+                // Update sections
+                settingsSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(sectionId).classList.add('active');
+            });
+        });
+
+        // Sales Code Management
+        function copySalesCode() {
+            // Implementation for copying sales code
+            alert('Sales code copied to clipboard');
+        }
+
+        function regenerateSalesCode() {
+            // Implementation for regenerating sales code
+            alert('New sales code generated');
+        }
+
+        // Session Management
+        function terminateSession(sessionId) {
+            // Implementation for terminating session
+            alert(`Terminating session: ${sessionId}`);
+        }
+
+        // Form Submission Handlers
+        document.getElementById('profile-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Implementation for saving profile changes
+            alert('Profile changes saved');
+        });
+
+        document.getElementById('password-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Implementation for updating password
+            alert('Password updated successfully');
+        });
+
+        // 2FA Toggle
+        const twoFAToggle = document.getElementById('2fa-toggle');
+        const twoFAStatus = document.getElementById('2fa-status');
+
+        twoFAToggle.addEventListener('change', () => {
+            if (twoFAToggle.checked) {
+                twoFAStatus.textContent = 'Enabled';
+                twoFAStatus.classList.remove('badge-warning');
+                twoFAStatus.classList.add('badge-success');
+            } else {
+                twoFAStatus.textContent = 'Disabled';
+                twoFAStatus.classList.remove('badge-success');
+                twoFAStatus.classList.add('badge-warning');
+            }
+        });
+    </script>
+</body>
+
+</html>

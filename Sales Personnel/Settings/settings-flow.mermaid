@@ -1,0 +1,78 @@
+graph TD
+    Settings[Settings Page] --> MyAccount[My Account]
+    Settings --> Documentation[Documentation & Help]
+    Settings --> Legal[Legal & Policy]
+    
+    MyAccount --> Profile[Profile Management]
+    MyAccount --> Security[Security Settings]
+    MyAccount --> NotifPref[Notification Preferences]
+    MyAccount --> SalesCode[Sales Code/Link]
+    
+    Profile --> EditProfile[Edit Profile]
+    Profile --> UpdateInfo[Personal Information]
+    Profile --> Validation[Data Validation]
+    
+    UpdateInfo --> Name[Name/Contact]
+    UpdateInfo --> Email[Email Settings]
+    UpdateInfo --> Phone[Phone Number]
+    
+    Security --> Password[Password Change]
+    Security --> TwoFactor[Two-Factor Auth]
+    Security --> SessionMgmt[Session Management]
+    
+    NotifPref --> AlertTypes[Alert Types]
+    NotifPref --> Channels[Notification Channels]
+    NotifPref --> Toggles[Enable/Disable]
+    
+    SalesCode --> Display[View Code]
+    SalesCode --> Copy[Copy to Clipboard]
+    SalesCode --> Regenerate[Regenerate Code]
+    
+    Documentation --> Manuals[User Manuals]
+    Documentation --> FAQs[FAQs & Tutorials]
+    Documentation --> Search[Knowledge Base]
+    
+    Manuals --> Topics[Browse Topics]
+    Manuals --> Download[PDF Downloads]
+    
+    FAQs --> Questions[View FAQs]
+    FAQs --> Tutorials[Watch Tutorials]
+    FAQs --> Feedback[Resource Feedback]
+    
+    Search --> Query[Search Bar]
+    Search --> Results[Search Results]
+    Search --> Filters[Result Filters]
+    
+    Legal --> Terms[Terms of Service]
+    Legal --> Privacy[Privacy Policy]
+    Legal --> Compliance[Compliance Info]
+    
+    subgraph Account Management
+        MyAccount
+        Profile
+        Security
+        NotifPref
+        SalesCode
+    end
+    
+    subgraph Support Resources
+        Documentation
+        Manuals
+        FAQs
+        Search
+    end
+    
+    subgraph Legal Framework
+        Legal
+        Terms
+        Privacy
+        Compliance
+    end
+    
+    style Settings fill:#f9f,stroke:#333,stroke-width:2px
+    style Account Management fill:#ffd,stroke:#333,stroke-width:1px
+    style Support Resources fill:#dff,stroke:#333,stroke-width:1px
+    style Legal Framework fill:#ffe,stroke:#333,stroke-width:1px
+    
+    classDef action fill:#e1e1e1,stroke:#666,stroke-width:2px
+    class EditProfile,Password,Copy,Regenerate,Download action

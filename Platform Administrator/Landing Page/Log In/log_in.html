@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge by Citrus - Administrator Login</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Favicon\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Favicon\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Favicon\favicon-16x16.png">
+
+    <!-- Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="log_in.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a
+                    href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Landing Page\landing_page.html">
+                    <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Logo\Logo.png"
+                        alt="Edge by Citrus Logo" class="logo">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="login-container">
+            <!-- Initial Login Form -->
+            <div class="login-form-container">
+                <div class="login-header">
+                    <h1>Welcome Back</h1>
+                    <p>Log in to your Edge by Citrus Administrator account</p>
+                </div>
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Work Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your work email" required>
+                        <div class="error" id="emailError">Please enter a valid work email address</div>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        Send Verification Link
+                    </button>
+                </form>
+            </div>
+
+            <!-- Verification Sent State -->
+            <div class="verification-sent" id="verificationSent">
+                <i class="fas fa-check-circle"></i>
+                <h2>Verification Email Sent</h2>
+                <p>We've sent a secure verification link to your email address. Please click the link to access your
+                    account.</p>
+                <p>Didn't receive the email? <a class="resend-link" id="resendLink">Resend verification</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <div class="footer-links">
+                    <a
+                        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Footer\Terms of Service\terms_of_service.html">Terms
+                        of Service</a>
+                    <a
+                        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Footer\Privacy Policy\privacy_policy.html">Privacy
+                        Policy</a>
+                    <a
+                        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Footer\Data Policy\data_policy.html">Data
+                        Policy</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <div class="footer-links">
+                    <a
+                        href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Footer\FAQ\faq.html">FAQ</a>
+                    <a href="https://citruslabs.co.ke/">Corporate Website</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Citrus Labs. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Form Elements
+        const loginForm = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+        const loginContainer = document.querySelector('.login-form-container');
+        const verificationSent = document.getElementById('verificationSent');
+        const resendLink = document.getElementById('resendLink');
+        const toast = document.getElementById('toast');
+
+        // Email validation regex
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        // Show toast notification
+        function showToast(message, duration = 3000) {
+            toast.textContent = message;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, duration);
+        }
+
+        // Handle form submission
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const email = emailInput.value.trim();
+
+            if (!emailRegex.test(email)) {
+                emailError.style.display = 'block';
+                emailInput.style.borderColor = 'var(--error-red)';
+                return;
+            }
+
+            // Hide the login form and show verification sent message
+            loginContainer.style.display = 'none';
+            verificationSent.style.display = 'block';
+
+            // Here you would typically make an API call to send the verification email
+            console.log('Sending verification email to:', email);
+        });
+
+        // Handle email input validation
+        emailInput.addEventListener('input', function () {
+            const email = this.value.trim();
+
+            if (emailRegex.test(email)) {
+                emailError.style.display = 'none';
+                this.style.borderColor = 'var(--light-gray)';
+            }
+        });
+
+        // Handle resend verification
+        resendLink.addEventListener('click', function () {
+            showToast('Verification email resent successfully');
+            // Here you would typically make an API call to resend the verification email
+        });
+
+        // Close toast when clicked
+        toast.addEventListener('click', function () {
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

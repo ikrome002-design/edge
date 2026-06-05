@@ -1,0 +1,70 @@
+graph TD
+    FAQ[Platform Administrator FAQ]
+    
+    %% Main Sections
+    FAQ --> AS[1. Account Setup]
+    FAQ --> UM[2. User Management]
+    FAQ --> DM[3. Data Management]
+    FAQ --> SC[4. Security and Compliance]
+    FAQ --> PC[5. Platform Customization]
+    FAQ --> MR[6. Monitoring and Reporting]
+    FAQ --> TS[7. Technical Support]
+    FAQ --> UM2[8. Updates and Maintenance]
+    FAQ --> TR[9. Training and Resources]
+    FAQ --> FS[10. Feedback and Suggestions]
+    
+    %% Account Setup Questions
+    AS --> AS1[How to create account?]
+    AS --> AS2[How to configure account?]
+    
+    %% User Management Questions
+    UM --> UM1[How to add users?]
+    UM --> UM2[How to edit users?]
+    UM --> UM3[How to remove/change roles?]
+    
+    %% Data Management Questions
+    DM --> DM1[How to import data?]
+    DM --> DM2[How to export data?]
+    DM --> DM3[Available data tools?]
+    
+    %% Security Questions
+    SC --> SC1[Data security steps?]
+    SC --> SC2[Access control management?]
+    SC --> SC3[Compliance measures?]
+    
+    %% Platform Customization Questions
+    PC --> PC1[How to customize settings?]
+    PC --> PC2[Customization limitations?]
+    
+    %% Monitoring Questions
+    MR --> MR1[How to monitor activity?]
+    MR --> MR2[How to generate reports?]
+    
+    %% Technical Support Questions
+    TS --> TS1[Common troubleshooting]
+    TS --> TS2[Support resources]
+    TS --> TS3[Contact support]
+    TS3 --> TS3A[Email]
+    TS3B --> TS3B[Phone]
+    TS3C --> TS3C[Mail]
+    
+    %% Updates Questions
+    UM2 --> UM2A[Managing updates?]
+    UM2 --> UM2B[Maintenance tasks?]
+    
+    %% Training Questions
+    TR --> TR1[Access training materials?]
+    TR --> TR2[Available training sessions?]
+    
+    %% Feedback Questions
+    FS --> FS1[How to provide feedback?]
+    FS --> FS2[How to report issues?]
+    
+    %% Styling
+    classDef mainSection fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subSection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef detail fill:#dfd,stroke:#333,stroke-width:1px
+    
+    class FAQ,AS,UM,DM,SC,PC,MR,TS,UM2,TR,FS mainSection
+    class AS1,AS2,UM1,UM2,UM3,DM1,DM2,DM3,SC1,SC2,SC3,PC1,PC2,MR1,MR2,TS1,TS2,TS3,UM2A,UM2B,TR1,TR2,FS1,FS2 subSection
+    class TS3A,TS3B,TS3C detail

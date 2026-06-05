@@ -1,0 +1,90 @@
+graph TD
+    PrivacyPolicy[Privacy Policy] --> Collection[1. Data Collection and Use]
+    PrivacyPolicy --> LegalBasis[2. Legal Basis for Processing]
+    PrivacyPolicy --> Rights[3. Data Subjects' Rights]
+    PrivacyPolicy --> Security[4. Data Security]
+    PrivacyPolicy --> Sharing[5. Data Sharing and Transfers]
+    PrivacyPolicy --> Cookies[6. Cookies and Tracking]
+    PrivacyPolicy --> Retention[7. Retention Periods]
+    PrivacyPolicy --> Consent[8. User Consent]
+    PrivacyPolicy --> Contact[9. Contact Information]
+    PrivacyPolicy --> Changes[10. Changes to Policy]
+
+    Collection --> TypesData[Types of Data]
+    Collection --> Purposes[Purposes for Collection]
+    
+    TypesData --> Personal[Personal Identification]
+    TypesData --> Usage[Usage Data]
+    TypesData --> Transaction[Transactional Data]
+    
+    Purposes --> AccountMgmt[Account Management]
+    Purposes --> ProcessTrans[Process Transactions]
+    Purposes --> Communication[Communications]
+    Purposes --> Analysis[Service Analysis]
+    Purposes --> Compliance[Legal Compliance]
+
+    LegalBasis --> ConsentBasis[Consent]
+    LegalBasis --> Contractual[Contractual Necessity]
+    LegalBasis --> LegalOb[Legal Obligations]
+    LegalBasis --> Legitimate[Legitimate Interests]
+
+    Rights --> Access[Right of Access]
+    Rights --> Correction[Right to Correction]
+    Rights --> Deletion[Right to Deletion]
+    Rights --> Portability[Right to Portability]
+    Rights --> ObjectRestrict[Right to Object/Restrict]
+
+    Security --> Protection[Protection Measures]
+    Protection --> Encryption[Encryption]
+    Protection --> AccessControl[Access Controls]
+    Protection --> Assessments[Regular Assessments]
+    Protection --> IncidentMgmt[Incident Management]
+
+    Sharing --> ThirdParty[Third-Party Sharing]
+    Sharing --> CrossBorder[Cross-Border Transfers]
+    Sharing --> Legal[Legal Disclosures]
+
+    Cookies --> CookieUsage[Usage]
+    Cookies --> UserControl[User Control]
+
+    Retention --> DataRetention[Data Retention]
+    Retention --> RetentionCriteria[Retention Criteria]
+
+    Consent --> ObtainConsent[Obtaining Consent]
+    Consent --> RecordConsent[Recording Consent]
+    Consent --> Withdrawal[Withdrawal of Consent]
+
+    Contact --> Email[Email]
+    Contact --> Mail[Mailing Address]
+    Contact --> Phone[Phone]
+
+    Changes --> Updates[Policy Updates]
+    Changes --> Notification[Notification Process]
+    Changes --> ContinuedUse[Continued Use]
+
+    subgraph Core Elements
+        Collection
+        LegalBasis
+        Rights
+        Security
+    end
+
+    subgraph Data Management
+        Sharing
+        Cookies
+        Retention
+        Consent
+    end
+
+    subgraph Administrative
+        Contact
+        Changes
+    end
+
+    style PrivacyPolicy fill:#FF9E1B,stroke:#333,stroke-width:2px
+    style Core Elements fill:#F5F5F5,stroke:#333,stroke-width:1px
+    style Data Management fill:#E8E8E8,stroke:#333,stroke-width:1px
+    style Administrative fill:#F0F0F0,stroke:#333,stroke-width:1px
+
+    classDef section fill:#1F1F1F,color:#FFFFFF,stroke:#333,stroke-width:2px
+    class Collection,LegalBasis,Rights,Security,Sharing,Cookies,Retention,Consent,Contact,Changes section

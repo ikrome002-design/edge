@@ -1,0 +1,76 @@
+graph TD
+    DataPolicy[Data Policy] --> Collection[1. Data Collection and Processing]
+    DataPolicy --> Rights[2. Data Subjects' Rights]
+    DataPolicy --> Security[3. Data Security]
+    DataPolicy --> Accountability[4. Accountability and Governance]
+    DataPolicy --> Transfers[5. Data Transfers]
+    DataPolicy --> Compliance[6. Compliance and Enforcement]
+    DataPolicy --> Training[7. Training and Awareness]
+    DataPolicy --> Incident[8. Incident Response]
+    DataPolicy --> Review[9. Policy Review and Amendments]
+    DataPolicy --> Contact[Contact DPO]
+
+    Collection --> LawfulBasis[Lawful Basis]
+    Collection --> Transparency[Transparency and Purpose]
+    Collection --> Minimization[Data Minimization]
+    Collection --> FairProcessing[Fair Processing]
+
+    Rights --> Access[Access and Portability]
+    Rights --> Correction[Correction and Deletion]
+    Rights --> Restriction[Restriction and Objection]
+    Rights --> Exercise[Exercise of Rights]
+
+    Security --> CIA[Confidentiality, Integrity, Availability]
+    Security --> Protection[Protection Against Unauthorized Access]
+    Security --> Prevention[Breach Prevention and Mitigation]
+
+    Accountability --> DPO[Data Protection Officer]
+    Accountability --> Audits[Regular Audits and Reviews]
+    Accountability --> Structure[Governance Structure]
+
+    Transfers --> CrossBorder[Cross-Border Transfers]
+    Transfers --> Documentation[Documentation and Approval]
+
+    Compliance --> Regulatory[Regulatory Compliance]
+    Compliance --> Enforcement[Enforcement Mechanisms]
+    Compliance --> Reporting[Reporting and Remediation]
+
+    Training --> Mandatory[Mandatory Training Programs]
+    Training --> Continuous[Continuous Awareness]
+    Training --> TrainingDocs[Documentation of Training]
+
+    Incident --> Protocol[Breach Response Protocol]
+    Incident --> Notification[Notification Requirements]
+    Incident --> PostIncident[Post-Incident Review]
+
+    Review --> RegularReview[Regular Review]
+    Review --> Communication[Stakeholder Communication]
+
+    Contact --> Email[legal@citruslabs.co.ke]
+
+    subgraph Core Policy Elements
+        Collection
+        Rights
+        Security
+        Accountability
+    end
+
+    subgraph Operational Elements
+        Transfers
+        Compliance
+        Training
+        Incident
+    end
+
+    subgraph Management
+        Review
+        Contact
+    end
+
+    style DataPolicy fill:#FF9E1B,stroke:#333,stroke-width:2px
+    style Core Policy Elements fill:#F5F5F5,stroke:#333,stroke-width:1px
+    style Operational Elements fill:#E8E8E8,stroke:#333,stroke-width:1px
+    style Management fill:#F0F0F0,stroke:#333,stroke-width:1px
+
+    classDef section fill:#1F1F1F,color:#FFFFFF,stroke:#333,stroke-width:2px
+    class Collection,Rights,Security,Accountability,Transfers,Compliance,Training,Incident,Review,Contact section

@@ -1,0 +1,77 @@
+graph TD
+    SC[System Configuration]
+
+    %% Global Settings Section
+    SC --> GS[Global Settings]
+    GS --> ST[Session Timeout]
+    ST --> ST1[Duration Config]
+    ST --> ST2[Inactivity Rules]
+    GS --> DP[Data Policies]
+    DP --> DP1[Retention Rules]
+    DP --> DP2[Cleanup Schedules]
+    GS --> LC[Localization]
+    LC --> LC1[Time Zones]
+    LC --> LC2[Date Formats]
+    LC --> LC3[Language Settings]
+
+    %% Security Protocols Section
+    SC --> SP[Security Protocols]
+    SP --> MFA[MFA Configuration]
+    MFA --> MFA1[Authentication Methods]
+    MFA --> MFA2[Verification Rules]
+    SP --> PP[Password Policies]
+    PP --> PP1[Complexity Rules]
+    PP --> PP2[Expiration Settings]
+    PP --> PP3[Reset Procedures]
+    SP --> AS[Access Security]
+    AS --> AS1[IP Restrictions]
+    AS --> AS2[Device Management]
+    AS --> AS3[Session Controls]
+
+    %% Data Retention Section
+    SC --> DR[Data Retention]
+    DR --> DRP[Retention Policies]
+    DRP --> DRP1[Storage Duration]
+    DRP --> DRP2[Archive Rules]
+    DR --> BAK[Backup Settings]
+    BAK --> BAK1[Schedule Config]
+    BAK --> BAK2[Storage Location]
+    DR --> PUR[Data Purge]
+    PUR --> PUR1[Cleanup Rules]
+    PUR --> PUR2[Compliance Settings]
+
+    %% API Controls Section
+    SC --> API[API Controls]
+    API --> KEY[Key Management]
+    KEY --> KEY1[Generation Rules]
+    KEY --> KEY2[Rotation Policy]
+    KEY --> KEY3[Access Scopes]
+    API --> END[Endpoint Config]
+    END --> END1[URL Management]
+    END --> END2[Rate Limits]
+    END --> END3[Timeout Settings]
+    API --> SEC[API Security]
+    SEC --> SEC1[Authentication]
+    SEC --> SEC2[Encryption]
+    SEC --> SEC3[Monitoring]
+
+    %% Monitoring & Alerts
+    SC --> MA[Monitoring & Alerts]
+    MA --> PM[Performance Monitoring]
+    PM --> PM1[Resource Usage]
+    PM --> PM2[Response Times]
+    MA --> AM[Alert Management]
+    AM --> AM1[Threshold Settings]
+    AM --> AM2[Notification Rules]
+    MA --> LOG[System Logging]
+    LOG --> LOG1[Error Tracking]
+    LOG --> LOG2[Audit Trails]
+
+    %% Styling
+    classDef section fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subsection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef action fill:#dfd,stroke:#333,stroke-width:1px
+
+    class SC,GS,SP,DR,API,MA section
+    class ST,DP,LC,MFA,PP,AS,DRP,BAK,PUR,KEY,END,SEC,PM,AM,LOG subsection
+    class ST1,ST2,DP1,DP2,LC1,LC2,LC3,MFA1,MFA2,PP1,PP2,PP3,AS1,AS2,AS3,DRP1,DRP2,BAK1,BAK2,PUR1,PUR2,KEY1,KEY2,KEY3,END1,END2,END3,SEC1,SEC2,SEC3,PM1,PM2,AM1,AM2,LOG1,LOG2 action

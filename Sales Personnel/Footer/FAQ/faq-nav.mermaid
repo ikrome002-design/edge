@@ -1,0 +1,65 @@
+graph TD
+    FAQ[Frequently Asked Questions] --> General[1. General Information]
+    FAQ --> Starting[2. Getting Started]
+    FAQ --> Features[3. Features and Functionality]
+    FAQ --> Account[4. Account Management]
+    FAQ --> Privacy[5. Data Privacy and Security]
+    FAQ --> Trouble[6. Troubleshooting]
+    FAQ --> Support[7. Customer Support]
+    FAQ --> Legal[8. Legal and Compliance]
+    FAQ --> Feedback[9. User Feedback]
+
+    General --> WhatIs[What is Edge by Citrus?]
+
+    Starting --> CreateAccount[Create Account]
+    Starting --> Login[Log In Process]
+
+    Features --> KeyFeatures[Key Features]
+    Features --> AccessFeatures[Access and Usage]
+
+    Account --> UpdateInfo[Update Account Info]
+    Account --> Password[Password Reset]
+    Account --> Issues[Account Issues]
+
+    Privacy --> DataProtection[Data Protection]
+    Privacy --> PrivacyInfo[Privacy Information]
+
+    Trouble --> TechIssues[Technical Issues]
+    Trouble --> BugReport[Bug Reporting]
+
+    Support --> ContactChannels[Contact Channels]
+    Support --> Email[Email Support]
+    Support --> Phone[Phone Support]
+    Support --> Mail[Mailing Address]
+
+    Legal --> Terms[Terms of Service]
+    Legal --> PrivacyPolicy[Privacy Policy]
+
+    Feedback --> ProvideFeedback[Provide Feedback]
+    Feedback --> ReportBugs[Report Bugs]
+
+    subgraph Basic Information
+        General
+        Starting
+        Features
+    end
+
+    subgraph Account and Security
+        Account
+        Privacy
+        Legal
+    end
+
+    subgraph Help and Support
+        Trouble
+        Support
+        Feedback
+    end
+
+    style FAQ fill:#FF9E1B,stroke:#333,stroke-width:2px
+    style Basic Information fill:#F5F5F5,stroke:#333,stroke-width:1px
+    style Account and Security fill:#E8E8E8,stroke:#333,stroke-width:1px
+    style Help and Support fill:#F0F0F0,stroke:#333,stroke-width:1px
+
+    classDef section fill:#1F1F1F,color:#FFFFFF,stroke:#333,stroke-width:2px
+    class General,Starting,Features,Account,Privacy,Trouble,Support,Legal,Feedback section

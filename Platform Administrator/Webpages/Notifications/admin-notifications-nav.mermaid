@@ -1,0 +1,71 @@
+graph TD
+    NP[Notifications Page]
+
+    %% System Alerts Section
+    NP --> SA[System Alerts]
+    SA --> SC[Security Concerns]
+    SC --> SC1[Authentication Issues]
+    SC --> SC2[Access Violations]
+    SC --> SC3[Session Anomalies]
+    SA --> SI[System Issues]
+    SI --> SI1[Performance Alerts]
+    SI --> SI2[Integration Errors]
+    SI --> SI3[Data Sync Issues]
+    SA --> UM[User Management]
+    UM --> UM1[Account Changes]
+    UM --> UM2[Role Updates]
+    UM --> UM3[Permission Changes]
+
+    %% Integration Alerts Section
+    NP --> IA[Integration Alerts]
+    IA --> CS[Connection Status]
+    CS --> CS1[API Status]
+    CS --> CS2[Sync Status]
+    CS --> CS3[Error Reports]
+    IA --> DI[Data Integration]
+    DI --> DI1[Sync Failures]
+    DI --> DI2[Data Conflicts]
+    DI --> DI3[Validation Errors]
+    IA --> PA[Performance Alerts]
+    PA --> PA1[Response Times]
+    PA --> PA2[Error Rates]
+    PA --> PA3[Health Metrics]
+
+    %% Administrative Alerts Section
+    NP --> AA[Administrative Alerts]
+    AA --> FR[Flagged Registrations]
+    FR --> FR1[New Flags]
+    FR --> FR2[Pending Reviews]
+    FR --> FR3[Resolution Updates]
+    AA --> CA[Configuration Alerts]
+    CA --> CA1[Setting Changes]
+    CA --> CA2[Policy Updates]
+    CA --> CA3[System Updates]
+    AA --> UA[User Activities]
+    UA --> UA1[Suspicious Actions]
+    UA --> UA2[Bulk Operations]
+    UA --> UA3[Critical Changes]
+
+    %% Alert Management Section
+    NP --> AM[Alert Management]
+    AM --> AS[Alert Settings]
+    AS --> AS1[Priority Levels]
+    AS --> AS2[Notification Rules]
+    AS --> AS3[Delivery Methods]
+    AM --> AH[Alert Handling]
+    AH --> AH1[Batch Actions]
+    AH --> AH2[Status Updates]
+    AH --> AH3[Archive Options]
+    AM --> AR[Alert Reporting]
+    AR --> AR1[Alert Analytics]
+    AR --> AR2[Trend Analysis]
+    AR --> AR3[Export Options]
+
+    %% Styling
+    classDef section fill:#f9f,stroke:#333,stroke-width:2px
+    classDef subsection fill:#bbf,stroke:#333,stroke-width:1px
+    classDef action fill:#dfd,stroke:#333,stroke-width:1px
+
+    class NP,SA,IA,AA,AM section
+    class SC,SI,UM,CS,DI,PA,FR,CA,UA,AS,AH,AR subsection
+    class SC1,SC2,SC3,SI1,SI2,SI3,UM1,UM2,UM3,CS1,CS2,CS3,DI1,DI2,DI3,PA1,PA2,PA3,FR1,FR2,FR3,CA1,CA2,CA3,UA1,UA2,UA3,AS1,AS2,AS3,AH1,AH2,AH3,AR1,AR2,AR3 action

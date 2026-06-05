@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Compliance - Edge by Citrus</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon.icon">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Technical Writings/Images/Favicon/favicon-16x16.png">
+
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="security_compliance.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Dashboard & Analytics\dashboard_analytics.html">
+                <img src="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Technical Writings\Images\Logo\Logo.png"
+                    alt="Edge by Citrus Logo" class="logo">
+            </a>
+        </div>
+        <div class="nav-icons">
+            <a
+                href="C:\Users\nderu\Documents\Development\Product\Edge by Citrus\Platform Administrator\Webpages\Notifications\notifications.html">
+                <i class="fas fa-bell" id="notificationsBtn"></i>
+                <span class="notification-badge">3</span>
+            </a>
+            <img src="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Technical Writings/Images/Icons/icons8-profile-picture-48.png"
+                alt="Profile" id="profile-icon" style="width: 32px; height: 32px; cursor: pointer;">
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dashboard & Analytics/dashboard_analytics.html"
+            class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            Dashboard & Analytics
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/User & Role Management/user.html"
+            class="nav-item">
+            <i class="fas fa-users"></i>
+            User & Role Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/System Configuration/system_configuration.html"
+            class="nav-item">
+            <i class="fas fa-cogs"></i>
+            System Configuration
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Integration Management/integration_management.html"
+            class="nav-item">
+            <i class="fas fa-plug"></i>
+            Integration Management
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Security & Compliance/security_compliance.html"
+            class="nav-item active">
+            <i class="fas fa-shield-alt"></i>
+            Security & Compliance
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Flagged Registrations/flagged _registrations.html"
+            class="nav-item">
+            <i class="fas fa-flag"></i>
+            Flagged Registrations
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Dynamic Sales Capture/dynamic_sales_capture.html"
+            class="nav-item">
+            <i class="fas fa-chart-bar"></i>
+            Dynamic Sales Capture
+        </a>
+        <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Settings/settings.html"
+            class="nav-item">
+            <i class="fas fa-cog"></i>
+            Settings
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1 class="section-title">Security & Compliance</h1>
+
+        <!-- Security Overview Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-shield-alt"></i>
+                <div class="stat-value">98.5%</div>
+                <div class="stat-label">Security Score</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-user-shield"></i>
+                <div class="stat-value">2,456</div>
+                <div class="stat-label">Active Users</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="stat-value">12</div>
+                <div class="stat-label">Security Alerts</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <div class="stat-value">99.9%</div>
+                <div class="stat-label">Uptime</div>
+            </div>
+        </div>
+
+        <!-- Audit Logs Section -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-history"></i>
+                Audit Logs
+            </h2>
+            <div class="table-container">
+                <div class="form-group">
+                    <label>Filter by Type</label>
+                    <select class="form-control">
+                        <option>All Events</option>
+                        <option>Admin Actions</option>
+                        <option>User Activities</option>
+                        <option>System Changes</option>
+                    </select>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Event Type</th>
+                            <th>User</th>
+                            <th>Action</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025-02-18 10:45</td>
+                            <td>Admin Action</td>
+                            <td>John Doe</td>
+                            <td>Modified User Permissions</td>
+                            <td><span class="status-badge status-success">Success</span></td>
+                        </tr>
+                        <tr>
+                            <td>2025-02-18 10:30</td>
+                            <td>Security Event</td>
+                            <td>System</td>
+                            <td>Failed Login Attempt</td>
+                            <td><span class="status-badge status-error">Failed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-primary" style="margin-top: 1rem;">
+                    <i class="fas fa-download"></i> Export Report
+                </button>
+            </div>
+        </div>
+
+        <!-- MFA Management Section -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-key"></i>
+                MFA Management
+            </h2>
+            <div class="form-group">
+                <label>Global MFA Settings</label>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span>Require MFA for all users</span>
+                </div>
+            </div>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>MFA Status</th>
+                            <th>Method</th>
+                            <th>Last Verified</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td><span class="status-badge status-success">Enabled</span></td>
+                            <td>Google Authenticator</td>
+                            <td>2025-02-18 09:30</td>
+                            <td>
+                                <button class="btn btn-secondary">Reset</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td><span class="status-badge status-error">Disabled</span></td>
+                            <td>Not Set</td>
+                            <td>Never</td>
+                            <td>
+                                <button class="btn btn-primary">Enable</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Session Controls Section -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-user-clock"></i>
+                Session Controls
+            </h2>
+            <div class="form-group">
+                <label>Session Timeout (minutes)</label>
+                <input type="number" class="form-control" value="30" min="5" max="120">
+            </div>
+            <div class="form-group">
+                <label>Maximum Concurrent Sessions</label>
+                <input type="number" class="form-control" value="2" min="1" max="5">
+            </div>
+            <div class="table-container">
+                <h3 style="margin: 1rem 0;">Active Sessions</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>IP Address</th>
+                            <th>Location</th>
+                            <th>Duration</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>192.168.1.100</td>
+                            <td>Nairobi, Kenya</td>
+                            <td>25 minutes</td>
+                            <td>
+                                <button class="btn btn-danger">Terminate</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Compliance Documents Section -->
+        <div class="card">
+            <h2 class="card-title">
+                <i class="fas fa-file-alt"></i>
+                Compliance Documents
+            </h2>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Document Name</th>
+                            <th>Type</th>
+                            <th>Last Updated</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Security Policy</td>
+                            <td>Policy Document</td>
+                            <td>2025-02-01</td>
+                            <td><span class="status-badge status-success">Current</span></td>
+                            <td>
+                                <button class="btn btn-secondary">View</button>
+                                <button class="btn btn-secondary">Download</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Privacy Policy</td>
+                            <td>Policy Document</td>
+                            <td>2025-01-15</td>
+                            <td><span class="status-badge status-warning">Review Required</span></td>
+                            <td>
+                                <button class="btn btn-secondary">View</button>
+                                <button class="btn btn-secondary">Download</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Compliance Report Q1 2025</td>
+                            <td>Audit Report</td>
+                            <td>2025-02-15</td>
+                            <td><span class="status-badge status-success">Completed</span></td>
+                            <td>
+                                <button class="btn btn-secondary">View</button>
+                                <button class="btn btn-secondary">Download</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-primary" style="margin-top: 1rem;">
+                    <i class="fas fa-upload"></i> Upload New Document
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/@citruske" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LabsCitrus" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063778943426" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@citrus-labs" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/company/citrus-labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-links">
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Data Policy/data_policy.html">Data
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/FAQ/faq.html">FAQ</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Privacy Policy/privacy_policy.html">Privacy
+                    Policy</a>
+                <a
+                    href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Footer/Terms of Service/terms_of_service.html">Terms
+                    of Service</a>
+            </div>
+            <div class="copyright">
+                © 2025 Citrus Labs. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- User Profile Popup -->
+    <div class="profile-popup" id="profile-popup">
+        <div class="profile-menu">
+            <a href="C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Landing Page/landing_page.html"
+                class="nav-item">
+                <i class="fas fa-sign-out-alt"></i>
+                Log Out
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Profile Popup Toggle
+        const profileIcon = document.getElementById('profile-icon');
+        const profilePopup = document.getElementById('profile-popup');
+
+        profileIcon.addEventListener('click', () => {
+            profilePopup.classList.toggle('show');
+        });
+
+        // Close profile popup when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!profileIcon.contains(event.target) && !profilePopup.contains(event.target)) {
+                profilePopup.classList.remove('show');
+            }
+        });
+
+        // Notifications Popup
+        const notificationsIcon = document.getElementById('notifications-icon');
+        notificationsIcon.addEventListener('click', () => {
+            window.location.href = 'C:/Users/nderu/Documents/Development/Product/Edge by Citrus/Platform Administrator/Webpages/Notifications/notifications.html';
+        });
+
+        // Session Management Functions
+        function terminateSession(userId) {
+            // Implementation for terminating user session
+            alert(`Terminating session for user: ${userId}`);
+        }
+
+        // MFA Management Functions
+        function resetMFA(userId) {
+            // Implementation for resetting user's MFA
+            alert(`Resetting MFA for user: ${userId}`);
+        }
+
+        function enableMFA(userId) {
+            // Implementation for enabling MFA for user
+            alert(`Enabling MFA for user: ${userId}`);
+        }
+
+        // Document Management Functions
+        function viewDocument(docId) {
+            // Implementation for viewing document
+            alert(`Viewing document: ${docId}`);
+        }
+
+        function downloadDocument(docId) {
+            // Implementation for downloading document
+            alert(`Downloading document: ${docId}`);
+        }
+
+        // Export Report Function
+        function exportReport() {
+            // Implementation for exporting audit log report
+            alert('Exporting audit log report...');
+        }
+    </script>
+</body>
+
+</html>
